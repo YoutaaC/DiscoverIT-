@@ -63,7 +63,6 @@ const routes: Routes = [
   {path:'historiqueLikess',component:HistoriqueLikesComponent},
   {path:'historiqueReservationn',component:HistoriqueReservationComponent}
   
-  
 ];
 
 @NgModule({

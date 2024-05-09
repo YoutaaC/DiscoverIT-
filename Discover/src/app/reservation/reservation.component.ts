@@ -4,6 +4,7 @@ import { User } from '../models/user.model';
 import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 import { UserService } from '../user.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var $:any;
 @Component({
   selector: 'app-reservation',
@@ -11,20 +12,28 @@ declare var $:any;
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent implements OnInit{
-  // user!:User;
-  // userId! :number;
+  
   event!:Event;
   eventId! :number;
   accessToken!: any;
   currentUser!: User;
   currentId! :number;
 
+
+  myForm!: FormGroup;
+  qrData: string = '';
   
-  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService){}
+  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private fb: FormBuilder){}
   
   ngOnInit(): void {
     this.eventId=+this.route.snapshot.paramMap.get('id')!;
     this.getEventById();
+
+    this.myForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      // Add other form fields as needed
+    });
   }
 
 
@@ -44,6 +53,18 @@ export class ReservationComponent implements OnInit{
       })
   }
 
+   
+
+  // onSubmit() {
+  //   if (this.myForm.valid) {
+  //     // Extract data from the form
+  //     const name = this.myForm.get('name')?.value;
+  //     const email = this.myForm.get('email')?.value;
+
+  //     // Concatenate data for QR code (adjust based on your needs)
+  //     this.qrData = `Name: ${name}\nEmail: ${email}`;
+  //   }
+  // }
 
   // onPhoneKeyPress(event: KeyboardEvent) {
   //   const charCode = event.charCode  event.keyCode;

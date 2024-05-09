@@ -1,4 +1,192 @@
 <body>
     <app-navbar></app-navbar>
-
-</body>
+    <aside id="sidebar" class="sidebar">
+          <div class="text-center ">
+          <img src="./../../assets/img/profile-img.jpg" class="pdp">
+          <p style="font-size: 18px; font-weight: bold;">Pseudo</p>
+      </div>
+      <hr>
+          <ul class="sidebar-nav" id="sidebar-nav">
+    
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="profile">
+                  <i class="fa-solid fa-user"></i>
+                <span>Mon compte</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="UserProfileUpdate">
+                  <i class="fa-solid fa-pen"></i>
+                <span>Modifier le profil</span>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="UserProfileforgotPassword">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Modifier le mot de passe</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="favoris">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Favoris</span>
+                </a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="historiqueReservationn">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <span>Historique des réservations</span>
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="historiqueLikess">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                <span >Historique des j’aimes</span>
+              </a>
+            </li>
+            <br><br>  <br>
+        <br>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="">
+            <i class="fa-solid fa-arrow-right-from-bracket pp"></i>
+            <span (click)="logout()">Se déconnecter</span>
+          </a>
+        </li>
+          </ul>
+      
+        </aside>
+        <main id="main" class="main">
+          <div class="pagetitle">
+            
+            <h1 style="font-size: 25px;">Historique des j’aimes</h1> 
+                
+          </div>
+          <hr> 
+          <section class="section-profile">
+  <!-- card -->
+      <!-- <div class="card-grp d-block  ">-->
+    <!-- ligne1 -->
+     <!--<div class="ligne1 d-flex ">-->
+      <!-- card1 -->
+      <!-- <div class="card" >
+       
+        <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+        <div class="card-body">   
+        <div class="part2-card">
+          <pre>24/03/2024 | <span class="text-info type">AR/VR</span></pre>   
+        </div>
+          <h5 class="title-desc">Investissement dans les startups IA</h5>
+          <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+          <div class="btns justify-content-between d-flex ">
+           <button class="btn btn-voirplus">Voir Plus</button>
+          <div class="react justify-content-around ">
+          <img src="./../../assets/images/like.png" class="like">&nbsp;
+          <img src="./../../assets/images/send.png" class="partage">
+        </div>
+        </div>
+        </div>
+     </div>-->
+     <!-- card2 -->
+    <!-- <div class="card" >
+       <img class="card-img-top" src="./../../../assets/images/Rectangle 13-1.png" alt="Card image cap img-card">
+       <div class="card-body">   
+       <div class="part2-card">
+         <pre>24/03/2024 | <span class="text-info type">AI</span></pre>   
+       </div>
+         <h5 class="title-desc">Investissement dans les startups IA</h5>
+         <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+         <div class="btns justify-content-between d-flex ">
+          <button class="btn btn-voirplus">Voir Plus</button>
+         <div class="react justify-content-around ">
+         <img src="./../../assets/images/like.png" class="like">&nbsp;
+         <img src="./../../assets/images/send.png" class="partage">
+       </div>
+       </div>
+       </div>
+     </div>-->
+     <!-- card3 -->
+     <!--<div class="card" >
+       <img class="card-img-top" src="./../../../assets/images/Rectangle 13-2.png" alt="Card image cap img-card">
+       <div class="card-body">   
+       <div class="part2-card">
+         <pre>24/03/2024 | <span class="text-info type">Developpement</span></pre>   
+       </div>
+         <h5 class="title-desc">Investissement dans les startups IA</h5>
+         <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+         <div class="btns justify-content-between d-flex ">
+          <button class="btn btn-voirplus">Voir Plus</button>
+         <div class="react justify-content-around ">
+         <img src="./../../assets/images/like.png" class="like">&nbsp;
+         <img src="./../../assets/images/send.png" class="partage">
+       </div>
+       </div>
+       </div>
+     </div>
+    </div>
+  <br>-->
+    <!-- ligne2 -->
+  <!--<div class="ligne2 d-flex ">-->
+        <!-- card1 -->
+       <!-- <div class="card" >
+         
+          <img class="card-img-top" src="./../../../assets/images/Rectangle 13-3.png" alt="Card image cap img-card">
+          <div class="card-body">   
+          <div class="part2-card">
+            <pre>24/03/2024 | <span class="text-info type">Sécurité</span></pre>   
+          </div>
+            <h5 class="title-desc">Investissement dans les startups IA</h5>
+            <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+            <div class="btns justify-content-between d-flex ">
+             <button class="btn btn-voirplus">Voir Plus</button>
+            <div class="react justify-content-around ">
+            <img src="./../../assets/images/like.png" class="like">&nbsp;
+            <img src="./../../assets/images/send.png" class="partage">
+          </div>
+          </div>
+          </div>
+       </div>-->
+       <!-- card2 -->
+      <!-- <div class="card" >
+         <img class="card-img-top" src="./../../../assets/images/Rectangle 13-4.png" alt="Card image cap img-card">
+         <div class="card-body">   
+         <div class="part2-card">
+           <pre>24/03/2024 | <span class="text-info type">Developpement</span></pre>   
+         </div>
+           <h5 class="title-desc">Investissement dans les startups IA</h5>
+           <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+           <div class="btns justify-content-between d-flex ">
+            <button class="btn btn-voirplus">Voir Plus</button>
+           <div class="react justify-content-around ">
+           <img src="./../../assets/images/like.png" class="like">&nbsp;
+           <img src="./../../assets/images/send.png" class="partage">
+         </div>
+         </div>
+         </div>
+       </div>-->
+       <!-- card3 -->
+      <!-- <div class="card" >
+         <img class="card-img-top" src="./../../../assets/images/Rectangle 13-5.png" alt="Card image cap img-card">
+         <div class="card-body">   
+         <div class="part2-card">
+           <pre>24/03/2024 | <span class="text-info type">AI</span></pre>   
+         </div>
+           <h5 class="title-desc">Investissement dans les startups IA</h5>
+           <p class="card-text">Une société de capital-risque tunisienne annonce un fonds d'investissement dédié aux startups travaillant dans le domaine de l'IA...</p>
+           <div class="btns justify-content-between d-flex ">
+            <button class="btn btn-voirplus">Voir Plus</button>
+           <div class="react justify-content-around ">
+           <img src="./../../assets/images/like.png" class="like">&nbsp;
+           <img src="./../../assets/images/send.png" class="partage">
+         </div>
+         </div>
+         </div>
+       </div>
+      </div>
+  </div> -->
+  <br><br><br>
+    </section>
+        </main> 
+      <!-- <app-footer></app-footer>  -->
+  </body>
+  

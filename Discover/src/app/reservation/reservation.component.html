@@ -4,38 +4,38 @@
       <div class="form-box">
           
             <div class="formu">
-          <form>
-            <h2 class="title-salon"  [(ngModel)]="event.type">:<span class="title-NameEvent">{{event.title}}</span> </h2>
+          <form [formGroup]="myForm">
+            <h2 class="title-salon text-capitalize">{{event.type}}:&nbsp;&nbsp;<span class="title-NameEvent">{{event.title}}</span> </h2>
             <br>
-            <div class="d-flex ">
+            <div class="d-flex " style="color: white;">
               <div>
-                <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}date</p>
-                <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}time</p>
+                <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
               </div>
                   <br>
                 <div>
-                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}lieu</p>
-                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.prix}}money</p>
+                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.prix}}</p>
                 </div>
           </div>
           <br>
             <h4 class="title">-Informations personnelles</h4>
 <!-- saisir le nom -->
                 <label for="nom">Nom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom"  [(ngModel)]="currentUser.firstName">
+                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="currentUser.firstName">
  <!-- saisir le prenom -->
                 <label for="prenom">Prenom<b style="color: #A60707;">*</b></label>
                 <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName">
 <!-- saisir l'email -->
                 <label for="email">Email<b style="color: #A60707;">*</b></label>
-                <input type="text" id="email" placeholder="  Entrer votre email"  name="email"  [(ngModel)]="currentUser.email">
+                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="currentUser.email">
 <!-- saisir le telephone -->
                 <label for="tel">Num de téléphone<b style="color: #A60707;">*</b></label>
                 <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="test" 
                 maxlength="8" [(ngModel)]="currentUser.tel">
 
                 <h4 class="title">-Informations de réservation</h4>
-                <label for="nbr-pkace">Nombre  de places:</label><input class="nbrPlace ms-3 " placeholder=""><br>
+                <label for="nbr-pkace">Nombre  de places:</label><input type="number" min="0" class="nbrPlace " placeholder=""><br>
                 <br>
                 <h4 class="title">-Informations supplémentaires</h4>
                 <label for="nbr-pkace">Commentaires supplémentaires</label><br>
@@ -46,7 +46,7 @@
                 <input type="radio" name="mm"><span class="money-radio">&nbsp;D17</span><br>
                 <input type="radio" name="mm"><span class="money-radio">&nbsp;Cash</span><br>
                 <br><br>
-                <button type="submit" class="sumbmit-btn" >Réserver</button>
+                <button type="submit" class="sumbmit-btn"  >Réserver</button>
                 <!-- (click)="genererQRCode()" -->
               </form>    
           </div>
