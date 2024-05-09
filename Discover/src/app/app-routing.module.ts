@@ -27,6 +27,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ProfileForgotPasswordComponent } from './profile-forgot-password/profile-forgot-password.component';
 import { FavorisProfileComponent } from './favoris-profile/favoris-profile.component';
 import { ForumComponent } from './forum/forum.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
+import { HistoriqueLikesComponent } from './historique-likes/historique-likes.component';
+import { HistoriqueReservationComponent } from './historique-reservation/historique-reservation.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -55,7 +58,10 @@ const routes: Routes = [
   {path:'forgotPassword',component:ForgotPasswordComponent},
   {path:'UserProfileforgotPassword',component:ProfileForgotPasswordComponent},
   {path:'favoris',component:FavorisProfileComponent},
-  {path:'forum',component:ForumComponent}
+  {path:'forum',component:ForumComponent},
+  {path:'qrCodeee',component:QrcodeComponent},
+  {path:'historiqueLikess',component:HistoriqueLikesComponent},
+  {path:'historiqueReservationn',component:HistoriqueReservationComponent}
   
   
 ];

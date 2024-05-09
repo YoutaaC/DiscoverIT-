@@ -37,6 +37,9 @@ import { UpdateUserProfilComponent } from './update-user-profil/update-user-prof
 import { ProfileForgotPasswordComponent } from './profile-forgot-password/profile-forgot-password.component';
 import { FavorisProfileComponent } from './favoris-profile/favoris-profile.component';
 import { ForumComponent } from './forum/forum.component';
+import { HistoriqueReservationComponent } from './historique-reservation/historique-reservation.component';
+import { HistoriqueLikesComponent } from './historique-likes/historique-likes.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { ForumComponent } from './forum/forum.component';
     UpdateUserProfilComponent,
     ProfileForgotPasswordComponent,
     FavorisProfileComponent,
-    ForumComponent
+    ForumComponent,
+    HistoriqueReservationComponent,
+    HistoriqueLikesComponent,
+    QrcodeComponent
     ],
   imports: [
     BrowserModule,
