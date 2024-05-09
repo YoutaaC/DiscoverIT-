@@ -4,7 +4,7 @@
       <div class="form-box">
           
             <div class="formu">
-          <form [formGroup]="myForm">
+          <form (ngSubmit)="generateQrCode()">
             <h2 class="title-salon text-capitalize">{{event.type}}:&nbsp;&nbsp;<span class="title-NameEvent">{{event.title}}</span> </h2>
             <br>
             <div class="d-flex " style="color: white;">
@@ -22,17 +22,17 @@
             <h4 class="title">-Informations personnelles</h4>
 <!-- saisir le nom -->
                 <label for="nom">Nom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="currentUser.firstName">
+                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="firstName">
  <!-- saisir le prenom -->
                 <label for="prenom">Prenom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName">
+                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="lastName">
 <!-- saisir l'email -->
                 <label for="email">Email<b style="color: #A60707;">*</b></label>
-                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="currentUser.email">
+                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="email">
 <!-- saisir le telephone -->
                 <label for="tel">Num de téléphone<b style="color: #A60707;">*</b></label>
                 <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="test" 
-                maxlength="8" [(ngModel)]="currentUser.tel">
+                maxlength="8" [(ngModel)]="tel">
 
                 <h4 class="title">-Informations de réservation</h4>
                 <label for="nbr-pkace">Nombre  de places:</label><input type="number" min="0" class="nbrPlace " placeholder=""><br>
@@ -51,11 +51,9 @@
               </form>    
           </div>
         </div>
-        <!-- <div class="qr-code-container">
-            <img *ngIf="qrCodeImage" src="{{ qrCodeImage }}" alt="QR Code">
-            <span *ngIf="!qrCodeImage && generantQRCode">Chargement du QR code...</span>
-          </div>
-          <button *ngIf="qrCodeImage" (click)="telechargerQRCode()">Télécharger le QR Code</button> -->
+        <div *ngIf="qrCode">
+          <img [src]="qrCode" alt="QR Code">
+        </div>  
         <br><br>
         <app-footer></app-footer>
         </body>
