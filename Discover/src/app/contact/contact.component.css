@@ -1,0 +1,158 @@
+body {
+  width: 100%;
+  height: auto;
+  background-image: url(./../../assets/images/eventFond.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; 
+  color: white;
+}
+.img-top{
+  position: relative;
+  margin-left: 150px;
+  margin-top: 90px;
+  
+  /* box-shadow: 2px 2px 2px rgba(164,164,164); */
+  width: 343px;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.title{
+  font-size: 40px;
+  position: relative;
+  margin-left: 149px; 
+  margin-top: 50px;
+}
+.marque{
+  background-image: url(./../../assets/images/Asset.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.arrow-event{
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 370px;
+  width: 120px;
+  height: auto;
+}
+.img-anim1 {
+  position: absolute;
+  margin-top: -370px;
+  margin-left: 70px;
+
+  /* Animation properties */
+  animation: rotate2 2s linear infinite; /* Adjust values as needed */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
+  to { transform: rotate(360deg); } /* Rotate 360 degrees */
+}
+
+@keyframes rotate2 {
+  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
+  to { transform: rotate(-360deg); } /* Rotate 360 degrees */
+}
+.img-anim2{
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 500px;
+  /* Animation properties */
+  animation: rotate 6s linear infinite;
+}
+.img-anim3{
+  position: absolute;
+  margin-top: -370px;
+  margin-left: 450px;
+  animation: rotate 8s linear infinite; 
+} 
+.card{
+  background-color: #00264D;
+  border-radius: 30px;
+  color: white;
+  padding: 50px;
+  margin-left: 150px;
+  margin-top: 40px;
+  width: 645px;
+  align-items: left;
+}
+.side-card{
+  background-color: #00264D;
+  border-radius: 30px;
+  color: white;
+  padding: 50px;
+  margin-left: 30px;
+  margin-top: 40px;
+  width: 475px;
+  height: 392px;
+  align-items: left;
+}
+
+.formu input[type="text"],
+.formu input[type="password"] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 15px 0 7px 0;
+  padding: 15px 15px 15px 12px;
+  width: 370px;
+  height: auto;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+}
+.form-message{
+  border-radius: 10px;
+  margin: 15px 0 7px 0;
+  padding: 15px 15px 15px 12px;
+}
+.sumbmit-btn{
+  background-color: #AC8DF7;
+      border-radius: 32px;
+      padding: 8px 16px;
+      margin-top: 20px;
+      color: white;
+      margin-left: 470px;
+      
+}
+.warning-icon{
+  font-size: 20px;
+  color: #FF0000;
+  margin-right: 5px;
+}
+
+.warning-div{
+  margin: 5px 0 5px 0;
+  color: #FF0000;
+}
+
+.box-info{
+
+  border: #AC8DF7 solid 1px ;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  padding: 20px 0 20px 25px;
+}
+.box-info2{
+  color: #AC8DF7;
+  border: #AC8DF7 solid 1px ;
+  border-radius: 20px;
+  padding: 20px 0 20px 25px;
+}
+.box-resaux{
+   background: transparent;
+   border: #AC8DF7 solid 1px;
+   border-radius: 50%;
+   margin: 6px;
+   width: 50px;
+   height: 50px;
+
+}
+.icon-rs{
+  width: 40px;
+ }
+ .icon-info{
+     width: 25px;
+ }

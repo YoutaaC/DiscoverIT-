@@ -1,0 +1,51 @@
+<body>
+    <br><br>
+    <h2 class="big_title">Ajout d'une Actualité</h2>
+      <div class="form-box">
+            <!-- saisir le titre -->
+            <div class="formu">
+          <form >
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="  Entrer votre title"  name="title" [(ngModel)]="newPost.title" >
+     <!-- saisir le mini body -->
+  
+     <label for="body">description</label>
+     <input type="text" id="body" placeholder="  Entrer votre body" name="body" [(ngModel)]="newPost.mini_body" >
+  <!-- saisir le body -->
+  
+                <label for="body">Body</label>
+                <input type="text" id="body" placeholder="  Entrer votre body" name="body" [(ngModel)]="newPost.body" >
+  
+  <!-- saisir le type -->
+         
+                <label for="type">Type</label>
+                <input type="text" id="type" placeholder="  Entrer votre type"  name="type" [(ngModel)]="newPost.type" >
+  
+
+                <label for="imgpost">image du post</label><br>
+                <input type="file" id="imgpost" name="imgpost" >
+
+                <button type="submit" class="sumbmit-btn" (click)="createPost()" >Ajouter</button>
+                <a href="adminActu" class="btn btn-link retour-btn">Retour</a>
+              </form>    
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        </body>
+  
+        <div class="modal fade" id="addModal">
+          <div class="modal-dialog m-3">
+            <div class="modal-content">
+              <div class="modal-header m-3">
+                <h5 class="modal-title">Add Post</h5>
+              </div>
+              <div class="modal-body m-2">
+                <p>Post added !</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary buttonModal" (click)="closeAddPost()">Fermer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  

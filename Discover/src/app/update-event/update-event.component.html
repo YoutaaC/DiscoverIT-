@@ -1,0 +1,89 @@
+<body>
+    <br><br>
+    <h2 class="big_title">Modifier un Evenement</h2>
+      <div class="form-box">
+            <!-- saisir le titre -->
+            <div class="formu">
+          <form >
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="  Entrer votre title"  name="title" [(ngModel)]="event.title" >
+    
+  <!-- saisir le body -->
+  
+                <label for="body">Body</label>
+                <input type="text" id="body" placeholder="  Entrer votre body" name="body" [(ngModel)]="event.body" >
+  
+  <!-- saisir le type -->
+         
+                <label for="type">Type</label>
+                <input type="text" id="type" placeholder="  Entrer votre type"  name="type" [(ngModel)]="event.type" >
+
+   <!-- saisir le categorie -->
+         
+   <label for="categorie">categorie</label>
+   <input type="text" id="categorie" placeholder="  Entrer votre categorie"  name="categorie" [(ngModel)]="event.categorie" >
+
+    <!-- saisir le lieu -->
+         
+    <label for="lieu">lieu</label>
+    <input type="text" id="lieu" placeholder="  Entrer votre lieu"  name="lieu" [(ngModel)]="event.lieu" >
+ 
+        <!-- saisir le time -->
+         
+        <label for="time">time</label>
+        <input type="text" id="time" placeholder="  Entrer votre time"  name="time" [(ngModel)]="event.time" >
+     
+        <!-- saisir le capacite_max -->
+         
+        <label for="capacite_max">capacite_max</label>
+        <input type="text" id="capacite_max" placeholder="  Entrer votre capacite_max"  name="capacite_max" [(ngModel)]="event.capacite_max" >
+
+
+        <!-- saisir le date_debut -->
+        <label for="jour_debut">jour_debut</label>
+        <input type="text" id="jour_debut" placeholder="  Entrer votre jour"  name="jour_debut" [(ngModel)]="event.jour_debut" >
+        <label for="mois_debut">mois_debut</label>
+        <input type="text" id="mois_debut" placeholder="  Entrer votre mois"  name="mois_debut" [(ngModel)]="event.mois_debut" >
+        <label for="annee_debut">annee_debut</label>
+        <input type="text" id="annee_debut" placeholder="  Entrer votre annee"  name="annee_debut" [(ngModel)]="event.annee_debut" >
+        <!-- saisir le date_fin -->
+         
+        <label for="date_fin">date_fin</label>
+        <input type="text" id="date_fin" placeholder="  Entrer votre date_fin"  name="date_fin" [(ngModel)]="event.date_fin" >
+       
+       <!-- saisir le prix -->
+         
+       <label for="prix">prix</label>
+       <input type="text" id="prix" placeholder="  Entrer votre prix"  name="prix" [(ngModel)]="event.prix" >
+       
+  <!-- saisir l'image -->
+
+                <label for="imgpost">image du l'evenement</label><br>
+                <input type="file" id="imgpost" name="imgpost" >
+
+                <button type="submit" class="sumbmit-btn" (click)="confirmUpdate()" >Modifer</button>
+                <a href="adminEvent" class="btn btn-link retour-btn">Retour</a>
+              </form>    
+          </div>
+        </div>
+        <br><br><br><br><br>
+        </body>
+  
+        <div class="modal fade" id="updateModal">
+          <div class="modal-dialog m-3">
+            <div class="modal-content">
+              <div class="modal-header m-3">
+                <h5 class="modal-title">Event Update</h5>
+              </div>
+              <div class="modal-body m-2">
+                <p>Êtes-vous certain de vouloir effectuer des modifications sur cette Evenement ?</p>
+              </div>
+              <br>
+              <div class="modal-footer">
+                <button class="btn btn-secondary buttonModal" (click)="closeUpdate()">Annuler</button>
+                <button class="btn btn-danger  buttonModal" (click)="updateEvent()">oui</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  

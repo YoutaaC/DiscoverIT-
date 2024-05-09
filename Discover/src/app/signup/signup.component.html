@@ -1,0 +1,145 @@
+<body>
+    <div class="form-box">
+        <div class="button-box">
+            <button type="button" class="toggle-btn1" (click)="gotoSignup()">S'inscrire</button>
+            <button type="button" class="toggle-btn2" (click)="gotoSignin()">Se connecter</button>
+          </div>
+          <!-- saisir le nom -->
+          <div class="formu">
+        <form  [formGroup]="forminput">
+              <label for="nom">Nom<b style="color: #660909;">*</b></label>
+              <input type="text" id="nom" placeholder="  Entrer votre nom" formControlName="nom" name="nom" [(ngModel)]="user.firstName" >
+
+              <div class="warning-div"
+              *ngIf="!forminput.pristine && forminput.controls['nom'].errors?.['required']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Nom !!
+             </div>
+        </form>    
+<!-- saisir le prenom -->
+        <form  [formGroup]="forminput1">
+              <label for="prenom">Prenom<b style="color: #660909;">*</b></label>
+              <input type="text" id="prenom" formControlName="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="user.lastName" >
+
+              <div class="warning-div"
+              *ngIf="!forminput1.pristine && forminput1.controls['prenom'].errors?.['required']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Prenom !!
+             </div>
+        </form>
+<!-- saisir l'email -->
+        <form  [formGroup]="forminput2">
+              <label for="email">Email<b style="color: #660909;">*</b></label>
+              <input type="text" id="email" placeholder="  Entrer votre email" formControlName="email" name="email" [(ngModel)]="user.email" >
+
+              <div class="warning-div"
+              *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['required']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Email !!
+             </div>
+             <div class="warning-div"
+              *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['email']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Email incorrect !!
+             </div>
+        </form>
+         <!-- saisir le num de tel -->
+         <label for="tel">Num Tel<b style="color: #660909;">*</b></label>
+         <input type="text" id="tel" placeholder="   Entrer votre Num de telephone" name="tel"  [(ngModel)]="user.tel">
+    <!-- saisir le mot de passe -->
+    <form  [formGroup]="forminput3">
+              <label for="motDePasse">Mot de passe<b style="color: #660909;">*</b></label>
+              <input type="password" id="motDePasse" placeholder="  Entrer votre mot de passe" formControlName="password" name="password" [(ngModel)]="user.password">
+               
+              <div class="warning-div"
+              *ngIf="!forminput3.pristine && forminput3.controls['password'].errors?.['required']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Mot De Passe !!
+             </div>
+    </form>
+
+    <!-- confirmation mot de pass -->
+    <form  [formGroup]="forminput4">
+              <label for="confirmeMdp">Confirmer le Mot de Passe<b style="color: #660909;">*</b></label>
+              <input type="password" id="confirmeMdp" placeholder="  Confirmer le mot de passe" formControlName="confPass" name="confPassword">
+
+            <div class="warning-div"
+            *ngIf="!forminput4.pristine && forminput4.controls['confPass'].errors?.['required']">
+            <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp;Confirmer votre Mot De Passe !!
+            </div>
+             <div class="warning-div"
+            *ngIf="forminput4.controls['confPass'].value !== forminput3.controls['password'].value">
+            <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp;Mot De Passe different !!
+            </div>
+    </form>
+         
+    <!-- choisir le pseudo -->
+    <form [formGroup]="forminput5">
+              <label for="pseudo">choisir un pseudo<b style="color: #660909;">*</b></label>
+              <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"  formControlName="pseudo" [(ngModel)]="user.username">
+              <div class="warning-div"
+              *ngIf="!forminput5.pristine && forminput5.controls['pseudo'].errors?.['required']">
+              <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp;Confirmer votre Pseudo !!
+              </div>
+
+              <button type="submit" class="sumbmit-btn" (click)="register()" [disabled]="forminput.invalid" [disabled]="forminput1.invalid" [disabled]="forminput2.invalid" [disabled]="forminput3.invalid" [disabled]="forminput4.invalid" [disabled]="forminput5.invalid" >S'inscrire</button>
+            </form>   
+        </div>
+      </div>
+
+
+      </body>
+
+      <div class="modal fade" id="ConfirmeModal">
+        <div class="modal-dialog m-2 ">
+          <div class="modal-content">
+                <br>
+                <div class="modal-header">
+                <h5 class="modal-title ms-3">User Ajouter</h5>
+                </div>
+                <br>
+            <div class="modal-body ms-3">
+              <p>L'ajout de l'utilisateur a été effectué avec succès.</p>
+            </div>
+            <br>
+            <div class="modal-footer">
+      <button type="button" class="btn btn-secondary buttonModal" (click)="closeModal()">Fermer &times;</button>   
+      </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="dejaModal">
+        <div class="modal-dialog m-2 ">
+          <div class="modal-content">
+                <br>
+                <div class="modal-header">
+                <h5 class="modal-title ms-3">Error </h5>
+                </div>
+                <br>
+            <div class="modal-body ms-3">
+              <p>Le pseudo ou l'email est deja pris!</p>
+            </div>
+            <br>
+            <div class="modal-footer">
+      <button type="button" class="btn btn-danger buttonModal" (click)="closedejaModal()">Fermer &times;</button>   
+      </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="disabledModalModal">
+        <div class="modal-dialog m-2 ">
+          <div class="modal-content">
+                <br>
+                <div class="modal-header">
+                <h5 class="modal-title ms-3">Error</h5>
+                </div>
+                <br>
+            <div class="modal-body ms-3">
+              <p>The form is incomplete. Please fill in all required fields to proceed.</p>
+            </div>
+            <br>
+            <div class="modal-footer">
+      <button type="button" class="btn btn-danger buttonModal" (click)="closedisabledModal()">Fermer  &times;</button>   
+      </div>
+          </div>
+        </div>
+      </div>
+

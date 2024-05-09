@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/eventFond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+
+  }
+  
+  .form-box {
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(0,38,77), rgba(0,38,77));
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    width: 640px;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin-left: 450px;
+    justify-content: center;
+   
+    
+  }
+  
+  .button-box {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    line-height: 26px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: white;
+    margin-top: 41px;
+    border: 2px solid #003f5a;
+    border-radius: 40px;
+  }
+  
+  .formu {
+    margin: 41px 0;
+  }
+  
+  .toggle-btn2{
+    padding: 10px 40px; 
+    margin: 0 ;
+    background-color: #003f5a;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0px 40px 40px 0px;
+
+
+  }
+
+  .toggle-btn1{
+    padding: 10px 40px; 
+    margin: 0;
+    background-color: white;
+    border: #003f5a;
+    color: #003f5a;
+    cursor: pointer;
+    border-radius: 40px 0px 0px 40px;
+
+  }
+  
+  .formu input[type="text"] {
+    border: 0;
+    background: white;
+    display: block;
+    margin: 10px 10px 10px 0;
+    padding: 15px 10px 15px 10px;
+    width: 445px;
+    height: auto;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+  }
+  
+  .sumbmit-btn {
+    border-radius: 32px;
+    background-color: #AC8DF7;
+    border: 0;
+    color: white;
+    border-radius: 32px;
+    padding: 9px 16px;
+    font-size: 18px;
+  }
+  
+  input::placeholder {
+    text-align: left;
+  }
+  
+  br {
+    line-height: 15px;
+  }
+
+  .form-check{
+    padding: 15px;
+    font-size: small;
+    margin: 0;
+    
+  }
+
+  .oublier-mdp{
+    font-size: small;
+    align-items: end; 
+  }
+
+  .form-check-input{
+    width: 20px;
+    height: 20px;
+  }
+
+.form-check-label{
+    padding: 0 0 0 2px;
+    
+}
+
+  .sous-form{
+    margin-left: 15px;
+    font-size: small;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+
+  }
+
+ a:hover {
+        color: #003f5a;
+      }
+      a{
+        color: #02052d;
+ 
+      }
+          
+a:focus {
+        border: 2px solid #161831;
+      }
+
+.pass-icon{
+position: absolute;
+top: 309px;
+right: 110px;
+width: 24px;
+cursor: pointer;
+color: #AC8DF7;
+}
+
+.buttonModal{
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.retour-btn{
+  margin-top: 10px;
+}
+.title-salon{
+    color: #AC8DF7;
+}
+.title-NameEvent{
+    color: #AC8DF7;
+}
+.title{
+    color: white;
+    margin-bottom: 20px;
+}
+label{
+    color: white;
+}
+.nbrPlace{
+    width: 94px;
+    height: 30px;
+    border-radius: 10px;
+}
+.comments{
+    border-radius: 10px;
+    padding: 5px;
+}
+.itemms-event{
+    color: white;
+}
+.money-radio{
+    color: white;
+}

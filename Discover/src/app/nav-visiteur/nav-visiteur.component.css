@@ -1,0 +1,42 @@
+nav{
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 18px;
+}
+.icon-profile{
+width: 20px;
+height: auto;
+}
+
+.icon-recherche{
+  width: 20px;
+  height: auto;
+}
+a{
+position: relative;
+}
+.nav-link:after{
+content: "";
+position: absolute;
+background-color: white;
+height: 2px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+.nav-link:hover{
+color:#ffffff;
+}
+.nav-link:hover:after{
+width: 100%;
+}
+.logo{
+width: 140px;
+height: auto;
+margin-right: 10px;
+}
+.name-logo{
+color: #AC8DF7;
+}
+

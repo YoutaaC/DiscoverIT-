@@ -1,0 +1,144 @@
+<body>
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="accueil" class="logo d-flex align-items-center">
+          <img src="./../../assets/images/logo_icone.png" class="logo-icone">
+          <span class="d-none d-lg-block">DiscoverIT</span>
+        </a>
+        <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+      </div>
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center" style="text-decoration: none; ">
+
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="adminProfile" >
+              <img src="./../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block ps-2">admin</span>
+            </a>
+        </ul>
+      </nav>
+    </header>
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+  
+      <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="adminDashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-heading">Fonctionnalitées</li>
+
+        <li class="nav-item">
+          
+            <a class="nav-link " href="adminUser">
+              <i class="fa-solid fa-users"></i>
+              <span>User</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="adminEvent">
+              <i class="fa-solid fa-shapes"></i>
+              <span>Evenement</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="adminActu">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Actualité</span>
+            </a>
+          </li>
+        <li class="nav-heading">Profile</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="adminProfile">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="messageAdmin">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="signin">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span (click)="logout()">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Users</h1>   
+      </div>
+      <section class="section profile"> 
+  <!-- Table -->
+  <table class="table table-striped table-responsive">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Email</th>
+        <th scope="col">Tel</th>
+        <th scope="col">Mot De Passe</th>
+        <th scope="col">Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.tel}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.creationDate | date: 'dd/MM/yyyy' }}</td>
+        <td><button class="btn  modif-btn text-light" (click)="updateUser(user.id)">Modifier</button>&nbsp; &nbsp;
+          <button class="btn delete-btn text-light" (click)="confirmDelete(user)">Supprimer</button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <a href="signup"><button class="btn conf-btn text-light text-center " (click)="gotoSignup()">Ajouter</button> </a>
+      
+</section>
+    </main> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+
+  <div class="modal fade" id="deleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmation</h5>
+        </div>
+        <div class="modal-body">
+          <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
+  
+        </div>
+        <div class="modal-footer">
+  <button class="btn btn-secondary" (click)="closeDelete()">No</button>
+  <button class="btn btn-danger" (click)="deleteUser()" >Yes</button>     
+  </div>    
+      </div>
+  
+    </div>
+  </div>
+ 

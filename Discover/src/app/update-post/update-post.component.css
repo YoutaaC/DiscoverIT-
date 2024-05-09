@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/eventFond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+  }
+  
+  .form-box {
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(255, 246, 235, 0.6), rgba(255, 246, 235, 0.6));
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    width: 560px;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin-left: 450px;
+    justify-content: center;
+  }
+  .button-box {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    line-height: 26px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: white;
+    margin-top: 41px;
+    border: 2px solid #003f5a;
+    border-radius: 40px;
+  }
+  .formu {
+    margin: 41px 0;
+  }
+  .toggle-btn2{
+    padding: 10px 40px; 
+    margin: 0 ;
+    background-color: #003f5a;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0px 40px 40px 0px;
+  }
+  .toggle-btn1{
+    padding: 10px 40px; 
+    margin: 0;
+    background-color: white;
+    border: #003f5a;
+    color: #003f5a;
+    cursor: pointer;
+    border-radius: 40px 0px 0px 40px;
+  }
+  .formu input[type="text"],
+  .formu input[type="password"] {
+    border: 0;
+    background: white;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 15px 15px 12px;
+    width: 370px;
+    height: auto;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+  }
+
+  .sumbmit-btn {
+    border: 0;
+    background: #003f5a;
+    color: white;
+    display: block;
+    padding: 15px 40px;
+    border-radius: 10px;
+    width: 100%; 
+    border: 2px solid #003f5a;
+  }
+  
+  input::placeholder {
+    text-align: left;
+  }
+  
+  br {
+    line-height: 15px;
+  }
+  .form-check{
+    padding: 15px;
+    font-size: small;
+    margin: 0;
+  }
+  .oublier-mdp{
+    font-size: small;
+    align-items: end; 
+  }
+  .form-check-input{
+    width: 20px;
+    height: 20px;
+  }
+.form-check-label{
+    padding: 0 0 0 3px;
+}
+  .sous-form{
+    margin-left: 15px;
+    font-size: small;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+
+  }
+ a:hover {
+        color: #003f5a;
+      }
+      a{
+        color: #02052d;
+ 
+      }
+          
+a:focus {
+        border: 2px solid #161831;
+      }
+.pass-icon{
+position: absolute;
+top: 309px;
+right: 110px;
+width: 24px;
+cursor: pointer;
+color: #AC8DF7;
+}
+.buttonModal{
+  margin: 5px;
+  padding: 5px 10px;
+}
+.retour-btn{
+  margin-top: 10px;
+}
+input[type="file"] {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="file"]::before {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  input[type="file"]:value::before {
+    content: attr(value);
+  }
+  .big_title{
+    color: white;
+    margin-left: 37%;
+  }

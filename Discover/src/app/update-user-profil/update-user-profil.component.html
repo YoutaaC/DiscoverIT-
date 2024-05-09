@@ -1,0 +1,144 @@
+<body>
+  <app-navbar></app-navbar>
+  <aside id="sidebar" class="sidebar">
+        <div class="text-center ">
+            <img src="./../../assets/img/profile-img.jpg" class="pdp">
+        <p>Pseudo</p>
+    </div>
+    <hr>
+        <ul class="sidebar-nav" id="sidebar-nav">
+  
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="profile">
+                <i class="fa-solid fa-user"></i>
+              <span>Mon compte</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="UserProfileUpdate">
+                <i class="fa-solid fa-pen"></i>
+              <span>Modifier le profil</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="UserProfileforgotPassword">
+                <i class="fa-solid fa-lock"></i>
+                <span>Modifier le mot de passe</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favoris</span>
+              </a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Historique des réservations</span>
+              </a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="">
+                <i class="fa-solid fa-thumbs-up"></i>
+              <span >Historique des j’aimes</span>
+            </a>
+          </li>
+      <br>
+      <br>
+      <br><br>  
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span (click)="logout()">Se déconnecter</span>
+        </a>
+      </li>
+        </ul>
+    
+      </aside>
+      <main id="main" class="main">
+        <section class="section profile">
+<!-- card1 -->
+<div class="card">
+  <div class="pagetitle">
+    <div class="d-flex ">
+    <img src="./../../assets/img/profile-img.jpg" class="pdp2">
+    <div class="upload-img-icon"><i class="fa-solid fa-pen icon-update"></i></div>
+    <div class="div-P1">
+    <h1 style="font-size: 20px;">Pseudo</h1> 
+    <span>Ajouter ou modifier votre photo <br>
+      Cette photo sera affichée sur votre profil</span>
+  </div>    
+  </div>
+</div>
+      <div class="formu">
+        <hr> 
+        <form class="text-capitalize">
+            <div class="d-flex ">
+                <div>
+              <label for="nom"> votre Nom</label>
+              <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" [(ngModel)]="currentUser.firstName" >
+            </div>
+<!-- saisir le prenom -->
+            <div>
+              <label for="prenom">votre Prenom</label>
+              <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName" >
+            </div>
+            </div>
+<!-- saisir l'email -->
+            <div class="d-flex ">
+                <div>
+              <label for="email">votre Email</label>
+              <input type="text" id="email" placeholder="  Entrer votre email"  name="email" [(ngModel)]="currentUser.email" >
+            </div>
+         <!-- saisir le num de tel -->
+         <div>
+         <label for="tel">Num Tel</label>
+         <input type="text" id="tel" placeholder="   Entrer votre Num de telephone" name="tel"  [(ngModel)]="currentUser.tel">
+        </div>
+        </div>
+         <!-- saisir le mot de passe -->
+             <div class="d-flex ">
+                <div>
+              <label for="motDePasse">votre Mot de passe</label>
+              <input type="password" id="motDePasse" placeholder="  Entrer votre mot de passe" name="password" [(ngModel)]="currentUser.password">
+            </div>
+ 
+         
+    <!-- choisir le pseudo -->
+                <div >
+              <label for="pseudo">votre pseudo</label>
+              <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"[(ngModel)]="currentUser.username">
+            </div>
+            </div>  
+            <hr> 
+            </form>   
+        </div>
+      <div class="d-flex  align-self-end">
+      <button (click)="confirmUpdate()" class="modif-btn">Enregistrer</button>
+      <button type="reset" class="conf-btn">Annuler</button>
+    </div>
+</div>
+   <br> <br> <br> <br>
+  </section>
+      </main> 
+    <!-- <app-footer></app-footer>  -->
+</body>
+
+<div class="modal fade  align-self-center" id="updateModal">
+    <div class="modal-dialog m-3">
+      <div class="modal-content">
+        <div class="modal-header m-3">
+          <h5 class="modal-title">Update Confirmation</h5>
+        </div>
+        <div class="modal-body m-2">
+          <p>Êtes-vous certain de vouloir effectuer des modifications sur cet utilisateur ?</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary buttonModal" (click)="closeUpdate()">Non</button>
+          <button class="btn btn-danger buttonModal" (click)="updateUser()">Oui</button>
+        </div>
+      </div>
+    </div>
+  </div> 

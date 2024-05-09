@@ -1,0 +1,249 @@
+<body>
+  <app-navbar></app-navbar>
+  <header>
+    <div class="anim-img_top col-4 ">
+      <img class="vector-icon4" alt="imagePrincipale" src="./../../assets/images/homephoto.png" />
+      <img class="vector-second" alt="imagePrincipale" src="./../../assets/images/secondPhoto.png" />
+      <img class="img-anim1" src="./../../assets/images/pos1.png" />
+      <img class="img-anim2" src="./../../assets/images/pos2.png" />
+      <img class="img-anim3" src="./../../assets/images/pos3.png" />
+      <img class="img-anim4" src="./../../assets/images/pos4.png" />
+      <img class="img-anim5" src="./../../assets/images/pos5.png" />
+      <img class="img-anim6" src="./../../assets/images/pos6.png" />
+    </div>
+    <div class="row align-items-center top-header">
+             <div class="col-5 first-part" >
+             <h1 class="title">Plongez dans l'univers de la technologie avec <span class="marque">DiscoverIT</span></h1>
+             <p class="text-secondary"  >Actualités IT, discussions passionnantes, réservations d'événements  <br> technologiques et tout ce dont vous avez besoin, au même endroit.</p>
+             <div class="btn-header d-flex ">
+             <button class=" discover-btn">Découvrir</button> &nbsp;&nbsp;
+              <button class="btn reserve-top-btn">Réserver</button>
+            </div>
+          </div>
+    </div>
+  </header>
+     <div class="title-part justify-content-between d-flex ">
+     <h2 class="titre2" >Derniére actualité</h2>
+     <button class="btn-decouvrir-title">Découvrir</button>  
+    </div>
+     <br>
+     <br><br>
+     <!-- cards -->
+     <div class="card-grp" >
+      <div *ngFor="let post of posts">
+            <!-- card1 -->
+     <div class="card "   *ngIf="post.id==1">
+         <div class="part1-card">
+             <div class="profile-part">
+                 <div class="profile">
+                 <img src="./../../../assets/images/icon-profile.png" class="pdp">
+             </div>
+             <div class="name-pseudo">
+                 <h5 class="card-title">Pseudo</h5>
+             </div>
+             </div>
+             <div class="suivre">
+                 <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+             </div>
+         </div>
+         <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+         <div class="card-body" >   
+         <div class="part2-card" >
+           <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+         </div>
+           <h5 class="title-desc">{{post.title}}</h5>
+           <p class="card-text">{{post.mini_body}}</p>
+           <div class="btns">
+           <button class="btn voirplus-btn">Voir Plus</button>
+           <div class="react d-flex">
+            <i class="fa-solid fa-thumbs-up btn-like"></i>&nbsp;
+           <div class="dropdown">
+            <i class="fa-solid fa-share-from-square btn-share"></i>
+            <ul class="dropdown-content">
+              <div>
+               <li>zz</li>
+              </div>
+            </ul>
+          </div>
+         </div>
+         </div>
+         </div>
+     </div>
+            <!-- card2 -->
+            <div class="card"   *ngIf="post.id==4">
+              <div class="part1-card">
+                  <div class="profile-part">
+                      <div class="profile">
+                      <img src="./../../../assets/images/icon-profile.png" class="pdp">
+                  </div>
+                  <div class="name-pseudo">
+                      <h5 class="card-title">Pseudo</h5>
+                  </div>
+                  </div>
+                  <div class="suivre">
+                      <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+                  </div>
+              </div>
+              <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
+              <div class="card-body" >   
+              <div class="part2-card" >
+                <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+              </div>
+                <h5 class="title-desc">{{post.title}}</h5>
+                <p class="card-text">{{post.mini_body}}</p>
+                <div class="btns">
+                <button class="btn voirplus-btn">Voir Plus</button>
+                <div class="react">
+                <img src="./../../assets/images/like.png" class="like">&nbsp;
+                <img src="./../../assets/images/send.png" class="partage">
+              </div>
+              </div>
+              </div>
+          </div>
+           <!-- card2 -->
+           <div class="card"   *ngIf="post.id==3">
+            <div class="part1-card">
+                <div class="profile-part">
+                    <div class="profile">
+                    <img src="./../../../assets/images/icon-profile.png" class="pdp">
+                </div>
+                <div class="name-pseudo">
+                    <h5 class="card-title">Pseudo</h5>
+                </div>
+                </div>
+                <div class="suivre">
+                    <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+                </div>
+            </div>
+            <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
+            <div class="card-body" >   
+            <div class="part2-card" >
+              <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+            </div>
+              <h5 class="title-desc">{{post.title}}</h5>
+              <p class="card-text">{{post.mini_body}}</p>
+              <div class="btns">
+              <button class="btn voirplus-btn">Voir Plus</button>
+              <div class="react">
+              <img src="./../../assets/images/like.png" class="like">&nbsp;
+              <img src="./../../assets/images/send.png" class="partage">
+            </div>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <br><br>
+  <div class="row avantages">
+    <div class="col-2 part1-avantage" >
+      <!-- <img src="" alt="logo"> -->
+      <h2 class="titre3" >Nos services</h2>
+      <p class="text-avantage">Nous sommes fiers de vous offrir une plateforme complète
+        qui vous permet de rester informé(e) et connecté(e) avec 
+        les dernières actualités.</p>
+        <ul class="list-avantage">
+          <div class="li-avantage">
+          <img src="./../../assets/images/btn check.png" class="img-li"><li>Actualités IT</li>
+        </div>
+          <div class="li-avantage">
+          <img src="./../../assets/images/btn check.png" class="img-li"><li>Événements IT </li>
+        </div>
+          <div class="li-avantage mb-0 ">
+          <img src="./../../assets/images/btn check.png" class="img-li"><li>Forums de Discussion</li>
+        </div>
+        </ul>
+        <button class="details-avantage-btn">Plus de détails <img src="./../../assets/images/flech-btn.png" class="arrow-up-right"></button>
+  </div>
+      <div class="col-2 part2-avantage">
+        <img src="./../../assets/images/mra.png" class="img-avantage">
+        <img src="./../../assets/images/njoum.png" class="etoile-bleu">
+        <img src="./../../assets/images/njoum2.png" class="etoile-blanc">
+  </div>
+  </div>
+  <br>
+  <div class="title-part justify-content-between d-flex" >
+    <h2 class="titre4" >Prochaines événements</h2>
+    <button class="btn-decouvrir-title">Découvrir</button> 
+    </div>
+  <br>
+  <!-- event slider -->
+  
+  <div class="carousel-container event-carousel" >
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      </div>
+     
+      <div class="carousel-inner">
+        <div class="carousel-item active event-box">
+          <div class="row">
+            <div class="col-md-5" *ngFor="let event of events">
+              <div class="card " style="width: 614px; height: auto;"  *ngIf="event.id === 1 || event.id === 2">
+                <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
+                <div class="card-body">
+                  <h1 class="titre-event">{{event.title}}</h1>
+                  <p>{{event.mini_body}}<a href="#" class="text-info "> ...Voir plus</a></p>
+                  <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                  <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div>
+                      <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                    </div>   
+                  <h5 class="payant-prix">{{event.prix}} DT</h5>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item event-box">
+          <div class="row">
+            <div class="col-md-5" *ngFor="let event of events">
+              <div class="card " style="width: 614px; height: auto;"  *ngIf="event.id === 4 || event.id === 5">
+                <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
+                <div class="card-body">
+                  <h1 class="titre-event">{{event.title}}</h1>
+                  <p>{{event.mini_body}}<a href="#" class="text-info "> ...Voir plus</a></p>
+                  <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                  <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div>
+                      <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                    </div>   
+                  <h5 class="payant-prix">{{event.prix}}</h5>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <br><br>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  
+  </div>
+  <!-- fin test1 -->
+   <br><br>
+   <h2 class="titre5" >Nos partenaires</h2> 
+   <div class="img-partenaires">
+   <img src="../../assets/images/partenaire1.png" class="img-part-item" >
+   <img src="../../assets/images/partenaire2.png" class="img-part-item">
+   <img src="../../assets/images/partenaire3.png" class="img-part-item">
+   <img src="../../assets/images/partenaire4.png" class="img-part-item">
+   <img src="../../assets/images/partenaire5.png" class="img-part-item">
+  </div>
+  <app-footer></app-footer>
+  </body>

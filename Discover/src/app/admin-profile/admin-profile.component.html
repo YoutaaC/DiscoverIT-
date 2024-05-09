@@ -1,0 +1,158 @@
+<body>
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="accueil" class="logo d-flex align-items-center">
+          <img src="./../../assets/images/logo_icone.png" class="logo-icone">
+          <span class="d-none d-lg-block">DiscoverIT</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div>
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+  
+         
+          <li class="nav-item dropdown pe-3">
+            <div *ngIf="currentUser">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="adminProfile" >
+              <img src="./../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block ps-2">{{currentUser.username}}</span>
+            </a>
+          </div>
+        </ul>
+      </nav>
+  
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="adminDashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-heading">Fonctionnalitées</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="adminUser">
+            <i class="fa-solid fa-users"></i>
+            <span>User</span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="adminEvent">
+              <i class="fa-solid fa-shapes"></i>
+              <span>Evenement</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="adminActu">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Actualité</span>
+            </a>
+          </li>
+        <li class="nav-heading">Profile</li>
+        <li class="nav-item">
+          <a class="nav-link " href="adminProfile">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="messageAdmin">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="signin">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span (click)="logout()">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main id="main" class="main">
+  
+      <div class="pagetitle">
+        <h1>Profile</h1>
+      </div>
+      <section class="section profile">
+        <div class="row">
+          <div class="col-xl-4">
+  
+            <div class="card">
+              <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+  
+                <img src=";/../../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                <div *ngIf="currentUser">
+                <h2>{{currentUser.firstName}} {{currentUser.lastName}}</h2>
+                <h3 class="pseudo-profile">{{currentUser.username}}</h3>
+              </div>
+
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="col-xl-8">
+  
+            <div class="card">
+              <div class="card-body pt-3">
+                <div class="tab-content pt-2">
+  
+                  <div class="tab-pane fade show active profile-overview" id="profile-overview">
+  
+                    <h5 class="card-title">Profile Details</h5>
+                      <br>
+                      <div *ngIf="currentUser">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label ">Nom</div>
+                      <div class="col-lg-9 col-md-8  info-profile">{{currentUser.firstName}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Prenom</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.lastName}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Pseudo</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.username}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Email</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.email}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Telephone</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.tel}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Password</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.password}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label">Date de creation</div>
+                      <div class="col-lg-9 col-md-8 info-profile">{{currentUser.creationDate}}</div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <br><br><br><br><br>
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        &copy; Copyright <strong><span>DiscoverIT</span></strong>. All Rights Reserved 2024
+      </div>
+    </footer>
+  </body>

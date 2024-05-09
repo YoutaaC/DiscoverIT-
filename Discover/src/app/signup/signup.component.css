@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    min-height: 100vh; 
+    width: 100%;
+    padding: 51px;
+    background-image: url(./../../assets/images/Desktop-9_1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+    display: flex;
+    align-items: start; 
+  }
+  
+  .form-box {
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54));
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(30px);
+    width: 560px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-left: 150px; 
+  }
+  
+  .button-box {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    line-height: 26px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: white;
+    margin-top: 41px;
+    display: flex;
+    border: 2px solid #AC8DF7;
+    border-radius: 40px;
+    
+  }
+  
+  .formu {
+    margin: 41px 0;
+  }
+  
+  .toggle-btn1{
+    padding: 10px 40px; 
+    margin: 0 ;
+    background-color: #AC8DF7;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 40px 0 0 40px;
+
+
+  }
+
+  .toggle-btn2 {
+    padding: 10px 40px; 
+    margin: 0;
+    background-color: white;
+    border: #AC8DF7;
+    color: #AC8DF7;
+    cursor: pointer;
+    border-radius: 0 40px 40px 0;
+
+  }
+
+  
+  .formu input[type="text"],
+  .formu input[type="password"] {
+    border: 0;
+    background: white;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 15px 15px 12px;
+    width: 370px;
+    height: auto;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+  }
+  
+  .sumbmit-btn {
+    border: 0;
+    background: #AC8DF7;
+    color: white;
+    display: block;
+    padding: 15px 40px;
+    border-radius: 10px;
+    width: 100%; 
+    align-items: center; 
+    border: 2px solid #AC8DF7;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+
+  }
+  
+  input::placeholder {
+    text-align: left;
+  }
+
+.warning-icon{
+  width: 25px;
+  height: auto;
+}
+
+.warning-div{
+  margin: 5px 0 5px 0;
+  color: #660909;
+}
+
+.buttonModal{
+  margin: 5px;
+  padding: 5px;
+}
+form:invalid{
+  border: 2px solid red;
+}

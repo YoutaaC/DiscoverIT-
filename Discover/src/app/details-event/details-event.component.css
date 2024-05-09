@@ -1,0 +1,58 @@
+body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/FHome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+    color: white;
+ 
+  }
+
+  .row{
+    margin: 200px;
+    justify-content: space-around;
+  }
+  .reserver-btn{
+    border-radius: 32px;
+    background-color: #AC8DF7;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    padding: 9px 16px; 
+    margin-top: 10px;
+  }
+  .calendrier-mail-btn{
+    border-radius: 32px;
+    background-color: #42E5E1;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    padding: 9px 16px; 
+      
+  }
+  .icon-event{
+    color: white;
+    font-size: 30px;
+    margin: 8px 10px 8px 0px;
+  }
+  .box{
+    display: flex;
+  }
+  .box1{
+    background: #00264D;
+    color: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    padding: 23px 18px;
+  }
+  .box2{
+    background: #00264D;
+    color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 23px 18px;
+  }
+  .img-p1{
+    margin: 3px;
+  }

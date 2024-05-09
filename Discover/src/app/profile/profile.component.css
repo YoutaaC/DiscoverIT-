@@ -1,0 +1,224 @@
+:root {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/FHome.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+    color: white;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #42E5E1;
+    text-decoration: none;
+  }
+
+  .pagetitle {
+    margin-bottom: 10px;
+  }
+  .pagetitle h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  /*Main*/
+  #main {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 20px 30px;
+    transition: all 0.3s;
+  }
+  @media (max-width: 1199px) {
+    #main {
+      padding: 20px;
+    }
+  }
+  
+  /* Sidebar*/
+  .sidebar {
+    position: fixed;
+    top: 65px;
+    left: 20px;
+    bottom: 70px;
+    width: 300px;
+    z-index: 996;
+    transition: all 0.3s;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    box-shadow: 0px 0px 20px rgba(11, 97, 245, 0.1);
+    background-color: #8D74CD;
+    border-radius: 20px;
+    height: 650px;
+  }  
+ 
+  .sidebar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background: transparent;
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #aab7cf;
+  }
+  @media (min-width: 1200px) {
+  
+    #main {
+      margin-left: 300px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .toggle-sidebar .sidebar {
+      left: 0;
+    }
+  }
+  @media (min-width: 1200px) {
+  
+    .toggle-sidebar #main {
+      margin-left: 0;
+    }
+    .toggle-sidebar .sidebar {
+      left: -300px;
+    }
+  }
+  .sidebar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .sidebar-nav li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .sidebar-nav .nav-item {
+    margin-bottom: 5px;
+  }
+  .sidebar-nav .nav-heading {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #899bbd;
+    font-weight: 600;
+    margin: 10px 0 5px 15px;
+  }
+  .sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.3;
+    background-color: #120E25;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+  .sidebar-nav .nav-link i {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #42E5E1;
+  }
+  .sidebar-nav .nav-link.collapsed {
+    color: #ffffff;
+    background: transparent;
+  }
+  .sidebar-nav .nav-link.collapsed i {
+    color: #ffffff;
+  }
+  .sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: #120E25;
+  }
+  .sidebar-nav .nav-link:hover i {
+    color: #42E5E1;
+  }
+  .sidebar-nav .nav-link .bi-chevron-down {
+    margin-right: 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
+    transform: rotate(180deg);
+  }
+  .sidebar-nav .nav-content {
+    padding: 5px 0 0 0;
+    margin: 0;
+    list-style: none;
+  }
+  .sidebar-nav .nav-content a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.3;
+    padding: 10px 0 10px 40px;
+    transition: 0.3s;
+  }
+  .sidebar-nav .nav-content a i {
+    font-size: 6px;
+    margin-right: 8px;
+    line-height: 0;
+    border-radius: 50%;
+  }
+  .sidebar-nav .nav-content a:hover,
+  .sidebar-nav .nav-content a.active {
+    color: #32839B;
+    
+  }
+  .sidebar-nav .nav-content a.active i {
+    background: transparent;
+  }
+  .card{
+ 
+    background-color: #00264D;
+    border-radius: 30px;
+    color: white;
+    padding: 20px;
+    margin: 9px;
+    width: 350px;
+    height: 470px;
+  }
+  .img-card{
+    border-radius: 30px;
+    
+  }
+  .pdp{
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    border: #42E5E1 solid 3px;
+    margin-bottom: 5px;
+}
+.pdp2{
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  border: #42E5E1 solid 3px;
+  margin-bottom: 5px;
+}
+  .pagetitle{
+    margin-left: 80px;
+  }
+  .section-profile{
+    margin-left: 50px; 
+  }
+  .btn-voirplus{
+    background-color:#02C1BA;
+    color: white;
+    border-radius: 32px;
+    padding: 7px 16px 9px 16px;
+  }
+
+  .div-P1{
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  hr{
+    border: #A4A4A4 solid 1px;
+  }
