@@ -1,4 +1,91 @@
 <body>
     <app-navbar></app-navbar>
-
-</body>
+    <aside id="sidebar" class="sidebar">
+          <div class="text-center ">
+          <img src="./../../assets/img/profile-img.jpg" class="pdp">
+          <p style="font-size: 18px; font-weight: bold;">Pseudo</p>
+      </div>
+      <hr>
+          <ul class="sidebar-nav" id="sidebar-nav">
+    
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="profile">
+                  <i class="fa-solid fa-user"></i>
+                <span>Mon compte</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="UserProfileUpdate">
+                  <i class="fa-solid fa-pen"></i>
+                <span>Modifier le profil</span>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="UserProfileforgotPassword">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Modifier le mot de passe</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="favoris">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Favoris</span>
+                </a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link " href="historiqueReservationn">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <span>Historique des réservations</span>
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="historiqueLikess">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                <span >Historique des j’aimes</span>
+              </a>
+            </li>
+            <br><br>  <br>
+        <br>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="">
+            <i class="fa-solid fa-arrow-right-from-bracket pp"></i>
+            <span (click)="logout()">Se déconnecter</span>
+          </a>
+        </li>
+          </ul>
+      
+        </aside>
+        <main id="main" class="main">
+          <div class="pagetitle">
+            
+            <h1 style="font-size: 25px;">Historique des j’aimes</h1> 
+                
+          </div>
+       
+          <section class="section-profile">
+            <div *ngFor="let event of events">
+                <span class="type-hr" ><hr></span>
+                <br>
+                <div class="row event-card">
+                    <div class="col-5 img-event">
+                    <img src="./../../assets/images/eventexmp.png" class="img-event">
+                    </div>
+                    <div class="col-4 disc-event">
+                      <div class="title-part justify-content-between d-flex ">
+                        <h2 class="title-event-part" >{{event.title}}</h2>
+                        <h2 class="payant-event-part" >{{event.prix}}DT</h2>
+                       </div>
+                        <p class="mini-body-part">{{event.mini_body}}</p>
+                        <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}} &nbsp;{{event.mois_debut}} &nbsp;{{event.annee_debut}}</p>
+                          <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                          <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                      
+                    </div>
+                  </div>
+                </div>
+  <br><br><br>
+    </section>
+        </main>  
+  </body>
+  
