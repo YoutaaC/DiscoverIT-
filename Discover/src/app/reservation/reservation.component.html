@@ -12,27 +12,28 @@
                 <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
                 <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
               </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <br>
                 <div>
                   <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
-                  <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.prix}}</p>
+                  <p><i class="fa-solid fa-sack-dollar icon-event"></i>{{event.prix}}</p>
                 </div>
           </div>
           <br>
             <h4 class="title">-Informations personnelles</h4>
 <!-- saisir le nom -->
                 <label for="nom">Nom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="firstName">
+                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="currentUser.firstName">
  <!-- saisir le prenom -->
                 <label for="prenom">Prenom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="lastName">
+                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName">
 <!-- saisir l'email -->
                 <label for="email">Email<b style="color: #A60707;">*</b></label>
-                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="email">
+                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="currentUser.email">
 <!-- saisir le telephone -->
                 <label for="tel">Num de téléphone<b style="color: #A60707;">*</b></label>
                 <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="test" 
-                maxlength="8" [(ngModel)]="tel">
+                maxlength="8" [(ngModel)]="currentUser.tel">
 
                 <h4 class="title">-Informations de réservation</h4>
                 <label for="nbr-pkace">Nombre  de places:</label><input type="number" min="0" class="nbrPlace " placeholder=""><br>
@@ -51,9 +52,9 @@
               </form>    
           </div>
         </div>
-        <div *ngIf="qrCode">
+        <!-- <div *ngIf="qrCode">
           <img [src]="qrCode" alt="QR Code">
-        </div>  
+        </div>   -->
         <br><br>
         <app-footer></app-footer>
         </body>

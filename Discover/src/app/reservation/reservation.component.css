@@ -1,17 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-  }
 
   body {
     width: 100%;
     height: auto;
-    background-image: url(./../../assets/images/eventFond.png);
+    background-image: url(./../../assets/images/FHome.png);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative; 
-
+    color: white;
+ 
   }
   
   .form-box {
@@ -198,4 +194,5 @@ label{
 .icon-event{
   color: white;
   font-size: 25px;
+  margin-right: 10px;
 }

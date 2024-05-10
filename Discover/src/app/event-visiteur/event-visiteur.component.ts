@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { EventService } from '../event.service';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
-import { Event } from '../models/event.model';
 import { VisiteurService } from '../visiteur.service';
-import { EventService } from '../event.service';
+import { Event } from '../models/event.model';
 
 @Component({
-  selector: 'app-evenement',
-  templateUrl: './evenement.component.html',
-  styleUrls: ['./evenement.component.css']
+  selector: 'app-event-visiteur',
+  templateUrl: './event-visiteur.component.html',
+  styleUrls: ['./event-visiteur.component.css']
 })
-export class EvenementComponent {
-
+export class EventVisiteurComponent {
   events: Event[] = [];
   accessToken!: any;
   currentUser!: User;
@@ -46,14 +45,11 @@ export class EvenementComponent {
     this.isOpen = !this.isOpen;
   }
 
-  gotoReservation(id :number) {
-    this.router.navigate(["/reservation",id])
-  }
-
-  gotoDetailsEvent(id :number) {
-    this.router.navigate(["/detailsEvent",id])
+  gotoSignup() {
+    this.router.navigate(["/signup"])
   }
 
 
-  
+
+
 }

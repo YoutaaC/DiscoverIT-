@@ -40,6 +40,10 @@ import { ForumComponent } from './forum/forum.component';
 import { HistoriqueReservationComponent } from './historique-reservation/historique-reservation.component';
 import { HistoriqueLikesComponent } from './historique-likes/historique-likes.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
+import { ActuVisiteurComponent } from './actu-visiteur/actu-visiteur.component';
+import { EventVisiteurComponent } from './event-visiteur/event-visiteur.component';
+import { AboutVisiteurComponent } from './about-visiteur/about-visiteur.component';
+import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,11 @@ import { QrcodeComponent } from './qrcode/qrcode.component';
     ForumComponent,
     HistoriqueReservationComponent,
     HistoriqueLikesComponent,
-    QrcodeComponent
+    QrcodeComponent,
+    ActuVisiteurComponent,
+    EventVisiteurComponent,
+    AboutVisiteurComponent,
+    ContactVisiteurComponent
     ],
   imports: [
     BrowserModule,

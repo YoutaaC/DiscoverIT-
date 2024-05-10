@@ -5,7 +5,7 @@ import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 import { UserService } from '../user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ZXingLibrary } from '@zxing/library';
+
 declare var $:any;
 @Component({
   selector: 'app-reservation',
@@ -21,21 +21,11 @@ export class ReservationComponent implements OnInit{
   currentId! :number;
 
 
-  user: {
-    firstname: string;
-    lastname: string;
-    email: string;
-    tel: string;
-  } = {
-    firstname: '',
-    lastname: '',
-    email: '',
-    tel: ''
-  };
 
-  qrCode: string;
+
+  // qrCode: string;
   
-  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private fb: FormBuilder,private zxing: ZXingLibrary ){}
+  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private fb: FormBuilder ){}
   
   ngOnInit(): void {
     this.eventId=+this.route.snapshot.paramMap.get('id')!;
@@ -66,12 +56,11 @@ export class ReservationComponent implements OnInit{
   
 
   generateQrCode() {
-    const data = `Firstname: ${this.user.firstname}, Lastname: ${this.user.lastname}, Email: ${this.user.email}, Phone Number: ${this.user.tel}`;
-    this.zxing.encode(data, 'QR_CODE', 200, 200).then((result) => {
-      this.qrCode = result;
-    });
+    
   }
    
+
+
 
   // onSubmit() {
   //   if (this.myForm.valid) {

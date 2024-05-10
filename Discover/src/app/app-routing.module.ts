@@ -30,6 +30,10 @@ import { ForumComponent } from './forum/forum.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 import { HistoriqueLikesComponent } from './historique-likes/historique-likes.component';
 import { HistoriqueReservationComponent } from './historique-reservation/historique-reservation.component';
+import { AboutVisiteurComponent } from './about-visiteur/about-visiteur.component';
+import { ActuVisiteurComponent } from './actu-visiteur/actu-visiteur.component';
+import { EventVisiteurComponent } from './event-visiteur/event-visiteur.component';
+import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -53,7 +57,7 @@ const routes: Routes = [
   {path:'adminEvent',component:AdminEventComponent},
   {path:'messageAdmin',component:MessagesComponent},
   {path:'reservation/:id',component:ReservationComponent},
-  {path:'detailsEvent',component:DetailsEventComponent},
+  {path:'detailsEvent/:id',component:DetailsEventComponent},
   {path:'UserProfileUpdate',component:UpdateUserProfilComponent},
   {path:'forgotPassword',component:ForgotPasswordComponent},
   {path:'UserProfileforgotPassword',component:ProfileForgotPasswordComponent},
@@ -61,7 +65,14 @@ const routes: Routes = [
   {path:'forum',component:ForumComponent},
   {path:'qrCodeee',component:QrcodeComponent},
   {path:'historiqueLikess',component:HistoriqueLikesComponent},
-  {path:'historiqueReservationn',component:HistoriqueReservationComponent}
+  {path:'historiqueReservationn',component:HistoriqueReservationComponent},
+  {path:'V_aboutUs',component:AboutVisiteurComponent},
+  {path:'V_actu',component:ActuVisiteurComponent},
+  {path:'V_event',component:EventVisiteurComponent},
+  {path:'V_contact',component:ContactVisiteurComponent}
+
+
+
   
 ];
 

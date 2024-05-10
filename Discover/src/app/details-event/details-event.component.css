@@ -10,7 +10,7 @@ body {
   }
 
   .row{
-    margin: 200px;
+    margin: 30px 20px 20px 20px;
     justify-content: space-around;
   }
   .reserver-btn{
@@ -55,4 +55,7 @@ body {
   }
   .img-p1{
     margin: 3px;
+  }
+  .part2{
+    padding: 0;
   }

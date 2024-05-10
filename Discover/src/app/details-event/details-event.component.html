@@ -5,14 +5,13 @@
           <img src="./../../assets/images/Rectangle 66.png">
         </div>
         <div class="col-4 part2">
-            <h2 class="title">salon : ....</h2>
-            <p class="body_event">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam enim odit nesciunt ab minima, voluptates dolor sequi autem repellat. 
-                Officia aliquam debitis laboriosam quod veniam corporis iusto cumque deleniti delectus?</p>
-                <span class="itemms-event"><i class="fa-regular fa-calendar icon-event"></i>calender</span><br>
-                <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>time</span><br>
-                <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>location</span><br>
-              <span class="itemms-event"><i class="fa-solid fa-sack-dollar icon-event"></i>money</span><br>
-                <button class="reserver-btn" (click)="gotoReservation()">Réserver</button> &nbsp; <button class="calendrier-mail-btn">Ajouter au calendrier</button>
+            <h2 class="title">{{event.type}} : {{event.title}}</h2>
+            <p class="body_event">{{event.body}}</p>
+                <span class="itemms-event"><i class="fa-regular fa-calendar icon-event"></i> de {{event.jour_debut}} {{event.mois_debut}} {{event.annee_debut}} à {{event.date_fin}}</span><br>
+                <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</span><br>
+                <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</span><br>
+              <span class="itemms-event"><i class="fa-solid fa-sack-dollar icon-event"></i>{{event.prix}}</span><br>
+                <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn">Ajouter au calendrier</button>
                 <div class="box">
                     <div class="box1">
                         <p>Organisateur:</p> 

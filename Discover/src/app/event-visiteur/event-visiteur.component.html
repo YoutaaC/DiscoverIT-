@@ -1,5 +1,5 @@
 <body>
-    <app-navbar></app-navbar>
+    <app-nav-visiteur></app-nav-visiteur>
     <header>
         <div class="row align-items-center">
             <div class="col-6 first-part" >
@@ -61,11 +61,11 @@
             <h2 class="title-event-part" >{{event.title}}</h2>
             <h2 class="payant-event-part" >{{event.prix}}DT</h2>
            </div>
-            <p class="mini-body-part">{{event.mini_body}} <a href="#" (click)="gotoDetailsEvent(event.id)" class="text-Voir-plus">...  Voir plus</a></p>
+            <p class="mini-body-part">{{event.mini_body}} </p>
             <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}} &nbsp;{{event.mois_debut}} &nbsp;{{event.annee_debut}}</p>
               <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
               <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
-            <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn">Ajouter au calendrier</button>
+            <button class="reserver-btn" (click)="gotoSignup()">Réserver</button> &nbsp; <button class="calendrier-mail-btn" (click)="gotoSignup()">Ajouter au calendrier</button>
         </div>
       </div>
     </div>
@@ -90,5 +90,4 @@
         </div>
       </div>
       <app-footer></app-footer>
-    </body>
-    
+ </body>

@@ -20,8 +20,7 @@ body {
 .marque{
   background-image: url(./../../assets/images/Asset.png);
   background-repeat: no-repeat;
-  opacity: 0; /* Initialement invisible */
-  animation: typing 4s ease-in-out forwards;
+  
 }
 .sous-titre{
   color: #B4B4B4;
@@ -117,10 +116,7 @@ margin-bottom: 6px;
 
 
 }
-@keyframes typing {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+
 
 .titre4,.titre5{
   text-align: start;
@@ -329,14 +325,7 @@ width: 24px;
 height: 24px;
 margin-right: 12px;
 }
-/* .like {
-font-size: 24px;
-cursor: pointer;
-}
-.partage {
-font-size: 24px;
-cursor: pointer;
-} */
+
 #btn_like, #btn_partage{
    text-decoration: none;
    background-color: transparent;
@@ -451,10 +440,7 @@ cursor: pointer;
   font-size: 25px;
  
 }
-/* .react{
-  padding-top: 10px;
-  padding-right: 10px;
-}  */
+
 
 .dropdown-button {
   text-align: left;
