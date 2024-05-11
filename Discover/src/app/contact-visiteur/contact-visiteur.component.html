@@ -21,7 +21,7 @@
           <div class="formu">
             <form  [formGroup]="forminput">
                   <label for="nom">Nom<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="nom" placeholder="  Entrer votre nom" formControlName="nom" name="nom" >
+                  <input type="text" id="nom" placeholder="  Entrer votre nom" formControlName="nom" name="nom" [(ngModel)]="newContact.nomUser">
     
                   <div class="warning-div"
                   *ngIf="!forminput.pristine && forminput.controls['nom'].errors?.['required']">
@@ -31,7 +31,7 @@
     <!-- saisir le prenom -->
             <form  [formGroup]="forminput1">
                   <label for="prenom">Prenom<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="prenom" formControlName="prenom" placeholder="  Entrer votre prenom" name="prenom" >
+                  <input type="text" id="prenom" formControlName="prenom" placeholder="  Entrer votre prenom" name="prenom"  [(ngModel)]="newContact.prenomUser">
     
                   <div class="warning-div"
                   *ngIf="!forminput1.pristine && forminput1.controls['prenom'].errors?.['required']">
@@ -41,7 +41,7 @@
     <!-- saisir l'email -->
             <form  [formGroup]="forminput2">
                   <label for="email">Email<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="email" placeholder="  Entrer votre email" formControlName="email" name="email"  >
+                  <input type="text" id="email" placeholder="  Entrer votre email" formControlName="email" name="email"  [(ngModel)]="newContact.emailUser">
     
                   <div class="warning-div"
                   *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['required']">
@@ -56,7 +56,7 @@
 
             <form  [formGroup]="forminput3">
                 <label for="objet">Objet<b style="color: #FF0000;">*</b></label>
-                <input type="text" id="objet" placeholder="  Entrer votre objet" formControlName="objet" name="objet" >
+                <input type="text" id="objet" placeholder="  Entrer votre objet" formControlName="objet" name="objet" [(ngModel)]="newContact.objet">
   
                 <div class="warning-div"
                 *ngIf="!forminput3.pristine && forminput3.controls['objet'].errors?.['required']">
@@ -68,13 +68,13 @@
         <form [formGroup]="forminput5">
                   <label for="message">Message<b style="color: #FF0000;">*</b></label><br>
                   <!-- <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"  formControlName="pseudo" > -->
-                  <textarea name="message" id="message" cols="43" rows="10"  placeholder="   Entrer votre message" formControlName="message" class="form-message"></textarea><br>
+                  <textarea name="message" id="message" cols="43" rows="10"  placeholder="   Entrer votre message" formControlName="message" class="form-message" [(ngModel)]="newContact.message"></textarea><br>
                   <div class="warning-div"
                   *ngIf="!forminput5.pristine && forminput5.controls['message'].errors?.['required']">
                   &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Message
                   </div>
     
-                  <button type="submit" class="sumbmit-btn" [disabled]="forminput.invalid" [disabled]="forminput1.invalid" [disabled]="forminput2.invalid" [disabled]="forminput3.invalid" [disabled]="forminput5.invalid" >Réserver</button>
+                  <button type="submit" class="sumbmit-btn" (click)="createContact()" [disabled]="forminput.invalid" [disabled]="forminput1.invalid" [disabled]="forminput2.invalid" [disabled]="forminput3.invalid" [disabled]="forminput5.invalid" >Réserver</button>
                 </form>   
             </div>
      </div>
@@ -93,4 +93,20 @@
      </div>
      </div>
  </body>
+
+ <div class="modal fade" id="addModal">
+    <div class="modal-dialog m-3">
+      <div class="modal-content">
+        <div class="modal-header m-3">
+          <h5 class="modal-title">Contact Us</h5>
+        </div>
+        <div class="modal-body m-2">
+          <p>Message envoyer avec succée !</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary buttonModal" (click)="closeAddContact()">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
     
