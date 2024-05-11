@@ -103,6 +103,7 @@ export class ContactVisiteurComponent {
 
   closeAddContact(){
     $('#addModal').modal('hide');
+    window.location.reload();
     
   }
 }
