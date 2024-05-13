@@ -54,6 +54,8 @@ export class HomeComponent {
 
 
   isFavori1 = false;
+  isFavori2 = false;
+
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -130,9 +132,16 @@ export class HomeComponent {
 
 
   get FavIconClass1() {
-    return this.isFavori1 ? 'fa-regular fa-heart icon-favoris' : 'fa-regular fa-heart icon-fav';
+    return this.isFavori1 ? 'fa-solid fa-heart icon-favoris' : 'fa-regular fa-heart icon-fav';
   }
   toggleFav1() {
     this.isFavori1 = !this.isFavori1; 
+  }
+
+  get FavIconClass2() {
+    return this.isFavori2 ? 'fa-solid fa-heart icon-favoris' : 'fa-regular fa-heart icon-fav';
+  }
+  toggleFav2() {
+    this.isFavori2 = !this.isFavori2; 
   }
 }

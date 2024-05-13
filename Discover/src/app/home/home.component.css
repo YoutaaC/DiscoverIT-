@@ -445,9 +445,6 @@ margin-right: 12px;
  margin-left: -30px;
  margin-top: -5px;
 }
-
-
-
 .dropdown-button {
   text-align: left;
   position: absolute;
@@ -482,7 +479,7 @@ margin-right: 12px;
   
 }
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: block; 
 }
 .titre-event{
   font-size: 20px;

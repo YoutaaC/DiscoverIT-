@@ -202,32 +202,39 @@ hr{
 
 .img-anim1 {
   position: absolute;
-  margin-top: 277px;
-  margin-left: 850px;
-
-  /* Animation properties */
-  animation: rotate2 10s linear infinite; /* Adjust values as needed */
+  margin-top: -370px;
+  margin-left: 70px;
+  animation: rotate2 2s linear infinite; 
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
-  to { transform: rotate(360deg); } /* Rotate 360 degrees */
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); } 
 }
 
 @keyframes rotate2 {
-  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
-  to { transform: rotate(-360deg); } /* Rotate 360 degrees */
+  from { transform: rotate(0deg); } 
+  to { transform: rotate(-360deg); } 
 }
 .img-anim2{
   position: absolute;
-  margin-top: 60px;
-  margin-left: 900px;
-  /* Animation properties */
-  animation: rotate 5s linear infinite;
+  margin-top: -40px;
+  margin-left: 500px;
+  animation: rotate 6s linear infinite;
 }
 .img-anim3{
   position: absolute;
-  margin-top: 20px;
-  margin-left: 980px;
-  animation: rotate 3s linear infinite; 
+  margin-top: -370px;
+  margin-left: 450px;
+  animation: rotate 8s linear infinite; 
 } 
+.cmpl{
+  color: white;
+  background-color: #00264D;
+  border: none;
+  border-radius: 32px;
+  padding: 13px 16px;
+  position: absolute;
+  margin-top: -330px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
