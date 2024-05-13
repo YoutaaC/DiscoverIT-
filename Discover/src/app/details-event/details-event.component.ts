@@ -5,6 +5,7 @@ import { UserService } from '../user.service';
 import { EventService } from '../event.service';
 import { User } from '../models/user.model';
 import { Event } from '../models/event.model';
+import { MailService } from '../mail.service';
 
 declare var $:any;
 @Component({
@@ -22,7 +23,11 @@ export class DetailsEventComponent {
   currentId! :number;
 
   
-  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private router : Router){}
+// body = `Cet événement aura lieu à ${event.lieu} de ${event.jour_debut} ${event.mois_debut} ${event.annee_debut} jusqu'au ${event.date_fin} à partir de ${event.time}. Soyez les bienvenus!`;
+
+
+
+  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private router : Router, private mailService:MailService){}
   
   ngOnInit(): void {
     this.eventId=+this.route.snapshot.paramMap.get('id')!;
@@ -48,6 +53,16 @@ export class DetailsEventComponent {
   }
   gotoReservation(id :number) {
     this.router.navigate(["/reservation",id])
+  }
+
+
+  sendMail(file: File[], to: string, cc: string[], subject: string, body: string) {
+    this.mailService.sendMail(file, to, cc, subject, body)
+      .subscribe(response => {
+        console.log('Email sent successfully:', response);
+      }, error => {
+        console.error('Error sending email:', error);
+      });
   }
   
 }

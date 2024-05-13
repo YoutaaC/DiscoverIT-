@@ -5,6 +5,7 @@ import { User } from '../models/user.model';
 import { EventService } from '../event.service';
 import { VisiteurService } from '../visiteur.service';
 import { Event } from '../models/event.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
@@ -18,7 +19,14 @@ export class AccueilComponent implements OnInit{
   currentUser!: User;
   accessToken!: any;
 
+  buttonText1 = 'Suivre';
+  buttonText2 = 'Suivre';
+  buttonText3 = 'Suivre';
 
+  isLiked1 = false;
+  isLiked2 = false;
+  isLiked3 = false;
+ 
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -37,7 +45,7 @@ export class AccueilComponent implements OnInit{
   }
 
   
-  constructor(private visiteurService: VisiteurService) {}
+  constructor(private visiteurService: VisiteurService, private router:Router) {}
 
   getAllPosts(): void {
     this.visiteurService.getAllPosts().subscribe(psts => {
@@ -53,5 +61,42 @@ export class AccueilComponent implements OnInit{
     }, error => {
       console.error('Error fetching events:', error);
     });
+  }
+
+  onClick1() {
+    this.buttonText1 = 'Suivi(e)';
+  }
+  onClick2() {
+    this.buttonText2 = 'Suivi(e)';
+  }
+  onClick3() {
+    this.buttonText3 = 'Suivi(e)';
+  }
+  goToActu(){
+    this.router.navigate(["/V_actu"]) 
+  }
+  goToEvent(){
+    this.router.navigate(["/V_event"]) 
+  }
+
+  get likeIconClass1() {
+    return this.isLiked1 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike1() {
+    this.isLiked1 = !this.isLiked1; 
+  }
+
+  get likeIconClass2() {
+    return this.isLiked2 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike2() {
+    this.isLiked2 = !this.isLiked2; 
+  }
+
+  get likeIconClass3() {
+    return this.isLiked3 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike3() {
+    this.isLiked3 = !this.isLiked3; 
   }
 }

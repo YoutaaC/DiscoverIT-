@@ -16,15 +16,15 @@
            <h1 class="title">Plongez dans l'univers de la technologie avec <span class="marque">DiscoverIT</span></h1>
            <p class="text-secondary"  >Actualités IT, discussions passionnantes, réservations d'événements  <br> technologiques et tout ce dont vous avez besoin, au même endroit.</p>
            <div class="btn-header d-flex ">
-           <button class=" discover-btn">Découvrir</button> &nbsp;&nbsp;
-            <button class="btn reserve-top-btn">Réserver</button>
+           <button class=" discover-btn" (click)="goToActu()">Découvrir</button> &nbsp;&nbsp;
+            <button class="btn reserve-top-btn" (click)="goToEvent()">Réserver</button>
           </div>
         </div>
   </div>
 </header>
    <div class="title-part justify-content-between d-flex ">
    <h2 class="titre2" >Derniére actualité</h2>
-   <button class="btn-decouvrir-title">Découvrir</button>  
+   <button class="btn-decouvrir-title" (click)="goToActu()">Découvrir</button>  
   </div>
    <br>
    <br><br>
@@ -43,7 +43,7 @@
            </div>
            </div>
            <div class="suivre">
-               <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+            <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText1" (click)="onClick1()">{{ buttonText1 }}</button>
            </div>
        </div>
        <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
@@ -55,9 +55,19 @@
          <p class="card-text">{{post.mini_body}}</p>
          <div class="btns">
          <button class="btn voirplus-btn">Voir Plus</button>
-         <div class="react">
-         <img src="./../../assets/images/like.png" class="like">&nbsp;
-         <img src="./../../assets/images/send.png" class="partage">
+         <div class="react d-flex">
+          <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="dropdown">
+          <i class="fa-regular fa-share-from-square btn-share"></i>
+          <ul class="dropdown-content">
+            <div>
+              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                  <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                  <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                  <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+            </div>
+          </ul>
+        </div>
        </div>
        </div>
        </div>
@@ -74,7 +84,7 @@
                 </div>
                 </div>
                 <div class="suivre">
-                    <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+                  <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText2" (click)="onClick2()">{{ buttonText2 }}</button>
                 </div>
             </div>
             <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
@@ -86,14 +96,24 @@
               <p class="card-text">{{post.mini_body}}</p>
               <div class="btns">
               <button class="btn voirplus-btn">Voir Plus</button>
-              <div class="react">
-              <img src="./../../assets/images/like.png" class="like">&nbsp;
-              <img src="./../../assets/images/send.png" class="partage">
-            </div>
+              <div class="react d-flex">
+                <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+               <div class="dropdown">
+                <i class="fa-regular fa-share-from-square btn-share"></i>
+                <ul class="dropdown-content">
+                  <div>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                        <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                  </div>
+                </ul>
+              </div>
+             </div>
             </div>
             </div>
         </div>
-         <!-- card2 -->
+         <!-- card3 -->
          <div class="card"   *ngIf="post.id==3">
           <div class="part1-card">
               <div class="profile-part">
@@ -105,7 +125,7 @@
               </div>
               </div>
               <div class="suivre">
-                  <button type="button" class="btn btn-link btn-suivre">Suivre</button>
+                  <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText3" (click)="onClick3()">{{ buttonText3 }}</button>
               </div>
           </div>
           <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
@@ -117,10 +137,20 @@
             <p class="card-text">{{post.mini_body}}</p>
             <div class="btns">
             <button class="btn voirplus-btn">Voir Plus</button>
-            <div class="react">
-            <img src="./../../assets/images/like.png" class="like">&nbsp;
-            <img src="./../../assets/images/send.png" class="partage">
-          </div>
+            <div class="react d-flex">
+             <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+             <div class="dropdown">
+              <i class="fa-regular fa-share-from-square btn-share"></i>
+              <ul class="dropdown-content">
+                <div>
+                  <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                      <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                      <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                      <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                </div>
+              </ul>
+            </div>
+           </div>
           </div>
           </div>
       </div>
@@ -175,7 +205,9 @@
             <div class="card " style="width: 614px; height: auto;"  *ngIf="event.id === 1 || event.id === 2">
               <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
               <div class="card-body">
-                <h1 class="titre-event">{{event.title}}</h1>
+                <div class="d-flex">
+                  <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav"><i class="fa-regular fa-heart icon-fav"></i></button>
+                </div>
                 <p>{{event.mini_body}}</p>
                 <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
                 <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
@@ -197,7 +229,9 @@
             <div class="card " style="width: 614px; height: auto;"  *ngIf="event.id === 4 || event.id === 5">
               <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
               <div class="card-body">
-                <h1 class="titre-event">{{event.title}}</h1>
+                <div class="d-flex">
+                <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav"><i class="fa-regular fa-heart icon-fav"></i></button>
+              </div>
                 <p>{{event.mini_body}}</p>
                 <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
                 <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>

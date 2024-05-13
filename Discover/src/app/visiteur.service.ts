@@ -29,7 +29,7 @@ export class VisiteurService {
     return this.httpClient.get<Post[]>(this.apiUrl + "getAllPosts", { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching users:', error);
+          console.error('Error fetching posts:', error);
           return throwError(error); 
         })
       );
@@ -49,7 +49,7 @@ export class VisiteurService {
     return this.httpClient.get<Event[]>(this.apiUrl + "getAllEvents", { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching users:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );

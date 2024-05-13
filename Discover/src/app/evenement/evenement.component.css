@@ -187,10 +187,14 @@ hr{
 }
 .title-event-part{
   font-size: 25px;
+  
 }
 .payant-event-part{
   font-size: 18px;
   color: #AC8DF7;
+  position: absolute;
+  margin-left: 500px;
+  
 }
 .text-Voir-plus{
   color: #42E5E1;

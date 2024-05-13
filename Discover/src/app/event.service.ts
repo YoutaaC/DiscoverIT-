@@ -29,7 +29,7 @@ export class EventService {
     return this.httpClient.get<Event[]>(this.apiUrl + "getAll", { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching users:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );
@@ -50,7 +50,7 @@ export class EventService {
     return this.httpClient.delete<any>(this.apiUrl + 'delete/'+id, { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching posts:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );
@@ -70,7 +70,7 @@ export class EventService {
     return this.httpClient.put<any>(this.apiUrl + 'update/'+id, event, { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching posts:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );
@@ -90,7 +90,7 @@ export class EventService {
     return this.httpClient.get<any>(this.apiUrl + 'getEventById/'+id, { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching posts:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );
@@ -110,7 +110,7 @@ export class EventService {
     return this.httpClient.post<any>(this.apiUrl + 'add', event, { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching posts:', error);
+          console.error('Error fetching events:', error);
           return throwError(error); 
         })
       );

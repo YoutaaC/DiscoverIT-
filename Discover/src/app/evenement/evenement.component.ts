@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
 import { VisiteurService } from '../visiteur.service';
 import { EventService } from '../event.service';
+import { MailService } from '../mail.service';
 
 @Component({
   selector: 'app-evenement',
@@ -30,7 +31,7 @@ export class EvenementComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router,private visiteurService: VisiteurService) {}
+  constructor(private eventService: EventService, private router: Router,private visiteurService: VisiteurService,private mailService: MailService) {}
 
   getAllEvents(): void {
     this.visiteurService.getAllEvents().subscribe(evtns => {
@@ -40,7 +41,7 @@ export class EvenementComponent {
     });
   }
 
-  isOpen = false; // Flag to track dropdown visibility
+  isOpen = false; //  track dropdown visibility
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
@@ -54,6 +55,14 @@ export class EvenementComponent {
     this.router.navigate(["/detailsEvent",id])
   }
 
+  sendMail(file: File[], to: string, cc: string[], subject: string, body: string) {
+    this.mailService.sendMail(file, to, cc, subject, body)
+      .subscribe(response => {
+        console.log('Email sent successfully:', response);
+      }, error => {
+        console.error('Error sending email:', error);
+      });
+  }
 
   
 }

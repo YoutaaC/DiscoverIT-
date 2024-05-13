@@ -437,9 +437,15 @@ margin-right: 12px;
 }
 
 .btn-like, .btn-share{
-  font-size: 25px;
+  font-size: 27px;
  
 }
+.btn-like{
+  position: absolute;
+ margin-left: -30px;
+ margin-top: -5px;
+}
+
 
 
 .dropdown-button {
@@ -477,4 +483,25 @@ margin-right: 12px;
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.titre-event{
+  font-size: 20px;
+}
+.btn-fav{
+  border: none;
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -30px;
+}
+
+.icon-fav{
+  font-size: 24px;
+  margin-top: 5px;
+}
+.icon-favoris{
+  font-size: 24px;
+  margin-top: 5px;
+  color: #D7443E;
 }

@@ -43,8 +43,17 @@ export class HomeComponent {
   events: Event[] = [];
   currentUser!: User;
   accessToken!: any;
+  
+  buttonText1 = 'Suivre';
+  buttonText2 = 'Suivre';
+  buttonText3 = 'Suivre';
+
+  isLiked1 = false;
+  isLiked2 = false;
+  isLiked3 = false;
 
 
+  isFavori1 = false;
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -81,7 +90,49 @@ export class HomeComponent {
     });
   }
 
-  gotoEvents(){
+  onClick1() {
+    this.buttonText1 = 'Suivi(e)';
+  }
+  onClick2() {
+    this.buttonText2 = 'Suivi(e)';
+  }
+  onClick3() {
+    this.buttonText3 = 'Suivi(e)';
+  }
+  goToActu(){
+    this.router.navigate(["/actualite"]) 
+  }
+  goToEvent(){
     this.router.navigate(["/event"]) 
+  }
+
+  get likeIconClass1() {
+    return this.isLiked1 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike1() {
+    this.isLiked1 = !this.isLiked1; 
+  }
+
+  get likeIconClass2() {
+    return this.isLiked2 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike2() {
+    this.isLiked2 = !this.isLiked2; 
+  }
+  
+  get likeIconClass3() {
+    return this.isLiked3 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  }
+  toggleLike3() {
+    this.isLiked3 = !this.isLiked3; 
+  }
+
+
+
+  get FavIconClass1() {
+    return this.isFavori1 ? 'fa-regular fa-heart icon-favoris' : 'fa-regular fa-heart icon-fav';
+  }
+  toggleFav1() {
+    this.isFavori1 = !this.isFavori1; 
   }
 }
