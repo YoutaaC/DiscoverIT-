@@ -3,6 +3,7 @@ import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 import { AuthenticationService } from '../authentication.service';
 import { User } from '../models/user.model';
+import Swal from 'sweetalert2'
 declare var $:any;
 @Component({
   selector: 'app-create-event',
@@ -35,7 +36,6 @@ export class CreateEventComponent {
 constructor(private eventService: EventService,private autService:AuthenticationService){}
 
 
-//add new post :
 newEvent: any = {
   id:-1,
   title:"",
@@ -62,20 +62,31 @@ EventToAdd!:Event;
       this.eventService.createEvent(this.newEvent)
         .subscribe(createdEvent => {
           console.log('Post added successfully:', createdEvent);
-          $('#addModal').modal('show');
+          Swal.fire({
+            title: "success",
+            text: "Post added successfully",
+            icon: "success"
+          });
         }, error => {
           console.error('Error adding Event:', error);
+          Swal.fire({
+            title: "Error !",
+            text: "Error adding Event",
+            icon: "error"
+          });
         });
     } else {
       console.error('Title and body are required.');
+      Swal.fire({
+        title: "???",
+        text: "Title and body are required",
+        icon: "warning"
+      });
     }
   }
 
 
-closeAddEvent(){
-  $('#addModal').modal('hide');
-  
-}
+
 }
 
 
