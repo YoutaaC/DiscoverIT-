@@ -55,25 +55,25 @@ export class UserService {
 
     //delete User with username function
 
-  deleteUser(username:string): Observable<User> {
-    const accessToken = this.authService.getAccessToken();
-
-    if (!accessToken) {
-      throw new Error('Access token not found.'); 
+    deleteUser(username:String): Observable<any> {
+      const accessToken = this.authService.getAccessToken();
+  
+      if (!accessToken) {
+        throw new Error('Access token not found.'); 
+      }
+      console.log(accessToken);
+      const headers = new HttpHeaders({
+        "Authorization": "Bearer " + accessToken
+      });
+  
+      return this.httpClient.delete<any>(this.apiUrl + "delete/"+username, { headers })
+        .pipe(
+          catchError(error => {
+            console.error('Error fetching users:', error);
+            return throwError(error); 
+          })
+        );
     }
-    console.log(accessToken);
-    const headers = new HttpHeaders({
-      "Authorization": "Bearer " + accessToken
-    });
-
-    return this.httpClient.delete<User>(this.apiUrl + "delete/"+username, { headers })
-      .pipe(
-        catchError(error => {
-          console.error('Error fetching users:', error);
-          return throwError(error); 
-        })
-      );
-  }
 
 
 // update user

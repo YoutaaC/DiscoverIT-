@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -52,30 +52,62 @@ password:String="";
   }
 
 
-  login(): void {
-    const loginData = {
-      username: this.username,
-      password: this.password
-    };
-  this.userService.login(loginData)
-    .subscribe(user => {
-      if (user) {
-        console.log('Login successful');
+//   login(): void {
+//     const loginData = {
+//       username: this.username,
+//       password: this.password
+//     };
+//   this.userService.login(loginData)
+//     .subscribe(user => {
+//       if (user) {
+//         console.log('Login successful');
 
-        if (this.username == 'admin' && this.password == 'admin') {  
-          this.router.navigate(['/adminDashboard']);
-        } else {
-          this.router.navigate(['/home']); 
-        }
+//         if (this.username == 'admin' && this.password == 'admin') {  
+//           this.router.navigate(['/adminDashboard']);
+//         } else {
+//           this.router.navigate(['/home']); 
+//         }
 
-        localStorage.setItem('accessToken', JSON.stringify(user)); 
-        localStorage.setItem('isLoggedIn', 'true');
+//         localStorage.setItem('accessToken', JSON.stringify(user)); 
+//         localStorage.setItem('isLoggedIn', 'true');
+//       } else {
+//         console.log('Invalid username or password');
+//       }
+//     }, error => {
+//       console.error('Error occurred during login:', error);
+//     });
+// }
+
+login(): void {
+  const loginData = {
+    username: this.username,
+    password: this.password
+  };
+this.userService.login(loginData)
+  .subscribe(user => {
+    if (user) {
+      console.log('Login successful');
+
+      if (this.username == 'admin' && this.password == 'admin') {  
+        this.router.navigate(['/adminDashboard']);
       } else {
-        console.log('Invalid username or password');
+        this.router.navigate(['/home']); 
       }
-    }, error => {
-      console.error('Error occurred during login:', error);
+
+      localStorage.setItem('accessToken', JSON.stringify(user)); 
+      localStorage.setItem('isLoggedIn', 'true');
+    } else {
+      console.log('Invalid username or password');
+      
+    }
+  }, error => {
+    console.error('Error occurred during login:', error);
+    Swal.fire({
+      title: "Problème  de Connection !",
+      text: "Invalid username or password",
+      icon: "info"
     });
+  });
 }
 
 

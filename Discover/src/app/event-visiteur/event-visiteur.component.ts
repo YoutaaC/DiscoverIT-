@@ -39,7 +39,7 @@ export class EventVisiteurComponent {
     });
   }
 
-  isOpen = false; // Flag to track dropdown visibility
+  isOpen = false; 
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;

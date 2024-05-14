@@ -4,6 +4,8 @@ import { PostService } from '../post.service';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import Swal from 'sweetalert2'
+
 declare var $:any;
 @Component({
   selector: 'app-admin-actu',
@@ -14,6 +16,7 @@ export class AdminActuComponent implements OnInit {
   currentUser!: User;
   posts: Post[] = [];
   users: User[] = [];
+  postToDelete!: Post;
   accessToken!:any;
   showOkButton: boolean = true;
   ngOnInit(): void {
@@ -48,26 +51,46 @@ export class AdminActuComponent implements OnInit {
   updatePost(id :number){
     this.router.navigate(["/updatePost",id])
   }
-  PostToDelete!:Post;
-  confirmDelete(post:Post){
-    $('#deleteModal').modal('show');
-    this.PostToDelete=post;
+  confirmDelete(post: Post) {
+    this.postToDelete = post;
+    Swal.fire({
+      title: 'Êtes-vous sûr de vouloir supprimer cette publication?',
+ 
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#32839B',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'Annuler'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.postService.deletePost(this.postToDelete.id)
+          .subscribe((response) => {
+            console.log('Deleted:', response); 
+            Swal.fire('Deleted!', 'Post deleted successfully.', 'success');
+           
+          }, (error) => {
+            console.error('Error deleting post:', error);
+            Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+          });
+      }
+    });
   }
 
-  closeDelete(){
-    $('#deleteModal').modal('hide');
-    window.location.reload();
-  }
-  deletePost()
-  {
-    this.postService.deletePost(this.PostToDelete.id)
-    .subscribe(() =>{
-      console.log("deleted")
-      $('#deleteModal').modal('hide');
-      window.location.reload();
+  // closeDelete(){
+  //   $('#deleteModal').modal('hide');
+  //   window.location.reload();
+  // }
+  // deletePost()
+  // {
+  //   this.postService.deletePost(this.PostToDelete.id)
+  //   .subscribe(() =>{
+  //     console.log("deleted")
+  //     $('#deleteModal').modal('hide');
+  //     window.location.reload();
   
-    })
-  }
+  //   })
+  // }
   onOkButtonClick(post: Post) {
     post.isConfirmed = true;
   }

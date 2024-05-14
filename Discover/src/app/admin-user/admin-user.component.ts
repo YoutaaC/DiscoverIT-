@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 declare var $:any;
 @Component({
   selector: 'app-admin-user',
@@ -13,6 +14,7 @@ export class AdminUserComponent implements OnInit{
   currentUser!: User;
   accessToken!: any;
 
+  userToDelete!: User;
 
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
@@ -41,37 +43,34 @@ export class AdminUserComponent implements OnInit{
     });
   }
 
+confirmDelete(user: User) {
+  this.userToDelete = user;
 
-  UserToDelete!:User;
-  confirmDelete(user:User)
-  {
+  Swal.fire({
+    title: 'Are you sure you want to delete this user?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#32839B',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'Cancel'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.userService. deleteUser(this.userToDelete.username)
+        .subscribe((response) => {
+          console.log('Deleted:', response);                                       
+          Swal.fire('Deleted!', 'User deleted successfully.', 'success');
+          
+        }, (error) => {
+          console.error('Error deleting user:', error);
+          Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+          
+        });
+    }
+  });
+}
   
-  $('#deleteModal').modal('show');
-  this.UserToDelete=user;
-  
-  
-  }
-  
-  closeDelete()
-  {
-    $('#deleteModal').modal('hide');
-    window.location.reload();
-  
-  }
 
-
-
-  deleteUser()
-  {
-    this.userService.deleteUser(this.UserToDelete.username)
-    .subscribe(() =>{
-      console.log("deleted")
-      $('#deleteModal').modal('hide');
-      window.location.reload();
-  
-    })
-  
-  }
 
 
   updateUser(id :number)
@@ -91,4 +90,7 @@ export class AdminUserComponent implements OnInit{
     window.location.reload();
     this.router.navigate(["/signin"])
   }
+
+
+  
 }

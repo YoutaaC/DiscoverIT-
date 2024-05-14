@@ -111,8 +111,7 @@
         <td>{{user.creationDate | date: 'dd/MM/yyyy' }}</td>
         <td><button class="btn  modif-btn text-light" (click)="updateUser(user.id)">Modifier</button>&nbsp; &nbsp;
           <button class="btn delete-btn text-light" (click)="confirmDelete(user)">Supprimer</button>
-        </td>
-        
+        </td> 
       </tr>
     </tbody>
   </table>
@@ -123,22 +122,4 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
   </body>
 
-  <div class="modal fade" id="deleteModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirmation</h5>
-        </div>
-        <div class="modal-body">
-          <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
-  
-        </div>
-        <div class="modal-footer">
-  <button class="btn btn-secondary" (click)="closeDelete()">No</button>
-  <button class="btn btn-danger" (click)="deleteUser()" >Yes</button>     
-  </div>    
-      </div>
-  
-    </div>
-  </div>
  
