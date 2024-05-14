@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from '../models/post.model';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2'
 declare var $:any;
 @Component({
   selector: 'app-update-post',
@@ -28,26 +29,32 @@ export class UpdatePostComponent {
   }
   
   
-  confirmeModif(){
-    $('#updateModal').modal('show');
+  confirmUpdate() { 
+    Swal.fire({
+      title: 'Are you sure you want to update this post?', 
   
-  }
-  
-  closeModif()
-  {
-    $('#updateModal').modal('hide');
-  
-  }
-  
-  updatePost(){
-  if(this.post){
-    this.postService.updatePostPut(this.postId,this.post).subscribe(updatePost=>
-      {
-        console.log("Update",updatePost)
-        $('#updateModal').modal('hide');
-  
-      })
-  }
-  
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, update it!', 
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if (this.post) { 
+          this.postService.updatePostPut(this.postId, this.post)
+            .subscribe(updatedPost => {
+              console.log('Updated Post:', updatedPost); 
+              Swal.fire('Updated!', 'Post updated successfully.', 'success');
+             
+            }, (error) => {
+              console.error('Error updating post:', error);
+              Swal.fire('Error!', 'An error occurred during update.', 'error');
+            });
+        } else {
+          console.error('No post data to update!'); 
+        }
+      }
+    });
   }
 }

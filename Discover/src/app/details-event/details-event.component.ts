@@ -22,9 +22,6 @@ export class DetailsEventComponent {
   currentUser!: User;
   currentId! :number;
 
-  
-// body = `Cet événement aura lieu à ${event.lieu} de ${event.jour_debut} ${event.mois_debut} ${event.annee_debut} jusqu'au ${event.date_fin} à partir de ${event.time}. Soyez les bienvenus!`;
-
 
 
   constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private router : Router, private mailService:MailService){}

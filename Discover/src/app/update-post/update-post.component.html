@@ -26,28 +26,12 @@
                 <label for="imgpost">image du post</label><br>
                 <input type="file" id="imgpost" name="imgpost" >
 
-                <button type="submit" class="sumbmit-btn" (click)="confirmeModif()">Modifier</button>
+                <button type="submit" class="sumbmit-btn" (click)="confirmUpdate()">Modifier</button>
                 <a href="adminActu" class="btn btn-link retour-btn">Retour</a>
               </form>    
           </div>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br>
         </body>
-  
-        <div class="modal fade" id="updateModal">
-          <div class="modal-dialog m-3">
-            <div class="modal-content">
-              <div class="modal-header m-3">
-                <h5 class="modal-title">Update Confirmation</h5>
-              </div>
-              <div class="modal-body m-2">
-                <p>Êtes-vous certain de vouloir effectuer des modifications sur cette actualité ?</p>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-secondary buttonModal" (click)="closeModif()">Non</button>
-                <button class="btn btn-danger buttonModal" (click)="updatePost()">Oui</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
   

@@ -4,6 +4,7 @@ import { UserService } from '../user.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../models/user.model';
 import { EventService } from '../event.service';
+import Swal from 'sweetalert2'
 declare var $:any;
 @Component({
   selector: 'app-update-event',
@@ -30,26 +31,34 @@ export class UpdateEventComponent {
   }
   
   
-  confirmUpdate(){
-    $('#updateModal').modal('show');
-  
+  confirmUpdate() {
+    Swal.fire({
+      title: 'Are you sure you want to update this event?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, update it!', 
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if (this.event) { 
+          this.eventService.updateEventPut(this.eventId, this.event)
+            .subscribe(updatedEvent => {
+              console.log('Updated Event:', updatedEvent); 
+              Swal.fire('Updated!', 'Event updated successfully.', 'success');
+              
+            }, (error) => {
+              console.error('Error updating event:', error);
+              Swal.fire('Error!', 'An error occurred during update.', 'error');
+            });
+        } else {
+          console.error('No event data to update!'); 
+        }
+      }
+    });
   }
   
-  closeUpdate()
-  {
-    $('#updateModal').modal('hide');
-  
-  }
-  
-  updateEvent(){
-  if(this.event){
-    this.eventService.updateEventPut(this.eventId,this.event).subscribe(updateEvent=>
-      {
-        console.log("Update",updateEvent)
-        $('#updateModal').modal('hide');
-  
-      })
-  }
-  
-  }
+
+
 }

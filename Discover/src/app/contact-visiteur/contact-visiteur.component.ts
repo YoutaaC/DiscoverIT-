@@ -94,7 +94,6 @@ export class ContactVisiteurComponent {
           console.log('Message added successfully:', createdContact);
           Swal.fire({
             title: "Message envoyer avec succée !",
-            
             icon: "success"
           });
         }, error => {
