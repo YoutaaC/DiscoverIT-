@@ -5,7 +5,7 @@ import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 import { UserService } from '../user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import Swal from 'sweetalert2';
 declare var $:any;
 @Component({
   selector: 'app-reservation',
@@ -51,14 +51,19 @@ export class ReservationComponent implements OnInit{
   }
 
 
-
-
-  
-
-  generateQrCode() {
-    
+  afficheQR(){
+    Swal.fire({
+      icon: "success",
+      title: "Réservation confirmée !",
+      text: "Votre réservation a été confirmée.",
+      imageUrl: "./../../assets/images/Reservation.png",
+      imageWidth: 300,
+      imageHeight: 300,
+      imageAlt: "QR Code"
+    });
   }
-   
+
+
 
 
 

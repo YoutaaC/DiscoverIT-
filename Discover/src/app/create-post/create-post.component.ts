@@ -3,6 +3,7 @@ import { Post } from '../models/post.model';
 import { PostService } from '../post.service';
 import { User } from '../models/user.model';
 import { AuthenticationService } from '../authentication.service';
+import Swal from 'sweetalert2'
 declare var $:any;
 @Component({
   selector: 'app-create-post',
@@ -39,16 +40,23 @@ PostToAdd!:Post;
       this.postService.createPosts(this.newPost)
         .subscribe(createdPost => {
           console.log('Post added successfully:', createdPost);
-          $('#addModal').modal('show');
+          Swal.fire({
+            title: "success",
+            text: "Post added successfully",
+            icon: "success"
+          });
         }, error => {
           console.error('Error adding post:', error);
+          Swal.fire({
+            title: "Error !",
+            text: "Error adding Event",
+            icon: "error"
+          });
         });
     } else {
       console.error('Title and body are required.');
+     
     }
   }
-closeAddPost(){
-  $('#addModal').modal('hide');
-  window.location.reload();
-}
+
 }

@@ -4,7 +4,7 @@
       <div class="form-box">
           
             <div class="formu">
-          <form (ngSubmit)="generateQrCode()">
+          <form >
             <h2 class="title-salon text-capitalize">{{event.type}}:&nbsp;&nbsp;<span class="title-NameEvent">{{event.title}}</span> </h2>
             <br>
             <div class="d-flex " style="color: white;">
@@ -47,14 +47,12 @@
                 <input type="radio" name="mm"><span class="money-radio">&nbsp;D17</span><br>
                 <input type="radio" name="mm"><span class="money-radio">&nbsp;Cash</span><br>
                 <br><br>
-                <button type="submit" class="sumbmit-btn"  >Réserver</button>
-                <!-- (click)="genererQRCode()" -->
+                <button type="submit" class="sumbmit-btn" (click)="afficheQR()" >Réserver</button>
+              
               </form>    
           </div>
         </div>
-        <!-- <div *ngIf="qrCode">
-          <img [src]="qrCode" alt="QR Code">
-        </div>   -->
+     
         <br><br>
         <app-footer></app-footer>
         </body>

@@ -61,10 +61,10 @@ EventToAdd!:Event;
     if (this.newEvent.title && this.newEvent.body && this.newEvent.type) {
       this.eventService.createEvent(this.newEvent)
         .subscribe(createdEvent => {
-          console.log('Post added successfully:', createdEvent);
+          console.log('Event added successfully:', createdEvent);
           Swal.fire({
             title: "success",
-            text: "Post added successfully",
+            text: "Event added successfully",
             icon: "success"
           });
         }, error => {
@@ -77,11 +77,7 @@ EventToAdd!:Event;
         });
     } else {
       console.error('Title and body are required.');
-      Swal.fire({
-        title: "???",
-        text: "Title and body are required",
-        icon: "warning"
-      });
+      
     }
   }
 
