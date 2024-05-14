@@ -101,11 +101,16 @@ export class HomeComponent {
   onClick3() {
     this.buttonText3 = 'Suivi(e)';
   }
+
+
   goToActu(){
     this.router.navigate(["/actualite"]) 
   }
   goToEvent(){
     this.router.navigate(["/event"]) 
+  }
+  goToAboutUs(){
+    this.router.navigate(["/apropos"]) 
   }
 
   get likeIconClass1() {
@@ -143,5 +148,18 @@ export class HomeComponent {
   }
   toggleFav2() {
     this.isFavori2 = !this.isFavori2; 
+  }
+
+
+  gotoReservation(id :number) {
+    this.router.navigate(["/reservation",id])
+  }
+
+  gotoDetailsEvent(id :number) {
+    this.router.navigate(["/detailsEvent",id])
+  }
+
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
   }
 }

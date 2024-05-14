@@ -44,6 +44,8 @@ import { ActuVisiteurComponent } from './actu-visiteur/actu-visiteur.component';
 import { EventVisiteurComponent } from './event-visiteur/event-visiteur.component';
 import { AboutVisiteurComponent } from './about-visiteur/about-visiteur.component';
 import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
+import { DetailsPostComponent } from './details-post/details-post.component';
+import { FooterVisiteurComponent } from './footer-visiteur/footer-visiteur.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +87,9 @@ import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.co
     ActuVisiteurComponent,
     EventVisiteurComponent,
     AboutVisiteurComponent,
-    ContactVisiteurComponent
+    ContactVisiteurComponent,
+    DetailsPostComponent,
+    FooterVisiteurComponent
     ],
   imports: [
     BrowserModule,

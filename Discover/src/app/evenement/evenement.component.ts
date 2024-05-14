@@ -41,7 +41,7 @@ export class EvenementComponent {
     });
   }
 
-  isOpen = false; //  track dropdown visibility
+  isOpen = false; 
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;

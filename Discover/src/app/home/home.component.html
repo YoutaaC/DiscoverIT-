@@ -54,7 +54,7 @@
          <h5 class="title-desc">{{post.title}}</h5>
          <p class="card-text">{{post.mini_body}}</p>
          <div class="btns">
-         <button class="btn voirplus-btn">Voir Plus</button>
+         <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
          <div class="react d-flex">
           <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
          <div class="dropdown">
@@ -95,7 +95,7 @@
               <h5 class="title-desc">{{post.title}}</h5>
               <p class="card-text">{{post.mini_body}}</p>
               <div class="btns">
-              <button class="btn voirplus-btn">Voir Plus</button>
+              <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
               <div class="react d-flex">
                 <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
                <div class="dropdown">
@@ -136,7 +136,7 @@
             <h5 class="title-desc">{{post.title}}</h5>
             <p class="card-text">{{post.mini_body}}</p>
             <div class="btns">
-            <button class="btn voirplus-btn">Voir Plus</button>
+            <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
             <div class="react d-flex">
              <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
              <div class="dropdown">
@@ -175,7 +175,7 @@
           <img src="./../../assets/images/btn check.png" class="img-li"><li>Forums de Discussion</li>
         </div>
         </ul>
-        <button class="details-avantage-btn">Plus de détails <img src="./../../assets/images/flech-btn.png" class="arrow-up-right"></button>
+        <button class="details-avantage-btn" (click)="goToAboutUs()">Plus de détails <img src="./../../assets/images/flech-btn.png" class="arrow-up-right"></button>
   </div>
       <div class="col-2 part2-avantage">
         <img src="./../../assets/images/mra.png" class="img-avantage">
@@ -214,7 +214,7 @@
                   <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                   <div class="d-flex justify-content-between align-items-center ">
                     <div>
-                      <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                      <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event"  (click)="gotoDetailsEvent(event.id)">Voir plus</button> 
                     </div>   
                   <h5 class="payant-prix">{{event.prix}} DT</h5>
                 </div>
@@ -238,7 +238,7 @@
                   <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                   <div class="d-flex justify-content-between align-items-center ">
                     <div>
-                      <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                      <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="gotoDetailsEvent(event.id)">Voir plus</button> 
                     </div>   
                   <h5 class="payant-prix">{{event.prix}}</h5>
                 </div>

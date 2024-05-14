@@ -43,7 +43,7 @@
            </div>
            </div>
            <div class="suivre">
-            <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText1" (click)="onClick1()">{{ buttonText1 }}</button>
+            <button type="button" class="btn btn-link btn-suivre" (click)="gotoSignup()">Suivre</button>
            </div>
        </div>
        <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
@@ -54,7 +54,7 @@
          <h5 class="title-desc">{{post.title}}</h5>
          <p class="card-text">{{post.mini_body}}</p>
          <div class="btns">
-         <button class="btn voirplus-btn">Voir Plus</button>
+         <button class="btn voirplus-btn" (click)="gotoSignup()">Voir Plus</button>
          <div class="react d-flex">
           <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
          <div class="dropdown">
@@ -84,7 +84,7 @@
                 </div>
                 </div>
                 <div class="suivre">
-                  <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText2" (click)="onClick2()">{{ buttonText2 }}</button>
+                  <button type="button" class="btn btn-link btn-suivre" (click)="gotoSignup()">Suivre</button>
                 </div>
             </div>
             <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
@@ -95,7 +95,7 @@
               <h5 class="title-desc">{{post.title}}</h5>
               <p class="card-text">{{post.mini_body}}</p>
               <div class="btns">
-              <button class="btn voirplus-btn">Voir Plus</button>
+              <button class="btn voirplus-btn" (click)="gotoSignup()">Voir Plus</button>
               <div class="react d-flex">
                 <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
                <div class="dropdown">
@@ -125,7 +125,7 @@
               </div>
               </div>
               <div class="suivre">
-                  <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText3" (click)="onClick3()">{{ buttonText3 }}</button>
+                <button type="button" class="btn btn-link btn-suivre" (click)="gotoSignup()">Suivre</button>
               </div>
           </div>
           <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
@@ -136,7 +136,7 @@
             <h5 class="title-desc">{{post.title}}</h5>
             <p class="card-text">{{post.mini_body}}</p>
             <div class="btns">
-            <button class="btn voirplus-btn">Voir Plus</button>
+            <button class="btn voirplus-btn" (click)="gotoSignup()">Voir Plus</button>
             <div class="react d-flex">
              <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
              <div class="dropdown">
@@ -175,7 +175,7 @@
         <img src="./../../assets/images/btn check.png" class="img-li"><li>Forums de Discussion</li>
       </div>
       </ul>
-      <button class="details-avantage-btn">Plus de détails <img src="./../../assets/images/flech-btn.png" class="arrow-up-right"></button>
+      <button class="details-avantage-btn" (click)="goToAboutUs()">Plus de détails <img src="./../../assets/images/flech-btn.png" class="arrow-up-right"></button>
 </div>
     <div class="col-2 part2-avantage">
       <img src="./../../assets/images/mra.png" class="img-avantage">
@@ -186,7 +186,7 @@
 <br>
 <div class="title-part justify-content-between d-flex" >
   <h2 class="titre4" >Prochaines événements</h2>
-  <button class="btn-decouvrir-title">Découvrir</button> 
+  <button class="btn-decouvrir-title" (click)="goToEvent()">Découvrir</button> 
   </div>
 <br>
 <!-- event slider -->
@@ -214,7 +214,7 @@
                 <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                 <div class="d-flex justify-content-between align-items-center ">
                   <div>
-                    <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                    <button class="reserver-btn" (click)="gotoSignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="gotoSignup()">Voir plus</button> 
                   </div>   
                 <h5 class="payant-prix">{{event.prix}} DT</h5>
               </div>
@@ -238,7 +238,7 @@
                 <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                 <div class="d-flex justify-content-between align-items-center ">
                   <div>
-                    <button class="reserver-btn">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                    <button class="reserver-btn" (click)="gotoSignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="gotoSignup()">Voir plus</button> 
                   </div>   
                 <h5 class="payant-prix">{{event.prix}}</h5>
               </div>
@@ -272,6 +272,6 @@
  <img src="../../assets/images/partenaire4.png" class="img-part-item">
  <img src="../../assets/images/partenaire5.png" class="img-part-item">
 </div>
-<app-footer></app-footer>
+<app-footer-visiteur></app-footer-visiteur>
 </body>
 

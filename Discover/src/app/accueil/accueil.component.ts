@@ -19,9 +19,6 @@ export class AccueilComponent implements OnInit{
   currentUser!: User;
   accessToken!: any;
 
-  buttonText1 = 'Suivre';
-  buttonText2 = 'Suivre';
-  buttonText3 = 'Suivre';
 
   isLiked1 = false;
   isLiked2 = false;
@@ -63,21 +60,21 @@ export class AccueilComponent implements OnInit{
     });
   }
 
-  onClick1() {
-    this.buttonText1 = 'Suivi(e)';
-  }
-  onClick2() {
-    this.buttonText2 = 'Suivi(e)';
-  }
-  onClick3() {
-    this.buttonText3 = 'Suivi(e)';
-  }
+
+
   goToActu(){
     this.router.navigate(["/V_actu"]) 
   }
   goToEvent(){
     this.router.navigate(["/V_event"]) 
   }
+  goToAboutUs(){
+    this.router.navigate(["/V_aboutUs"]) 
+  }
+  gotoSignup(){
+    this.router.navigate(['signup']);
+  }
+
 
   get likeIconClass1() {
     return this.isLiked1 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
@@ -99,4 +96,7 @@ export class AccueilComponent implements OnInit{
   toggleLike3() {
     this.isLiked3 = !this.isLiked3; 
   }
+
+
+
 }

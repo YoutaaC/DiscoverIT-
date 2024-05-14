@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Contact } from '../models/contact.model';
 import { User } from '../models/user.model';
 import { MessageService } from '../message.service';
+import Swal from 'sweetalert2';
 declare var $:any;
 @Component({
   selector: 'app-contact',
@@ -91,18 +92,18 @@ export class ContactComponent {
       this.messageService.createContact(this.newContact)
         .subscribe(createdContact => {
           console.log('Message added successfully:', createdContact);
-          $('#addModal').modal('show');
+          Swal.fire({
+            title: "Message envoyer avec succée !",
+            
+            icon: "success"
+          });
         }, error => {
-          console.error('Error adding Event:', error);
+          console.error('Error adding Contact:', error);
+          Swal.fire('Error!', 'An error occurred during deletion.', 'error');
         });
     } else {
       console.error('Title and body are required.');
     }
   }
 
-  closeAddContact(){
-    $('#addModal').modal('hide');
-    window.location.reload();
-    
-  }
 }

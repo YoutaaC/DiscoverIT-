@@ -1,0 +1,27 @@
+hr{
+    width: 1136px;;
+
+}
+.copyright{
+    margin-left: 49px;
+    margin-right: 149px;
+    font-size: 14px;
+    color: #B4B4B4;
+}
+
+h6{
+    text-decoration: underline 2px;
+}
+footer{
+    margin-left: 150px;
+}
+
+section{
+    margin-left: -180px;
+}
+.icon-rs{
+ width: 40px;
+}
+.icon-info{
+    width: 25px;
+}

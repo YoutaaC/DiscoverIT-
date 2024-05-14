@@ -64,9 +64,6 @@ export class ReservationComponent implements OnInit{
   }
 
 
-
-
-
   // onSubmit() {
   //   if (this.myForm.valid) {
   //     // Extract data from the form

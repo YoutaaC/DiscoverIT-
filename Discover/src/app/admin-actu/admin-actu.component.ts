@@ -77,20 +77,7 @@ export class AdminActuComponent implements OnInit {
     });
   }
 
-  // closeDelete(){
-  //   $('#deleteModal').modal('hide');
-  //   window.location.reload();
-  // }
-  // deletePost()
-  // {
-  //   this.postService.deletePost(this.PostToDelete.id)
-  //   .subscribe(() =>{
-  //     console.log("deleted")
-  //     $('#deleteModal').modal('hide');
-  //     window.location.reload();
-  
-  //   })
-  // }
+
   onOkButtonClick(post: Post) {
     post.isConfirmed = true;
   }

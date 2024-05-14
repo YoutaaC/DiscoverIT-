@@ -34,6 +34,7 @@ import { AboutVisiteurComponent } from './about-visiteur/about-visiteur.componen
 import { ActuVisiteurComponent } from './actu-visiteur/actu-visiteur.component';
 import { EventVisiteurComponent } from './event-visiteur/event-visiteur.component';
 import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
+import { DetailsPostComponent } from './details-post/details-post.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -69,11 +70,9 @@ const routes: Routes = [
   {path:'V_aboutUs',component:AboutVisiteurComponent},
   {path:'V_actu',component:ActuVisiteurComponent},
   {path:'V_event',component:EventVisiteurComponent},
-  {path:'V_contact',component:ContactVisiteurComponent}
-
-
-
-  
+  {path:'V_contact',component:ContactVisiteurComponent},
+  {path:'detailsPost/:id',component:DetailsPostComponent}
+ 
 ];
 
 @NgModule({

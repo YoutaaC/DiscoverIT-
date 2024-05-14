@@ -33,7 +33,7 @@ export class SignupComponent {
       .subscribe(newUser => {
         console.log('User registered successfully:', newUser);
         Swal.fire({
-          title: ">L'ajout de l'utilisateur a été effectué avec succès!",
+          title: "L'ajout de l'utilisateur a été effectué avec succès!",
           icon: "success"
         });
       }, error => {
@@ -41,7 +41,7 @@ export class SignupComponent {
         Swal.fire({
           title: "Problème  de signUp !",
           text: "User deja existant",
-          icon: "info"
+          icon: "warning"
         });
       });
   }
