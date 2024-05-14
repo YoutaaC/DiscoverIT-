@@ -4,7 +4,7 @@ import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
 import { VisiteurService } from '../visiteur.service';
-
+import Swal from 'sweetalert2'
 declare var $:any;
 
 @Component({
@@ -16,7 +16,7 @@ export class AdminEventComponent {
   events: Event[] = [];
   accessToken!: any;
   currentUser!: User;
-
+  eventToDelete!: Event | null;
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -45,21 +45,39 @@ export class AdminEventComponent {
    }
 
   EventToDelete!:Event;
-  confirmDelete(event:Event)
-  {
-  
-  $('#deleteModal').modal('show');
-  this.EventToDelete=event;
-  
-  
+  confirmDelete(event: Event) {
+    this.eventToDelete = event; 
+
+    Swal.fire({
+      title: 'Are you sure you want to delete this event?',
+      text: "This action cannot be undone!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if (!this.eventToDelete) {
+          console.error('No event selected for deletion!');
+          return; 
+        }
+
+        this.eventService.deleteEvent(this.eventToDelete.id)
+          .subscribe((response) => {
+            console.log('Deleted:', response); 
+            Swal.fire('Deleted!', 'Event deleted successfully.', 'success');
+            
+          }, (error) => {
+            console.error('Error deleting event:', error);
+            Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+          });
+      }
+    });
   }
   
-  closeDelete()
-  {
-    $('#deleteModal').modal('hide');
-    window.location.reload();
-  
-  }
+
 
   deleteEvent()  {
     this.eventService.deleteEvent(this.EventToDelete.id)

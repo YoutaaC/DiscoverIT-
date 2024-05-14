@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user.model';
 import { UserService } from '../user.service';
-
+import Swal from 'sweetalert2'
 declare var $:any;
 @Component({
   selector: 'app-signup',
@@ -20,7 +20,7 @@ export class SignupComponent {
     password:"",
     username:"",
     creationDate: new Date() ,
-    accessToken:"",// Set default to current date
+    accessToken:"",
   }
   
 
@@ -32,33 +32,20 @@ export class SignupComponent {
     this.userService.register(this.user)
       .subscribe(newUser => {
         console.log('User registered successfully:', newUser);
-        $('#ConfirmeModal').modal('show');
+        Swal.fire({
+          title: ">L'ajout de l'utilisateur a été effectué avec succès!",
+          icon: "success"
+        });
       }, error => {
         console.error('Error registering user:', error);
-        $('#dejaModal').modal('show');
+        Swal.fire({
+          title: "Problème  de signUp !",
+          text: "User deja existant",
+          icon: "info"
+        });
       });
   }
 
-    closeModal()
-  {
-    $('#ConfirmeModal').modal('hide');
-    window.location.reload();
-  
-  }
-
-  closedejaModal()
-  {
-    $('#dejaModal').modal('hide');
-    window.location.reload();
-  
-  }
-
-  closedisabledModal()
-  {
-    $('#disabledModal').modal('hide');
-    window.location.reload();
-  
-  }
   
   
   gotoSignin(){

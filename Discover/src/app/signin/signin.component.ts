@@ -51,33 +51,6 @@ password:String="";
     this.router.navigate(['signup']);
   }
 
-
-//   login(): void {
-//     const loginData = {
-//       username: this.username,
-//       password: this.password
-//     };
-//   this.userService.login(loginData)
-//     .subscribe(user => {
-//       if (user) {
-//         console.log('Login successful');
-
-//         if (this.username == 'admin' && this.password == 'admin') {  
-//           this.router.navigate(['/adminDashboard']);
-//         } else {
-//           this.router.navigate(['/home']); 
-//         }
-
-//         localStorage.setItem('accessToken', JSON.stringify(user)); 
-//         localStorage.setItem('isLoggedIn', 'true');
-//       } else {
-//         console.log('Invalid username or password');
-//       }
-//     }, error => {
-//       console.error('Error occurred during login:', error);
-//     });
-// }
-
 login(): void {
   const loginData = {
     username: this.username,
