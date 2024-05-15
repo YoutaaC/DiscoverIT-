@@ -8,8 +8,8 @@ import { AuthenticationService } from './authentication.service';
 })
 export class UserService {
 
-  private apiUrl="http://localhost:8080/user/"
-  private apiUrl1="http://localhost:8080/api/auth"
+  private apiUrl="http://localhost:8000/user/"
+  private apiUrl1="http://localhost:8000/api/auth"
 
 
   constructor(

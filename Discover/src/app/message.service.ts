@@ -9,7 +9,7 @@ import { Contact } from './models/contact.model';
 })
 export class MessageService {
 
-  private apiUrl="http://localhost:8080/Contactus/"
+  private apiUrl="http://localhost:8000/Contactus/"
   constructor(
     private httpClient: HttpClient,
     private authService: AuthenticationService 

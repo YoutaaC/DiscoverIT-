@@ -9,7 +9,7 @@ import { AuthenticationService } from './authentication.service';
 })
 export class PostService {
 
-  private apiUrl="http://localhost:8080/posts/"
+  private apiUrl="http://localhost:8000/posts/"
   constructor(
     private httpClient: HttpClient,
     private authService: AuthenticationService 
