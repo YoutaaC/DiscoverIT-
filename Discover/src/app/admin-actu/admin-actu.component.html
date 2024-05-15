@@ -108,8 +108,8 @@
         <td>{{post.title}}</td>
         <td>{{post.body}}</td>
         <td>{{post.mini_body}}</td>
-        <td>{{post.type}}</td>
-        <td>{{post.isConfirmed}}</td>
+        <td>{{post.type}}</td>  
+        <td style="color: #32839B;">{{post.isConfirmed}}</td>
         <!-- <td>{{post.creationDate | date: 'dd/MM/yyyy' }}</td> -->
         <td>
       <button mat-button *ngIf="!post.isConfirmed" class="btn text-light conf-btn" (click)="onOkButtonClick(post)">Confirmer</button>

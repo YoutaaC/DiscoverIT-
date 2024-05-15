@@ -10,10 +10,10 @@ import { QRCodeModule } from 'ngx-qrcode';
 })
 
 export class QrcodeComponent {
-  qrData: string = ''; // To receive data from the form component
+  qrData: string = ''; 
 
   onQrDataChange(event: Event) {
-    const data = (event as any).data; // Assuming the event object has a 'data' property
+    const data = (event as any).data;
     this.qrData = data;
   }
 }
