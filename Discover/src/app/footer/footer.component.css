@@ -1,10 +1,10 @@
-hr{
+/* hr{
     width: 1136px;;
 
-}
+} */
 .copyright{
-    margin-left: 49px;
-    margin-right: 149px;
+    /* margin-left: 500px; */
+    margin-left: 1000px;
     font-size: 14px;
     color: #B4B4B4;
 }
@@ -17,11 +17,17 @@ footer{
 }
 
 section{
-    margin-left: -180px;
+    margin-left: 10px;
 }
 .icon-rs{
  width: 40px;
 }
 .icon-info{
     width: 25px;
+}
+.logo{
+    width: 155px;
+    height: auto;
+    position: absolute;
+    margin-top: -15px;
 }
