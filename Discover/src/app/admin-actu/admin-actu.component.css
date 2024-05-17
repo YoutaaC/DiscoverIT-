@@ -425,6 +425,7 @@ background-color: #32839B;
 
 .table {
   background-color: transparent;
+  margin-top: 5px;
 }
 th, td {
   padding: 10px; 
@@ -447,3 +448,7 @@ th {
       width: 1160px; 
   }
 }
+/* .logo-icone{
+  width: 10px;
+  height: auto;
+} */
