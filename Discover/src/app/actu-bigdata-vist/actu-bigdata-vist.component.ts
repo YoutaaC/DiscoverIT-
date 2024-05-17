@@ -83,4 +83,7 @@ export class ActuBigdataVistComponent {
   actuai(){
     this.router.navigate(['V_actu/Ai']);
   }
+  actutechweb(){
+    this.router.navigate(['V_actu/Technologie Web']);
+  }
 }
