@@ -5,11 +5,11 @@ import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
 
 @Component({
-  selector: 'app-actu-securite-visit',
-  templateUrl: './actu-securite-visit.component.html',
-  styleUrls: ['./actu-securite-visit.component.css']
+  selector: 'app-actu-dev-visit',
+  templateUrl: './actu-dev-visit.component.html',
+  styleUrls: ['./actu-dev-visit.component.css']
 })
-export class ActuSecuriteVisitComponent {
+export class ActuDevVisitComponent {
   users: User[] = [];
   posts: Post[] = [];
   currentUser!: User;

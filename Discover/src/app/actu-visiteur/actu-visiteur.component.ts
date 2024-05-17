@@ -74,5 +74,10 @@ export class ActuVisiteurComponent {
   actutous(){
     this.router.navigate(['V_actu']);
   }
-
+  actusecurite(){
+    this.router.navigate(['V_actu/Securite']);
+  }
+  actudev(){
+    this.router.navigate(['V_actu/Developpement']);
+  }
 }

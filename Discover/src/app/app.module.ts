@@ -50,6 +50,14 @@ import { ActuBigdataComponent } from './actu-bigdata/actu-bigdata.component';
 import { ActuBigdataVistComponent } from './actu-bigdata-vist/actu-bigdata-vist.component';
 import { ActuSecuriteVisitComponent } from './actu-securite-visit/actu-securite-visit.component';
 import { ActuSecuriteComponent } from './actu-securite/actu-securite.component';
+import { ActuDevVisitComponent } from './actu-dev-visit/actu-dev-visit.component';
+import { ActuDevComponent } from './actu-dev/actu-dev.component';
+import { ActuAiVisitComponent } from './actu-ai-visit/actu-ai-visit.component';
+import { ActuAiComponent } from './actu-ai/actu-ai.component';
+import { ActuTechwebVisitComponent } from './actu-techweb-visit/actu-techweb-visit.component';
+import { ActuEcommerceVisitComponent } from './actu-ecommerce-visit/actu-ecommerce-visit.component';
+import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.component';
+import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
 
 
 @NgModule({
@@ -98,7 +106,15 @@ import { ActuSecuriteComponent } from './actu-securite/actu-securite.component';
     ActuBigdataComponent,
     ActuBigdataVistComponent,
     ActuSecuriteVisitComponent,
-    ActuSecuriteComponent
+    ActuSecuriteComponent,
+    ActuDevVisitComponent,
+    ActuDevComponent,
+    ActuAiVisitComponent,
+    ActuAiComponent,
+    ActuTechwebVisitComponent,
+    ActuEcommerceVisitComponent,
+    ActuEcommerceComponent,
+    ActuTechwebComponent
     ],
   imports: [
     BrowserModule,

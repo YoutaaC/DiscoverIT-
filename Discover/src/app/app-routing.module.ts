@@ -39,6 +39,14 @@ import { ActuBigdataVistComponent } from './actu-bigdata-vist/actu-bigdata-vist.
 import { ActuBigdataComponent } from './actu-bigdata/actu-bigdata.component';
 import { ActuSecuriteVisitComponent } from './actu-securite-visit/actu-securite-visit.component';
 import { ActuSecuriteComponent } from './actu-securite/actu-securite.component';
+import { ActuDevVisitComponent } from './actu-dev-visit/actu-dev-visit.component';
+import { ActuDevComponent } from './actu-dev/actu-dev.component';
+import { ActuAiVisitComponent } from './actu-ai-visit/actu-ai-visit.component';
+import { ActuAiComponent } from './actu-ai/actu-ai.component';
+import { ActuTechwebVisitComponent } from './actu-techweb-visit/actu-techweb-visit.component';
+import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
+import { ActuEcommerceVisitComponent } from './actu-ecommerce-visit/actu-ecommerce-visit.component';
+import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -79,7 +87,15 @@ const routes: Routes = [
   {path:'V_actu/BigData',component:ActuBigdataVistComponent},
   {path:'actualite/BigData',component:ActuBigdataComponent},
   {path:'V_actu/Securite',component:ActuSecuriteVisitComponent},
-  {path:'actualite/Securite',component:ActuSecuriteComponent}
+  {path:'actualite/Securite',component:ActuSecuriteComponent},
+  {path:'V_actu/Developpement',component:ActuDevVisitComponent},
+  {path:'actualite/Developpement',component:ActuDevComponent},
+  {path:'V_actu/Ai',component:ActuAiVisitComponent},
+  {path:'actualite/Ai',component:ActuAiComponent},
+  {path:'V_actu/Technologie Web',component:ActuTechwebVisitComponent},
+  {path:'actualite/Technologie Web',component:ActuTechwebComponent},
+  {path:'V_actu/E-commerce',component:ActuEcommerceVisitComponent},
+  {path:'actualite/E-commerce',component:ActuEcommerceComponent}
  
 ];
 
