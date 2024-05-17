@@ -46,6 +46,11 @@ import { AboutVisiteurComponent } from './about-visiteur/about-visiteur.componen
 import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
 import { DetailsPostComponent } from './details-post/details-post.component';
 import { FooterVisiteurComponent } from './footer-visiteur/footer-visiteur.component';
+import { ActuBigdataComponent } from './actu-bigdata/actu-bigdata.component';
+import { ActuBigdataVistComponent } from './actu-bigdata-vist/actu-bigdata-vist.component';
+import { ActuSecuriteVisitComponent } from './actu-securite-visit/actu-securite-visit.component';
+import { ActuSecuriteComponent } from './actu-securite/actu-securite.component';
+
 
 @NgModule({
   declarations: [
@@ -89,7 +94,11 @@ import { FooterVisiteurComponent } from './footer-visiteur/footer-visiteur.compo
     AboutVisiteurComponent,
     ContactVisiteurComponent,
     DetailsPostComponent,
-    FooterVisiteurComponent
+    FooterVisiteurComponent,
+    ActuBigdataComponent,
+    ActuBigdataVistComponent,
+    ActuSecuriteVisitComponent,
+    ActuSecuriteComponent
     ],
   imports: [
     BrowserModule,

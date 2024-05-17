@@ -65,7 +65,7 @@ body {
 } 
 .categ-btn{
   margin-top: 5px;
-  margin-left: 237px;
+  margin-left: 300px;
 }
 .btn-clicked, .btn-options{
   border-radius: 32px;
@@ -117,7 +117,7 @@ body {
 }
 .card-grp{
   display: flex;
-  margin-left: 142px;
+  justify-content: center;
 }
 .card-title{
   font-size: 16px;

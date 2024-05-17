@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { User } from '../models/user.model';
-import { Post } from '../models/post.model';
 import { VisiteurService } from '../visiteur.service';
 import { Router } from '@angular/router';
+import { User } from '../models/user.model';
+import { Post } from '../models/post.model';
 
 @Component({
-  selector: 'app-actu-visiteur',
-  templateUrl: './actu-visiteur.component.html',
-  styleUrls: ['./actu-visiteur.component.css']
+  selector: 'app-actu-bigdata-vist',
+  templateUrl: './actu-bigdata-vist.component.html',
+  styleUrls: ['./actu-bigdata-vist.component.css']
 })
-export class ActuVisiteurComponent {
+export class ActuBigdataVistComponent {
   users: User[] = [];
   posts: Post[] = [];
   currentUser!: User;
@@ -74,5 +74,4 @@ export class ActuVisiteurComponent {
   actutous(){
     this.router.navigate(['V_actu']);
   }
-
 }

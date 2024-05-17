@@ -35,6 +35,10 @@ import { ActuVisiteurComponent } from './actu-visiteur/actu-visiteur.component';
 import { EventVisiteurComponent } from './event-visiteur/event-visiteur.component';
 import { ContactVisiteurComponent } from './contact-visiteur/contact-visiteur.component';
 import { DetailsPostComponent } from './details-post/details-post.component';
+import { ActuBigdataVistComponent } from './actu-bigdata-vist/actu-bigdata-vist.component';
+import { ActuBigdataComponent } from './actu-bigdata/actu-bigdata.component';
+import { ActuSecuriteVisitComponent } from './actu-securite-visit/actu-securite-visit.component';
+import { ActuSecuriteComponent } from './actu-securite/actu-securite.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -71,7 +75,11 @@ const routes: Routes = [
   {path:'V_actu',component:ActuVisiteurComponent},
   {path:'V_event',component:EventVisiteurComponent},
   {path:'V_contact',component:ContactVisiteurComponent},
-  {path:'detailsPost/:id',component:DetailsPostComponent}
+  {path:'detailsPost/:id',component:DetailsPostComponent},
+  {path:'V_actu/BigData',component:ActuBigdataVistComponent},
+  {path:'actualite/BigData',component:ActuBigdataComponent},
+  {path:'V_actu/Securite',component:ActuSecuriteVisitComponent},
+  {path:'actualite/Securite',component:ActuSecuriteComponent}
  
 ];
 
