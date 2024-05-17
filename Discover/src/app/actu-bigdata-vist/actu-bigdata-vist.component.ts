@@ -80,4 +80,7 @@ export class ActuBigdataVistComponent {
   actudev(){
     this.router.navigate(['V_actu/Developpement']);
   }
+  actuai(){
+    this.router.navigate(['V_actu/Ai']);
+  }
 }
