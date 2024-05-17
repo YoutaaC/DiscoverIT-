@@ -58,7 +58,6 @@ button{
 }
 .img-card{
   border-radius: 30px;
-  
 }
 .pdp{
     width: 40px;
@@ -356,25 +355,22 @@ margin-right: 12px;
   position: absolute;
   margin-top: 277px;
   margin-left: 850px;
-
-  /* Animation properties */
-  animation: rotate2 10s linear infinite; /* Adjust values as needed */
+  animation: rotate2 10s linear infinite; 
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
-  to { transform: rotate(360deg); } /* Rotate 360 degrees */
+  from { transform: rotate(0deg); } 
+  to { transform: rotate(360deg); }
 }
 
 @keyframes rotate2 {
-  from { transform: rotate(0deg); } /* Start at 0 degrees rotation */
-  to { transform: rotate(-360deg); } /* Rotate 360 degrees */
+  from { transform: rotate(0deg); } 
+  to { transform: rotate(-360deg); } 
 }
 .img-anim2{
   position: absolute;
   margin-top: 60px;
   margin-left: 900px;
-  /* Animation properties */
   animation: rotate 5s linear infinite;
 }
 .img-anim3{
