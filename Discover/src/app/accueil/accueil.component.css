@@ -113,11 +113,7 @@ color: #42E5E1;
 text-align: start;
 font-size: 30px;
 margin-bottom: 6px;
-
-
 }
-
-
 .titre4,.titre5{
   text-align: start;
   font-size: 25px;
@@ -516,3 +512,9 @@ margin-right: 12px;
   font-size: 24px;
   margin-top: 5px;
 }
+.top-header{
+ width: 1500px; 
+}
+/* header{
+  width: 1840px;
+} */

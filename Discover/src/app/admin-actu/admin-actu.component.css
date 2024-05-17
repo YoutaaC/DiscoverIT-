@@ -426,3 +426,24 @@ background-color: #32839B;
 .table {
   background-color: transparent;
 }
+th, td {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  text-align: left;
+  background-color: #eee ;
+  font-size: 14px;
+}
+
+th {
+  background-color: #eee; 
+  font-weight: bold; 
+}
+.responsive-table {
+  width: 100%; 
+}
+
+@media (min-width: 768px) { 
+  .responsive-table {
+      width: 1160px; 
+  }
+}
