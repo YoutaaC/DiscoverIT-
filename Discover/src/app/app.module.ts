@@ -58,6 +58,7 @@ import { ActuTechwebVisitComponent } from './actu-techweb-visit/actu-techweb-vis
 import { ActuEcommerceVisitComponent } from './actu-ecommerce-visit/actu-ecommerce-visit.component';
 import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.component';
 import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
+import { GalerieComponent } from './galerie/galerie.component';
 
 
 @NgModule({
@@ -114,7 +115,8 @@ import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
     ActuTechwebVisitComponent,
     ActuEcommerceVisitComponent,
     ActuEcommerceComponent,
-    ActuTechwebComponent
+    ActuTechwebComponent,
+    GalerieComponent
     ],
   imports: [
     BrowserModule,

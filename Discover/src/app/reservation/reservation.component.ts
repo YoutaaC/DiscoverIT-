@@ -21,8 +21,6 @@ export class ReservationComponent implements OnInit{
   currentId! :number;
 
 
-
-
   // qrCode: string;
   
   constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private fb: FormBuilder ){}

@@ -3,8 +3,9 @@
 
 } */
 .copyright{
-    /* margin-left: 500px; */
-    margin-left: 1000px;
+    margin-top: 50px;
+    margin-left: 540px;
+    /* margin-left: 1000px; */
     font-size: 14px;
     color: #B4B4B4;
 }
@@ -15,7 +16,6 @@ h6{
 footer{
     margin-left: 150px;
 }
-
 section{
     margin-left: 10px;
 }
