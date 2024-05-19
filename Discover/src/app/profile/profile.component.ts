@@ -104,4 +104,8 @@ export class ProfileComponent {
   gotoDetailsPost(id :number) {
     this.router.navigate(["/detailsPost",id])
   }
+
+  gotoadd() {
+    this.router.navigate(["/UserAddPost"])
+  }
 }

@@ -1,4 +1,103 @@
 <body>
     <app-navbar></app-navbar>
+    <aside id="sidebar" class="sidebar">
+          <div class="text-center ">
+              <img src="./../../assets/img/profile-img.jpg" class="pdp">
+          <p>Pseudo</p>
+      </div>
+      <hr>
+          <ul class="sidebar-nav" id="sidebar-nav">
     
-</body>
+            <li class="nav-item">
+              <a class="nav-link" href="profile">
+                  <i class="fa-solid fa-user"></i>
+                <span>Mon compte</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="UserProfileUpdate">
+                  <i class="fa-solid fa-pen"></i>
+                <span>Modifier le profil</span>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="UserProfileforgotPassword">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Modifier le mot de passe</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="favoris">
+                  <i class="fa-solid fa-heart"></i>
+                  <span>Favoris</span>
+                </a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="historiqueReservationn">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                  <span>Historique des réservations</span>
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="historiqueLikess">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                <span >Historique des j’aimes</span>
+              </a>
+            </li>
+        <br>
+        <br>
+        <br><br>  
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="">
+            <i class="fa-solid fa-arrow-right-from-bracket pp"></i>
+            <span (click)="logout()">Se déconnecter</span>
+          </a>
+        </li>
+          </ul>
+      
+        </aside>
+        <main id="main" class="main">
+          <section class="section ">
+            <div class="card">
+
+                <img src="./../../assets/images/Group 145.png" class="icon-top">
+                <i class="fa-solid fa-plus mefteh"></i>
+            
+                <h3>Ajouter une publication</h3>
+                <br>
+            
+                    <form class="formu text-capitalize">
+                  <label for="titre">Titre</label>
+                  <input type="text" id="titre" placeholder="  Entrer votre titre" name="titre">
+
+                  <label for="titre">Contenu</label><br>
+                  <textarea name="titre" id="titre" cols="49" rows="10"  placeholder=" Entrer votre Contenu" class="form-message"></textarea><br>
+
+                  <label for="categorie">Choisir une catégorie</label><br>
+                  <div class="dropdown">
+                    <select class="dropdown-input">
+                      <option value="">Choisir une catégorie</option>
+                      <option value="Sécurité">Sécurité</option>
+                      <option value="Développement">Développement</option>
+                      <option value="AI">AI</option>
+                      <option value="TechnologieWeb">Technologie Web</option>
+                      <option value="BigData">Big Data </option>
+                      <option value="Ecommerce">E-commerce</option>
+                    </select>
+                  </div>
+                  <br><br>
+                  <label for="imageFile" class="mb-2">Choisir une image</label><br>
+                  <input type="file">
+<br><br>
+                 
+                </form>   
+                <div class="d-flex  align-self-end btns">
+                    <button  class="modif-btn" (click)="addpost()">Publier</button>&nbsp;&nbsp;
+                    <button class="conf-btn" (click)="gotoprofil()">Annuler</button>
+                  </div>
+            </div>
+    </section>
+        </main> 
+  
+  </body>
