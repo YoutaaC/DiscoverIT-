@@ -74,9 +74,144 @@ body {
   justify-content: space-between;
   padding: 30px 86px;
 }
-.nbr{
-  font-size: 35px;
+.nbr1{
+  font-size: 35px; 
 }
+.nbr2{
+  font-size: 35px; 
+}
+.nbr3{
+  font-size: 35px; 
+}
+.nbr1::after {
+  font: 500 35px system-ui;
+  content: counter(count);
+  animation: counter1 1.5s linear  alternate;
+  counter-reset: count 720;
+}
+
+@keyframes counter1 {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 70;
+  }
+  20% {
+    counter-increment: count 25;
+  }
+  30% {
+    counter-increment: count 03;
+  }
+  40% {
+    counter-increment: count 45;
+  }
+  50% {
+    counter-increment: count 36;
+  }
+  60% {
+    counter-increment: count 66;
+  }
+  70% {
+    counter-increment: count 97;
+  }
+  80% {
+    counter-increment: count 02;
+  }
+  90% {
+    counter-increment: count 59;
+  }
+  100% {
+    counter-increment: count 20;
+  }
+}
+
+.nbr2::after {
+  font: 500 35px system-ui;
+  content: counter(count);
+  animation: counter2 1.5s linear alternate;
+  counter-reset: count 52;
+}
+
+@keyframes counter2 {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 70;
+  }
+  20% {
+    counter-increment: count 25;
+  }
+  30% {
+    counter-increment: count 03;
+  }
+  40% {
+    counter-increment: count 45;
+  }
+  50% {
+    counter-increment: count 36;
+  }
+  60% {
+    counter-increment: count 66;
+  }
+  70% {
+    counter-increment: count 97;
+  }
+  80% {
+    counter-increment: count 02;
+  }
+  90% {
+    counter-increment: count 59;
+  }
+  100% {
+    counter-increment: count 20;
+  }
+}
+
+.nbr3::after {
+  font: 500 35px system-ui;
+  content: counter(count);
+  animation: counter3 1.5s linear  alternate;
+  counter-reset: count 60;
+}
+
+@keyframes counter3 {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 70;
+  }
+  20% {
+    counter-increment: count 25;
+  }
+  30% {
+    counter-increment: count 03;
+  }
+  40% {
+    counter-increment: count 45;
+  }
+  50% {
+    counter-increment: count 36;
+  }
+  60% {
+    counter-increment: count 66;
+  }
+  70% {
+    counter-increment: count 97;
+  }
+  80% {
+    counter-increment: count 02;
+  }
+  90% {
+    counter-increment: count 59;
+  }
+  100% {
+    counter-increment: count 20;
+  }
+}
+
 .sous-nbr{
   font-size: 18px;
   font-weight: 350;
@@ -99,6 +234,7 @@ body {
   align-items: center;
   margin-left: 550px;
   margin-top: 130px;
+  
 }
 .titre4{
   font-size: 30px;
@@ -141,7 +277,7 @@ body {
   padding-top: 40px;
   padding-left: 18px;
   padding-right: 18px;
-  
+
 }
 .pdp{
   width: 120px;
@@ -157,6 +293,7 @@ body {
 .member-num,.sous-member{
   font-size: 14px;
 }
+
 .pseudo{
 margin-left: 105px;
 margin-bottom: 35px;
