@@ -48,6 +48,7 @@ import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
 import { ActuEcommerceVisitComponent } from './actu-ecommerce-visit/actu-ecommerce-visit.component';
 import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.component';
 import { GalerieComponent } from './galerie/galerie.component';
+import { UserAddPostComponent } from './user-add-post/user-add-post.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -97,7 +98,8 @@ const routes: Routes = [
   {path:'actualite/Technologie Web',component:ActuTechwebComponent},
   {path:'V_actu/E-commerce',component:ActuEcommerceVisitComponent},
   {path:'actualite/E-commerce',component:ActuEcommerceComponent},
-  {path:'galerie',component:GalerieComponent}
+  {path:'galerie',component:GalerieComponent},
+  {path:'UserAddPost',component:UserAddPostComponent}
  
 ];
 

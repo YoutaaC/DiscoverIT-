@@ -225,3 +225,10 @@ body {
   .pp{
     transform: rotate(180deg);
   }
+  .btn-add{
+    background-color: #02C1BA;
+    border-radius: 32px;
+    padding: 10px 16px;
+    color: white;
+    border: none;
+  }

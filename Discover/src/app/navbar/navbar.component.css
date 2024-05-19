@@ -41,3 +41,44 @@ color:#ffffff;
   color: #AC8DF7;
 }
 
+.dropdown {
+  position: relative; /* Needed for proper positioning of the menu */
+  display: inline-block; /* Allow buttons to sit next to other content */
+ 
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  background: transparent;
+  color: #A4A4A4;
+  border: none;
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.dropdown-menu {
+  position: absolute; 
+  top: 100%; 
+  left: 10px; 
+  background-color: transparent;
+  min-width: 100%; 
+  display: none; 
+ 
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; 
+  
+}
+
+.nav-option{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.nav-option:hover{
+  text-decoration: none;
+  color: #AC8DF7;
+}
+
