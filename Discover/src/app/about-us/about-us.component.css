@@ -300,7 +300,25 @@ margin-bottom: 35px;
 margin-top: 10px;
 
 }
-.btn-suivre{
+.btn-suivre1{
+  width: 318px;
+  height: 66px;
+  margin-left: -18px;
+  background-color: #AC8DF7;
+  border: none;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+.btn-suivre2{
+  width: 318px;
+  height: 66px;
+  margin-left: -18px;
+  background-color: #AC8DF7;
+  border: none;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+.btn-suivre3{
   width: 318px;
   height: 66px;
   margin-left: -18px;

@@ -1,4 +1,4 @@
-<body>
+<body >
   <app-navbar></app-navbar>
   <header>
     <div class="anim-img_top col-4 ">
@@ -56,7 +56,12 @@
          <div class="btns">
          <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
          <div class="react d-flex">
-          <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div>
+            <span class="btn-like mb-4" (click)="toggleLike1()">
+              <i [class]="likeIconClass1"></i>
+            </span><br>
+            <span class="nbr-react1">{{ likeCount1 }}</span>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;
          <div class="dropdown">
           <i class="fa-regular fa-share-from-square btn-share"></i>
           <ul class="dropdown-content">
@@ -97,7 +102,12 @@
               <div class="btns">
               <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
               <div class="react d-flex">
-                <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div>
+                  <span class="btn-like mb-4" (click)="toggleLike2()">
+                    <i [class]="likeIconClass2"></i>
+                  </span><br>
+                  <span class="nbr-react2">{{ likeCount2 }}</span>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
                <div class="dropdown">
                 <i class="fa-regular fa-share-from-square btn-share"></i>
                 <ul class="dropdown-content">
@@ -138,8 +148,13 @@
             <div class="btns">
             <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
             <div class="react d-flex">
-             <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
-             <div class="dropdown">
+              <div>
+                <span class="btn-like mb-4" (click)="toggleLike3()">
+                  <i [class]="likeIconClass3"></i>
+                </span><br>
+                <span class="nbr-react3">{{ likeCount3 }}</span>
+              </div>            
+               <div class="dropdown">
               <i class="fa-regular fa-share-from-square btn-share"></i>
               <ul class="dropdown-content">
                 <div>

@@ -51,4 +51,57 @@ export class ProfileComponent {
     window.location.reload();
     this.router.navigate(["/"])
   }
+
+
+  isLiked1 = false;
+  likeCount1 = 21; // Initial count of likes
+
+  get likeIconClass1() {
+    return this.isLiked1 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike1() {
+    this.isLiked1 = !this.isLiked1;
+    if (this.isLiked1) {
+      this.likeCount1++;
+    } else {
+      this.likeCount1--;
+    }
+  }
+
+  isLiked2 = false;
+  likeCount2 = 21; // Initial count of likes
+
+  get likeIconClass2() {
+    return this.isLiked2 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike2() {
+    this.isLiked2 = !this.isLiked2;
+    if (this.isLiked2) {
+      this.likeCount2++;
+    } else {
+      this.likeCount2--;
+    }
+  }
+
+  isLiked3 = false;
+  likeCount3 = 21; // Initial count of likes
+
+  get likeIconClass3() {
+    return this.isLiked3 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike3() {
+    this.isLiked3 = !this.isLiked3;
+    if (this.isLiked3) {
+      this.likeCount3++;
+    } else {
+      this.likeCount3--;
+    }
+  }
+
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
+  }
 }

@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/eventFond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+    color: white;
+  }
+.all{
+    margin-left: 391px;
+    margin-top: 60px;
+}
+.pdp{
+    width: 77px;
+    border: #42E5E1 3px solid;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 55px;
+}
+.t1{
+    font-size: 20px;
+    margin-top: -30px;
+}
+.btn-suivre{
+    text-decoration: none;
+    color: #AC8DF7;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 451px;
+  }
+  .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .body{
+    width: 658px;
+    height: auto;
+  }
+  .nbr-react1{
+    font-size: 12px;
+    color: #A4A4A4;
+    margin-left: -26px;
+    
+  }
+  .nbr-react2{
+    font-size: 12px;
+    color: #A4A4A4;
+    margin-top: -5px;
+    
+  }
+  .dropdown-button {
+    text-align: left;
+    position: absolute;
+    font-size: 21px;
+    cursor: pointer;
+    background: none;
+    border-radius: 32px;
+    border: #42E5E1 solid 0px ;
+    padding: 16px;
+    color: white;
+    margin-top: 35px;
+    margin-left: 610px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    margin-left: 40px;
+    margin-top: -24px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+   
+  }
+  .dropdown-content a {
+    color: #AC8DF7;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    
+  }
+  .dropdown:hover .dropdown-content {
+    display: block; 
+  }
+  .btn-like, .btn-share{
+    font-size: 24px;
+   
+  }
+  .btn-like{
+    position: absolute;
+   margin-left: -30px;
+   margin-top: -5px;
+  }

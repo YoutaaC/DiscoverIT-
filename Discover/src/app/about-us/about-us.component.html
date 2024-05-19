@@ -62,7 +62,7 @@
                         <h5 class="sous-member">suivi(e)s</h5>
                       </div>
                  </div>
-                 <button class="btn-suivre">Suivre </button>
+                 <button class="btn-suivre1" [(ngModel)]="buttonText1" (click)="onClick1()">{{ buttonText1 }}</button>
           </div>
    <!-- member 2 -->
           <div class="box-member">
@@ -84,8 +84,8 @@
                    <h5 class="sous-member">suivi(e)s</h5>
                  </div>
             </div>
-            <button class="btn-suivre">Suivre </button>
-     </div>
+            <button class="btn-suivre2" [(ngModel)]="buttonText2" (click)="onClick2()">{{ buttonText2 }}</button>
+        </div>
    <!-- member 3 -->
      <div class="box-member">
         <img src="./../../assets/images/Ellipse 43.png" class="pdp">
@@ -106,7 +106,7 @@
                <h5 class="sous-member">suivi(e)s</h5>
              </div>
         </div>
-        <button class="btn-suivre">Suivre </button>
+        <button class="btn-suivre3" [(ngModel)]="buttonText3" (click)="onClick3()">{{ buttonText3 }}</button>
  </div>
           
     </div>

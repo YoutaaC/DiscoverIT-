@@ -48,9 +48,9 @@ export class HomeComponent {
   buttonText2 = 'Suivre';
   buttonText3 = 'Suivre';
 
-  isLiked1 = false;
-  isLiked2 = false;
-  isLiked3 = false;
+  // isLiked1 = false;
+  // isLiked2 = false;
+  // isLiked3 = false;
 
 
   isFavori1 = false;
@@ -113,25 +113,52 @@ export class HomeComponent {
     this.router.navigate(["/apropos"]) 
   }
 
+  isLiked1 = false;
+  likeCount1 = 21; // Initial count of likes
+
   get likeIconClass1() {
-    return this.isLiked1 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
-  }
-  toggleLike1() {
-    this.isLiked1 = !this.isLiked1; 
+    return this.isLiked1 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
   }
 
-  get likeIconClass2() {
-    return this.isLiked2 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+  toggleLike1() {
+    this.isLiked1 = !this.isLiked1;
+    if (this.isLiked1) {
+      this.likeCount1++;
+    } else {
+      this.likeCount1--;
+    }
   }
+
+  isLiked2 = false;
+  likeCount2 = 21; // Initial count of likes
+
+  get likeIconClass2() {
+    return this.isLiked2 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
   toggleLike2() {
-    this.isLiked2 = !this.isLiked2; 
+    this.isLiked2 = !this.isLiked2;
+    if (this.isLiked2) {
+      this.likeCount2++;
+    } else {
+      this.likeCount2--;
+    }
   }
   
+  isLiked3 = false;
+  likeCount3 = 21; // Initial count of likes
+
   get likeIconClass3() {
-    return this.isLiked3 ? 'fa-solid fa-thumbs-up ' : 'fa-regular fa-thumbs-up';
+    return this.isLiked3 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
   }
+
   toggleLike3() {
-    this.isLiked3 = !this.isLiked3; 
+    this.isLiked3 = !this.isLiked3;
+    if (this.isLiked3) {
+      this.likeCount3++;
+    } else {
+      this.likeCount3--;
+    }
   }
 
 

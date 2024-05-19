@@ -1,1 +1,43 @@
-<p>details-post works!</p>
+<body>
+    <app-navbar></app-navbar>
+<div class="all">
+    <div class="d-flex justify-content-between ">
+         <div class="d-flex">
+            <img src="./../../assets/images/Ellipse 39.png" class="pdp"> 
+            <p class="t1  align-self-center">Pseudo</p>
+         </div>
+         <div class="suivre">
+            <button type="button" class="btn btn-link btn-suivre" [(ngModel)]="buttonText1" (click)="onClick1()">{{ buttonText1 }}</button>
+           </div>
+    </div>
+    <pre style="font-size: 14px;"><span>{{post.creationDate}}03/21/2024</span>  | <span style="color: #02C1BA;">{{post.type}}</span> </pre>
+    <h3 class="title">{{post.title}}</h3>
+    <img src="./../../assets/images/d-post.png">
+    <p class="body">{{post.body}}</p>
+    <div class="reacts d-flex ">
+        <div class="like ms-4 d-block">
+            <span class="btn-like mb-4" (click)="toggleLike1()">
+                <i [class]="likeIconClass1"></i>
+              </span><br>
+              <span class="nbr-react1">{{ likeCount1 }}</span>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="partage">
+            <div class="dropdown ">
+                <i class="fa-regular fa-share-from-square btn-share"></i>
+                <ul class="dropdown-content">
+                  <div>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                        <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                  </div>
+                </ul>
+              </div>
+            <span class="nbr-react2">10</span>
+        </div>
+        
+    </div>
+</div>
+    <app-footer></app-footer>
+</body>
