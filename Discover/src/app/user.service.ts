@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { User } from './models/user.model';
 import { AuthenticationService } from './authentication.service'; 
@@ -120,4 +120,22 @@ getUserById(id:number): Observable<User> {
       })
     );
 }
+
+
+//recherche par username , id ou email
+
+// searchUsers(username?: string, id?: number, email?: string): Observable<User[]> {
+//   let params = new HttpParams();
+//   if (username) {
+//     params = params.set('username', username);
+//   }
+//   if (id) {
+//     params = params.set('id', id.toString());
+//   }
+//   if (email) {
+//     params = params.set('email', email);
+//   }
+
+//   return this.httpClient.get<User[]>(`${this.apiUrl}/search`, { params });
+// }
 }

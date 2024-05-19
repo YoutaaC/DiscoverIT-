@@ -490,12 +490,22 @@ background-color: #32839B;
   
   .dashboard .sales-card .card-icon {
     color: #4154f1;
-    background: #f6f6fe;
+    background: #f7f6fe;
   }
   
   .dashboard .revenue-card .card-icon {
     color: #2eca6a;
     background: #e0f8e9;
+  }
+/* zzz */
+  .dashboard .event-card .card-icon {
+    color: #d03fe3;
+    background: #f0e0f8;
+  }
+/* lll */
+  .dashboard .post-card .card-icon {
+    color: #3bb8ee;
+    background: #e0f1f8;
   }
   
   .dashboard .customers-card .card-icon {

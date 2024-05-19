@@ -53,13 +53,16 @@ export class DetailsEventComponent {
   }
 
 
-  sendMail(file: File[], to: string, cc: string[], subject: string, body: string) {
-    this.mailService.sendMail(file, to, cc, subject, body)
-      .subscribe(response => {
-        console.log('Email sent successfully:', response);
-      }, error => {
-        console.error('Error sending email:', error);
-      });
-  }
+  // sendMail(file: File[], to: string, cc: string[], subject: string, body: string) {
+  //   this.mailService.sendMail(file, to, cc, subject, body)
+  //     .subscribe(response => {
+  //       console.log('Email sent successfully:', response);
+  //     }, error => {
+  //       console.error('Error sending email:', error);
+  //     });
+  // }
+
+
+
   
 }

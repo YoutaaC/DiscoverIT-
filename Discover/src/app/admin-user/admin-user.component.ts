@@ -16,6 +16,11 @@ export class AdminUserComponent implements OnInit{
 
   userToDelete!: User;
 
+
+  // username!: string;
+  // id!: number;
+  // email!: string;
+
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -91,6 +96,9 @@ confirmDelete(user: User) {
     this.router.navigate(["/signin"])
   }
 
-
+  // search(): void {
+  //   this.userService.searchUsers(this.username, this.id, this.email)
+  //     .subscribe(users => this.users = users);
+  // }
   
 }

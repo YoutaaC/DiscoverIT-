@@ -119,6 +119,10 @@ margin-bottom: 6px;
   margin-left: 140px;
 
 }
+.sous-titre{
+  font-size : 16px;
+  color: #B4B4B4;
+}
 .box{
   width: 289px;
   height: 286px;

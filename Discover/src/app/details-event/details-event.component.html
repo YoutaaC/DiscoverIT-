@@ -6,7 +6,7 @@
         </div>
         <div class="col-4 part2">
             <h2 class="title">{{event.type}} : {{event.title}}</h2>
-            <p class="body_event">{{event.body}}</p>
+            <p class="body_event" id="myParagraph">{{event.body}}</p> 
                 <span class="itemms-event"><i class="fa-regular fa-calendar icon-event"></i> de {{event.jour_debut}} {{event.mois_debut}} {{event.annee_debut}} à {{event.date_fin}}</span><br>
                 <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</span><br>
                 <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</span><br>
@@ -34,3 +34,18 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <app-footer></app-footer>
 </body>
+
+<script>
+      const paragraph = document.getElementById('myParagraph');
+const button = document.getElementById('showMoreButton');
+
+button.addEventListener('click', () => {
+    if (paragraph.style.maxHeight === '1 line') {
+        paragraph.style.maxHeight = 'none';
+        button.textContent = 'Show Less';
+    } else {
+        paragraph.style.maxHeight = '1 line';
+        button.textContent = 'Show More';
+    }
+});
+</script>

@@ -1,96 +1,71 @@
 <body>
     <app-navbar></app-navbar>
-    <header>
-        <div class="row align-items-center">
-            <div class="col-6 first-part" >
-            <h1 class="title">Une question ? Une idée ?  <br>Ne restez pas dans l'ombre, <br> <span class="marque">contactez-nous !</span></h1>
-
-            </div>
-            <div class="col-4 ">
-                <img src="./../../assets/images/Group 144.png" class="img-top">
-                <img src="./../../assets/images/pos5.png" class="img-anim1">
-                <img src="./../../assets/images/pos2.png" class="img-anim2">
-                <img src="./../../assets/images/pos4.png" class="img-anim3">
-            </div>
-            <img src="./../../assets/images/arrow-event.png" class="arrow-event"/>  
-          </div>
-    </header>
     <div class="d-flex ">
-     <div class="card">
-          <h3 class="mb-4">Envoyez votre message</h3>
-          <div class="formu">
-            <form  [formGroup]="forminput">
-                  <label for="nom">Nom<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="nom" placeholder="  Entrer votre nom" formControlName="nom" name="nom" [(ngModel)]="newContact.nomUser">
-    
-                  <div class="warning-div"
-                  *ngIf="!forminput.pristine && forminput.controls['nom'].errors?.['required']">
-                  &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Nom 
-                 </div>
-            </form>    
-    <!-- saisir le prenom -->
-            <form  [formGroup]="forminput1">
-                  <label for="prenom">Prenom<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="prenom" formControlName="prenom" placeholder="  Entrer votre prenom" name="prenom"  [(ngModel)]="newContact.prenomUser">
-    
-                  <div class="warning-div"
-                  *ngIf="!forminput1.pristine && forminput1.controls['prenom'].errors?.['required']">
-                  &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Prenom 
-                 </div>
-            </form>
-    <!-- saisir l'email -->
-            <form  [formGroup]="forminput2">
-                  <label for="email">Email<b style="color: #FF0000;">*</b></label>
-                  <input type="text" id="email" placeholder="  Entrer votre email" formControlName="email" name="email"  [(ngModel)]="newContact.emailUser">
-    
-                  <div class="warning-div"
-                  *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['required']">
-                  &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Email 
-                 </div>
-                 <div class="warning-div"
-                  *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['email']">
-                  &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Email incorrect 
-                 </div>
-            </form>
-        <!-- choisir le objet -->
-
-            <form  [formGroup]="forminput3">
-                <label for="objet">Objet<b style="color: #FF0000;">*</b></label>
-                <input type="text" id="objet" placeholder="  Entrer votre objet" formControlName="objet" name="objet" [(ngModel)]="newContact.objet">
-  
-                <div class="warning-div"
-                *ngIf="!forminput3.pristine && forminput3.controls['objet'].errors?.['required']">
-                &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre objet 
-               </div>
-          </form> 
+        <div class="card">
+             <h3 class="mb-4 title">Contactez-nous !</h3>
+             <div class="formu">
+               <form  [formGroup]="forminput">
+                     <label for="nom">Nom<b style="color: #FF0000;">*</b></label>
+                     <input type="text" id="nom" placeholder="  Entrer votre nom" formControlName="nom" name="nom" [(ngModel)]="newContact.nomUser">
        
-        <!-- choisir le pseudo -->
-        <form [formGroup]="forminput5">
-                  <label for="message">Message<b style="color: #FF0000;">*</b></label><br>
-                  <!-- <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"  formControlName="pseudo" > -->
-                  <textarea name="message" id="message" cols="43" rows="10"  placeholder="   Entrer votre message" formControlName="message" class="form-message" [(ngModel)]="newContact.message"></textarea><br>
-                  <div class="warning-div"
-                  *ngIf="!forminput5.pristine && forminput5.controls['message'].errors?.['required']">
-                  &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Message
+                     <div class="warning-div"
+                     *ngIf="!forminput.pristine && forminput.controls['nom'].errors?.['required']">
+                     &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Nom 
+                    </div>
+               </form>    
+       <!-- saisir le prenom -->
+               <form  [formGroup]="forminput1">
+                     <label for="prenom">Prenom<b style="color: #FF0000;">*</b></label>
+                     <input type="text" id="prenom" formControlName="prenom" placeholder="  Entrer votre prenom" name="prenom"  [(ngModel)]="newContact.prenomUser">
+       
+                     <div class="warning-div"
+                     *ngIf="!forminput1.pristine && forminput1.controls['prenom'].errors?.['required']">
+                     &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Prenom 
+                    </div>
+               </form>
+       <!-- saisir l'email -->
+               <form  [formGroup]="forminput2">
+                     <label for="email">Email<b style="color: #FF0000;">*</b></label>
+                     <input type="text" id="email" placeholder="  Entrer votre email" formControlName="email" name="email"  [(ngModel)]="newContact.emailUser">
+       
+                     <div class="warning-div"
+                     *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['required']">
+                     &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Email 
+                    </div>
+                    <div class="warning-div"
+                     *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['email']">
+                     &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Email incorrect 
+                    </div>
+               </form>
+           <!-- choisir le objet -->
+   
+               <form  [formGroup]="forminput3">
+                   <label for="objet">Objet<b style="color: #FF0000;">*</b></label>
+                   <input type="text" id="objet" placeholder="  Entrer votre objet" formControlName="objet" name="objet" [(ngModel)]="newContact.objet">
+     
+                   <div class="warning-div"
+                   *ngIf="!forminput3.pristine && forminput3.controls['objet'].errors?.['required']">
+                   &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre objet 
                   </div>
-    
-                  <button type="submit" class="sumbmit-btn" (click)="createContact()" [disabled]="forminput.invalid" [disabled]="forminput1.invalid" [disabled]="forminput2.invalid" [disabled]="forminput3.invalid" [disabled]="forminput5.invalid" >Réserver</button>
-                </form>   
-            </div>
-     </div>
-     <div  class="side-card">
-        <h3 class="mb-4">Restez en contact</h3>
-        <div class="box-info">
-            <p><img src="../../assets/images/telephone.png" class="me-3 icon-info">+216 ** ** ** </p>
-            <p><img src="../../assets/images/mail.png" class="me-3 icon-info">discoverit.com</p>
+             </form> 
+          
+           <!-- choisir le pseudo -->
+           <form [formGroup]="forminput5">
+                     <label for="message">Message<b style="color: #FF0000;">*</b></label><br>
+                     <!-- <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"  formControlName="pseudo" > -->
+                     <textarea name="message" id="message" cols="43" rows="10"  placeholder="   Entrer votre message" formControlName="message" class="form-message" [(ngModel)]="newContact.message"></textarea><br>
+                     <div class="warning-div"
+                     *ngIf="!forminput5.pristine && forminput5.controls['message'].errors?.['required']">
+                     &nbsp;<i class="fa-solid fa-exclamation  warning-icon"></i>&nbsp; Saisir votre Message
+                     </div>
+       
+                     <button type="submit" class="sumbmit-btn" (click)="createContact()" [disabled]="forminput.invalid" [disabled]="forminput1.invalid" [disabled]="forminput2.invalid" [disabled]="forminput3.invalid" [disabled]="forminput5.invalid" >Envoyer</button>
+                   </form>   
+               </div>
         </div>
-        <div class="box-info2">
-            <a href="https://www.facebook.com/"><img src="../../assets/images/fb.png" class="me-3 icon-rs"></a>
-            <a href="https://www.instagram.com/"><img src="../../assets/images/insta.png" class="me-3 icon-rs"></a>
-            <a href="https://www.linkedin.com/"><img src="../../assets/images/in.png" class="me-3 icon-rs"></a>
-            <a href="https://discord.gg/gK7neb7Y"><img src="../../assets/images/dd.png" class="me-3 icon-rs"></a>
+        <div  class="side-card">
+           <img src="./../../assets/images/Asset 3 3.png" class="img-side">
         </div>
-     </div>
-     </div>
-     <!-- <app-footer></app-footer> -->
+        </div>
+     <app-footer></app-footer>
  </body>

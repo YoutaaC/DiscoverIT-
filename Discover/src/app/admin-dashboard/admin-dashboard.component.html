@@ -10,9 +10,9 @@
         </div><!-- End Logo -->
     
         <div class="search-bar">
-          <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+          <form class="search-form d-flex align-items-center">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword" >
+            <button type="submit" title="Search" ><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div><!-- End Search Bar -->
     
@@ -132,22 +132,21 @@
               </div>
   
               <!-- Revenue Card -->
-              <div class="col-xxl-4 col-md-6">
-                <div class="card info-card revenue-card card-two">
+              <div class="col-xxl-4 col-md-6 ">
+                <div class="card info-card revenue-card card-two ">
   
                   
   
-                  <div class="card-body ">
+                  <div class="card-body">
                     <h5 class="card-title">Partages <span style="color: black;">| Posts</span></h5>
   
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center ">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-share-from-square"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>2,548</h6>
+                        <h6>8</h6>
                         <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-  
                       </div>
                     </div>
                   </div>
@@ -169,7 +168,7 @@
                         <i class="fa-solid fa-heart"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>3,518</h6>
+                        <h6>18</h6>
                         <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
   
                       </div>
@@ -179,24 +178,58 @@
                 </div>
               </div>
               <!-- Reports -->
-              <div class="col-12">
-                <div class="card card-four">
+              <div class="col-6">
+                <div class="card card-four info-card event-card card-two ">
   
                  
   
                   <div class="card-body ">
-                    <h5 class="card-title">Events <span style="color: black;">| aujourd'hui</span></h5>
+                    <h5 class="card-title">Events <span style="color: black;">| totale</span></h5>
   
                     <!-- Line Chart -->
                     <div id="reportsChart"></div>
   
-                    
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>45</h6>
+  
+                      </div>
+                    </div>
   
                   </div>
   
                 </div>
               </div>
   
+
+   <!-- Recent Sales -->
+   <div class="col-6">
+    <div class="card overflow-auto card-five info-card post-card ">
+
+    
+
+      <div class="card-body ">
+        <h5 class="card-title">Posts <span style="color: black;">|  totale</span></h5>
+        <div id="reportsChart"></div>
+  
+        <div class="d-flex align-items-center">
+          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+          <div class="ps-3">
+            <h6>36</h6>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div><!-- End Recent Sales -->
+
               <!-- Recent Sales -->
               <div class="col-12">
                 <div class="card overflow-auto card-five">
@@ -227,5 +260,37 @@
               </div>
   
               <div class="card-body pb-0 ">
-                <h5 class="card-title">.. <span style="color: black;">| </span></h5>
+                <h5 class="card-title"> les Objets<span style="color: black;">| messages</span></h5>
+
+                <div class="card card-side">
+                  <ul  *ngFor="let contact of contacts">
+                    <li>{{contact.objet}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-side">
+              <div class="filter">
+                
+              </div>
+  
+              <div class="card-body pb-0 ">
+                <h5 class="card-title"> Users<span style="color: black;">| Totale</span></h5>
+
+                <div class="card card-side">
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+              
+            
+              
+                
+
+
+                  
                 

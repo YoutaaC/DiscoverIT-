@@ -34,7 +34,8 @@ export class SignupComponent {
         console.log('User registered successfully:', newUser);
         Swal.fire({
           title: "L'ajout de l'utilisateur a été effectué avec succès!",
-          icon: "success"
+          icon: "success",
+          
         });
       }, error => {
         console.error('Error registering user:', error);
