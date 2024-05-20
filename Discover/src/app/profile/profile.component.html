@@ -82,7 +82,7 @@
 <!-- card -->
     <div class="card-grp d-block  ">
       <!-- ligne 1 -->
-    <div class="card-grp" >
+    <div class="card-grp d-flex " >
       <div *ngFor="let post of posts">
             <!-- card1 -->
      <div class="card "   *ngIf="post.id==1">
@@ -175,7 +175,7 @@
       </div>
   </div>
   <!-- ligne 2 -->
-  <div class="card-grp" >
+  <div class="card-grp d-flex" >
     <div *ngFor="let post of posts">
           <!-- card1 -->
    <div class="card "   *ngIf="post.id==10">
@@ -190,7 +190,7 @@
          <div class="btns">
          <button class="btn voirplus-btn">Voir Plus</button>
          <div class="react d-flex">
-          <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="btn-like" (click)="toggleLike4()"><i [class]="likeIconClass4"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
          <div class="dropdown">
           <i class="fa-regular fa-share-from-square btn-share"></i>
           <ul class="dropdown-content">
@@ -219,7 +219,7 @@
               <div class="btns">
               <button class="btn voirplus-btn" >Voir Plus</button>
               <div class="react d-flex">
-                <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="btn-like" (click)="toggleLike5()"><i [class]="likeIconClass5"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
                <div class="dropdown">
                 <i class="fa-regular fa-share-from-square btn-share"></i>
                 <ul class="dropdown-content">
@@ -248,7 +248,7 @@
             <div class="btns">
             <button class="btn voirplus-btn" >Voir Plus</button>
             <div class="react d-flex">
-              <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="btn-like" (click)="toggleLike6()"><i [class]="likeIconClass6"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
              <div class="dropdown">
               <i class="fa-regular fa-share-from-square btn-share"></i>
               <ul class="dropdown-content">
@@ -267,7 +267,7 @@
     </div>
 </div>
 </div>
-<br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </section>
       </main> 
     <!-- <app-footer></app-footer>  -->
