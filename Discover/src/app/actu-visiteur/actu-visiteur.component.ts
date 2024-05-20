@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
-import { VisiteurService } from '../visiteur.service';
 import { Router } from '@angular/router';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-actu-visiteur',
@@ -37,10 +37,10 @@ export class ActuVisiteurComponent {
   }
 
     
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private postService: PostService, private router:Router) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService.getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);
@@ -85,8 +85,5 @@ export class ActuVisiteurComponent {
   }
   actutechweb(){
     this.router.navigate(['V_actu/Technologie Web']);
-  }
-  actuEcomm(){
-    this.router.navigate(['V_actu/E-commerce']);
   }
 }

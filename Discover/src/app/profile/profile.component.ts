@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { VisiteurService } from '../visiteur.service';
+// import { VisiteurService } from '../visiteur.service';
 import { Post } from '../models/post.model';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-profile',
@@ -33,10 +35,10 @@ export class ProfileComponent {
   }
 
   
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private userService: UserService, private router:Router,private postService : PostService) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService.getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);

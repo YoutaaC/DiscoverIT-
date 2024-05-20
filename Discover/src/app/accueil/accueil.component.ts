@@ -3,9 +3,11 @@ import { Post } from '../models/post.model';
 import { PostService } from '../post.service';
 import { User } from '../models/user.model';
 import { EventService } from '../event.service';
-import { VisiteurService } from '../visiteur.service';
+// import { VisiteurService } from '../visiteur.service';
 import { Event } from '../models/event.model';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-accueil',
@@ -42,10 +44,10 @@ export class AccueilComponent implements OnInit{
   }
 
   
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private userService: UserService, private router:Router,private httpClient : HttpClient, private postService : PostService,private eventService: EventService,) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService.getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);
@@ -53,7 +55,7 @@ export class AccueilComponent implements OnInit{
   }
 
   getAllEvents(): void {
-    this.visiteurService.getAllEvents().subscribe(evtns => {
+    this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
     }, error => {
       console.error('Error fetching events:', error);

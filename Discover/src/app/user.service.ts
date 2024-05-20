@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { User } from './models/user.model';
 import { AuthenticationService } from './authentication.service'; 
+import { Post } from './models/post.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -120,6 +121,48 @@ getUserById(id:number): Observable<User> {
       })
     );
 }
+
+
+// getAllPosts(): Observable<Post[]> {
+//   const accessToken = this.authService.getAccessToken();
+
+//   if (!accessToken) {
+//     throw new Error('Access token not found.'); 
+//   }
+//   console.log(accessToken);
+//   const headers = new HttpHeaders({
+//     "Authorization": "Bearer " + accessToken
+//   });
+
+//   return this.httpClient.get<Post[]>(this.apiUrl + "getAllPosts", { headers })
+//     .pipe(
+//       catchError(error => {
+//         console.error('Error fetching users:', error);
+//         return throwError(error); 
+//       })
+//     );
+// }
+
+// getAllEvents(): Observable<Event[]> {
+//   const accessToken = this.authService.getAccessToken();
+
+//   if (!accessToken) {
+//     throw new Error('Access token not found.'); 
+//   }
+//   console.log(accessToken);
+//   const headers = new HttpHeaders({
+//     "Authorization": "Bearer " + accessToken
+//   });
+
+//   return this.httpClient.get<Event[]>(this.apiUrl + "getAllEvents", { headers })
+//     .pipe(
+//       catchError(error => {
+//         console.error('Error fetching users:', error);
+//         return throwError(error); 
+//       })
+//     );
+// }
+
 
 
 //recherche par username , id ou email

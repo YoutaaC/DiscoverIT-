@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { VisiteurService } from '../visiteur.service';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-actu-securite-visit',
@@ -37,10 +37,10 @@ export class ActuSecuriteVisitComponent {
   }
 
     
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private postService: PostService, private router:Router) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService.getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);

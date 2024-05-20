@@ -3,8 +3,9 @@ import { User } from '../models/user.model';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
-import { VisiteurService } from '../visiteur.service';
+// import { VisiteurService } from '../visiteur.service';
 import Swal from 'sweetalert2'
+import { UserService } from '../user.service';
 declare var $:any;
 
 @Component({
@@ -31,10 +32,10 @@ export class AdminEventComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router,private visiteurService: VisiteurService) {}
+  constructor(private eventService: EventService, private router: Router,private userService: UserService) {}
 
   getAllEvents(): void {
-    this.visiteurService.getAllEvents().subscribe(evtns => {
+    this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
     }, error => {
       console.error('Error fetching events:', error);

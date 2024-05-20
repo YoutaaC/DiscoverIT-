@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
-import { VisiteurService } from '../visiteur.service';
 import { EventService } from '../event.service';
 import { MailService } from '../mail.service';
 
@@ -31,10 +30,10 @@ export class EvenementComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router,private visiteurService: VisiteurService,private mailService: MailService) {}
+  constructor(private eventService: EventService, private router: Router,private mailService: MailService) {}
 
   getAllEvents(): void {
-    this.visiteurService.getAllEvents().subscribe(evtns => {
+    this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
     }, error => {
       console.error('Error fetching events:', error);

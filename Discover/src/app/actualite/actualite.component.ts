@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { VisiteurService } from '../visiteur.service';
+// import { VisiteurService } from '../visiteur.service';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
+import { UserService } from '../user.service';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-actualite',
@@ -34,10 +36,10 @@ export class ActualiteComponent {
   }
 
     
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private userervice: UserService, private router:Router,private postService : PostService) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService.getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);
@@ -45,7 +47,7 @@ export class ActualiteComponent {
   }
 
   isLiked1 = false;
-  likeCount1 = 21; // Initial count of likes
+  likeCount1 = 21; 
 
   get likeIconClass1() {
     return this.isLiked1 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';

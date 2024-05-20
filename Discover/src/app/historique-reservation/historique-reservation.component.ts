@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
-import { VisiteurService } from '../visiteur.service';
 import { User } from '../models/user.model';
 import { Event } from '../models/event.model';
 
@@ -30,17 +29,17 @@ export class HistoriqueReservationComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router,private visiteurService: VisiteurService) {}
+  constructor(private eventService: EventService, private router: Router) {}
 
   getAllEvents(): void {
-    this.visiteurService.getAllEvents().subscribe(evnt => {
+    this.eventService.getAllEvents().subscribe(evnt => {
       this.events = evnt;
     }, error => {
       console.error('Error fetching events:', error);
     });
   }
 
-  isOpen = false; // Flag to track dropdown visibility
+  isOpen = false; 
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;

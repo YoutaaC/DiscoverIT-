@@ -1,11 +1,14 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Post } from '../models/post.model';
-import { PostService } from '../post.service';
+// import { PostService } from '../post.service';
 import { User } from '../models/user.model';
-import { EventService } from '../event.service';
-import { VisiteurService } from '../visiteur.service';
+// import { EventService } from '../event.service';
+// import { VisiteurService } from '../visiteur.service';
 import { Event } from '../models/event.model';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { EventService } from '../event.service';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-home',
@@ -48,10 +51,6 @@ export class HomeComponent {
   buttonText2 = 'Suivre';
   buttonText3 = 'Suivre';
 
-  // isLiked1 = false;
-  // isLiked2 = false;
-  // isLiked3 = false;
-
 
   isFavori1 = false;
   isFavori2 = false;
@@ -74,10 +73,10 @@ export class HomeComponent {
   }
 
   
-  constructor(private visiteurService: VisiteurService, private router:Router) {}
+  constructor(private userService: UserService, private router:Router,private eventService: EventService, private postService: PostService) {}
 
   getAllPosts(): void {
-    this.visiteurService.getAllPosts().subscribe(psts => {
+    this.postService  .getAllPosts().subscribe(psts => {
       this.posts = psts;
     }, error => {
       console.error('Error fetching posts:', error);
@@ -85,7 +84,7 @@ export class HomeComponent {
   }
 
   getAllEvents(): void {
-    this.visiteurService.getAllEvents().subscribe(evtns => {
+    this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
     }, error => {
       console.error('Error fetching events:', error);
