@@ -64,7 +64,32 @@
           </div>
        
           <section class="section-profile">
-         <!-- aaaa -->
+            <hr> 
+         
+        
+                <div class="col-md-5" *ngFor="let event of events">
+                  <div class="card " *ngIf="event.id === 4 || event.id === 5">
+                    <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
+                    <div class="card-body">
+                      <div class="d-flex">
+                      <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav" ><i class="fa-regular fa-heart icon-fav"></i></button>
+                    </div>
+                      <p>{{event.mini_body}}</p>
+                      <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                      <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                      <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                      <div class="d-flex justify-content-between align-items-center ">
+                        <div>
+                          <button class="reserver-btn" >Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
+                        </div>   
+                      <h5 class="payant-prix">{{event.prix}}</h5>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+     
+        
+
   <br><br><br>
     </section>
         </main>  

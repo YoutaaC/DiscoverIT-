@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
 import { PostService } from '../post.service';
+import { AuthenticationService } from '../authentication.service';
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-user-add-post',
@@ -15,6 +16,13 @@ export class UserAddPostComponent {
   currentUser: User | null = null;
   posts: Post[] = [];
   accessToken!:any;
+  newPost: any = {
+    title: '',
+    mini_body: '',
+    body: '',
+    type: '',
+    creationDate: new Date()
+  };
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem('accessToken'); 
     const userData = localStorage.getItem('accessToken');
@@ -26,17 +34,11 @@ export class UserAddPostComponent {
     }
     this.createPost();
   }
-  constructor(private userService:UserService, private route:ActivatedRoute, private router:Router,private postService:PostService){}
-  newPost: any = {
-    title: '',
-    mini_body: '',
-    body: '',
-    type: '',
-    creationDate: new Date()
-  };
+  constructor(private userService:UserService, private route:ActivatedRoute, private router:Router,private postService:PostService,private autService:AuthenticationService){}
+
   PostToAdd!:Post;
     createPost() {
-      if (this.newPost.title && this.newPost.body && this.newPost.type) {
+      if (this.newPost.title && this.newPost.body ) {
         this.postService.createPosts(this.newPost)
           .subscribe(createdPost => {
             console.log('Post added successfully:', createdPost);
