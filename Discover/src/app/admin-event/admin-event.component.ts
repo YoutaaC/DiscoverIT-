@@ -3,7 +3,6 @@ import { User } from '../models/user.model';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
-// import { VisiteurService } from '../visiteur.service';
 import Swal from 'sweetalert2'
 import { UserService } from '../user.service';
 declare var $:any;
