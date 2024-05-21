@@ -50,6 +50,7 @@ import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.componen
 import { GalerieComponent } from './galerie/galerie.component';
 import { UserAddPostComponent } from './user-add-post/user-add-post.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { RepondreMessageComponent } from './repondre-message/repondre-message.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -101,7 +102,8 @@ const routes: Routes = [
   {path:'actualite/E-commerce',component:ActuEcommerceComponent},
   {path:'galerie',component:GalerieComponent},
   {path:'UserAddPost',component:UserAddPostComponent},
-  {path:'addUser',component:AddUserComponent}
+  {path:'addUser',component:AddUserComponent},
+  {path:'Repondre/:id',component:RepondreMessageComponent}
  
 ];
 

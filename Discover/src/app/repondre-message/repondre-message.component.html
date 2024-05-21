@@ -1,1 +1,33 @@
-<p>repondre-message works!</p>
+<body>
+    <br><br>
+    <h2 class="big_title">Modifier une Actualité</h2>
+      <div class="form-box">
+            <!-- saisir le titre -->
+            <div class="formu">
+          <form >
+                
+
+  <!-- saisir le body -->
+  
+                <label for="to">to</label>
+                <input type="text" id="to" name="body" [(ngModel)]="contact.emailUser" >
+  
+  <!-- saisir le type -->
+         
+                <label for="objet">objet</label>
+                <input type="text" id="objet" placeholder="  Entrer votre objet"  name="type" [(ngModel)]="newcontact.objet" >
+  
+                <label for="message">Message</label>
+                <input type="text" id="message" placeholder="  Entrer votre message"  name="type" [(ngModel)]="newcontact.message" >
+  
+
+
+                <button type="submit" class="sumbmit-btn" (click)="confirmUpdate()">Modifier</button>
+                <a href="messageAdmin" class="btn btn-link retour-btn">Retour</a>
+              </form>    
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        </body>
+
+  

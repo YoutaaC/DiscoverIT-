@@ -99,7 +99,7 @@
               <th scope="col">emailUser</th>
               <th scope="col">objet</th>
               <th scope="col">message</th>
-              <th scope="col">Date</th>
+              <!-- <th scope="col">Date</th> -->
               <th scope="col">Action</th>
             </tr> 
           </thead>
@@ -111,9 +111,10 @@
               <td>{{contact.emailUser}}</td>
               <td>{{contact.objet}}</td>
               <td>{{contact.message}}</td>
-              <td>{{contact.creationDate | date: 'dd/MM/yyyy' }}</td>
+              <!-- <td>{{contact.creationDate | date: 'dd/MM/yyyy' }}</td> -->
               <td>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><button class="btn text-light modif-btn">Repondre</button></a>
+                <!-- <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><button class="btn text-light modif-btn">Repondre</button></a> -->
+                <button class="btn text-light modif-btn" (click)="gotoRepondre(contact.id)">Repondre</button>
                 <br><br>
                 <button class="btn text-light delete-btn" (click)="confirmDelete(contact)">Supprimer</button>
               </td>

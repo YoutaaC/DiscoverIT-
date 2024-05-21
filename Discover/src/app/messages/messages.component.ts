@@ -69,6 +69,10 @@ export class MessagesComponent implements OnInit {
       }
     });
   }
+  gotoRepondre(id: Number){
+    this.router.navigate(["/Repondre",id])
+  }
+
 
   logout(){
     localStorage.removeItem("user");
