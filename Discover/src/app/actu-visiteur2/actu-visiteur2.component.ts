@@ -3,7 +3,7 @@ import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { Post } from '../models/post.model';
 import { User } from '../models/user.model';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-actu-visiteur2',
   templateUrl: './actu-visiteur2.component.html',
@@ -88,5 +88,21 @@ export class ActuVisiteur2Component {
   }
   actuecommerce(){
     this.router.navigate(['V_actu/E-commerce']);
+  }
+  
+  wannasignup(){
+    Swal.fire({
+      title: "Créer un compte",
+      text: "Cette fonctionnalité est accessible lorsque vous créez un compte.",
+      icon: "info",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "S'inscrire"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['signup']);
+      }
+    });
   }
 }

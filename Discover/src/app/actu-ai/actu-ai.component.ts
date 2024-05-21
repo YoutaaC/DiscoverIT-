@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { PostService } from '../post.service';
 import { User } from '../models/user.model';
 import { Post } from '../models/post.model';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-actu-ai',
   templateUrl: './actu-ai.component.html',
@@ -114,4 +114,5 @@ export class ActuAiComponent {
   actuEcomm(){
     this.router.navigate(['actualite/E-commerce']);
   }
+
 }
