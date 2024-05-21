@@ -2,8 +2,8 @@
   <app-navbar></app-navbar>
   <aside id="sidebar" class="sidebar">
         <div class="text-center ">
-        <img src="./../../assets/img/profile-img.jpg" class="pdp">
-        <p style="font-size: 18px; font-weight: bold;">Pseudo</p>
+        <img src="./../../assets/images/Ellipse 43.png" class="pdp">
+        <p style="font-size: 18px; font-weight: 650;">{{currentUser.username}}</p>
     </div>
     <hr>
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -66,7 +66,7 @@
         <div class="pagetitle d-flex justify-content-between  ">
          
             <div class="d-flex ">
-          <img src="./../../assets/img/profile-img.jpg" class="pdp2">
+          <img src="./../../assets/images/Ellipse 43.png" class="pdp2">
           <div class="div-P1">
           <h1 style="font-size: 20px;">{{currentUser.username}}</h1> 
           <span>8 publications</span>&nbsp;&nbsp; <span>64 abonnés</span>&nbsp;&nbsp; <span>117 suivi(e)s</span>
@@ -266,8 +266,42 @@
       </div>
     </div>
 </div>
+ <!-- ligne 2 -->
+ <div class="card-grp d-flex" >
+  <div *ngFor="let post of posts">
+        <!-- card1 -->
+ <div class="card "   *ngIf="post.id==43">
+
+     <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+     <div class="card-body" >   
+     <div class="part2-card" >
+       <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+     </div>
+       <h5 class="title-desc">{{post.title}}</h5>
+       <p class="card-text">{{post.mini_body}}</p>
+       <div class="btns">
+       <button class="btn voirplus-btn">Voir Plus</button>
+       <div class="react d-flex">
+        <span class="btn-like" (click)="toggleLike4()"><i [class]="likeIconClass4"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+       <div class="dropdown">
+        <i class="fa-regular fa-share-from-square btn-share"></i>
+        <ul class="dropdown-content">
+          <div>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+          </div>
+        </ul>
+      </div>
+     </div>
+     </div>
+     </div>
+ </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
   </section>
       </main> 
     <!-- <app-footer></app-footer>  -->

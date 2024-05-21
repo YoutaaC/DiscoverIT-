@@ -2,8 +2,8 @@
     <app-navbar></app-navbar>
     <aside id="sidebar" class="sidebar">
           <div class="text-center ">
-              <img src="./../../assets/img/profile-img.jpg" class="pdp">
-          <p>Pseudo</p>
+              <img src="./../../assets/images/Ellipse 43.png" class="pdp">
+          <p>eya</p>
       </div>
       <hr>
           <ul class="sidebar-nav" id="sidebar-nav">
@@ -69,20 +69,23 @@
             
                     <form class="formu text-capitalize">
                   <label for="titre">Titre</label>
-                  <input type="text" id="titre" placeholder="  Entrer votre titre" name="titre">
-
+                  <input type="text" id="titre" placeholder="  Entrer votre titre" name="titre" [(ngModel)]="newPost.title">
+                  
+                  <label for="titre">Description</label>
+                  <input type="text" id="titre" placeholder="  Entrer votre titre" name="titre" [(ngModel)]="newPost.mini_body">
+                  
                   <label for="titre">Contenu</label><br>
-                  <textarea name="titre" id="titre" cols="49" rows="10"  placeholder=" Entrer votre Contenu" class="form-message"></textarea><br>
+                  <textarea name="titre" id="titre" cols="49" rows="10"  placeholder=" Entrer votre Contenu" class="form-message"[(ngModel)]="newPost.body"></textarea><br>
 
                   <label for="categorie">Choisir une catégorie</label><br>
                   <div class="dropdown">
-                    <select class="dropdown-input">
+                    <select class="dropdown-input" [(ngModel)]="newPost.type" id="categorie">
                       <option value="">Choisir une catégorie</option>
                       <option value="Sécurité">Sécurité</option>
                       <option value="Développement">Développement</option>
                       <option value="AI">AI</option>
                       <option value="TechnologieWeb">Technologie Web</option>
-                      <option value="BigData">Big Data </option>
+                      <option value="BigData">Big Data</option>
                       <option value="Ecommerce">E-commerce</option>
                     </select>
                   </div>
@@ -93,7 +96,7 @@
                  
                 </form>   
                 <div class="d-flex  align-self-end btns">
-                    <button  class="modif-btn" (click)="addpost()">Publier</button>&nbsp;&nbsp;
+                    <button  class="modif-btn" (click)="createPost()">Publier</button>&nbsp;&nbsp;
                     <button class="conf-btn" (click)="gotoprofil()">Annuler</button>
                   </div>
             </div>

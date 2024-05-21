@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 // import { VisiteurService } from '../visiteur.service';
 import { Post } from '../models/post.model';
 import { User } from '../models/user.model';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { PostService } from '../post.service';
 
@@ -16,6 +16,11 @@ export class ProfileComponent {
   posts: Post[] = [];
   currentUser!: User;
   accessToken!: any;
+  user!:User;
+  userId!: number;
+
+  
+
 
 
   ngOnInit(): void {
@@ -30,12 +35,30 @@ export class ProfileComponent {
       console.error('User data not found in local storage');
     }
 
-
+    this.getAllUsers();
+    this.getUserById(2);
     this.getAllPosts();
   }
 
   
-  constructor(private userService: UserService, private router:Router,private postService : PostService) {}
+  constructor(private userService: UserService, private router:Router,private postService : PostService,private activatedRoute: ActivatedRoute) {}
+
+  getAllUsers(): void {
+    this.userService.getAllUsers().subscribe(users => {
+      this.users = users;
+    }, error => {
+      console.error('Error fetching users:', error);
+    });
+  }
+  
+  
+  getUserById(id: number): void {
+    this.userService.getUserById(id).subscribe(user => {
+      this.currentUser = user;
+    }, error => {
+      console.error('Error fetching user:', error);
+    });
+  }
 
   getAllPosts(): void {
     this.postService.getAllPosts().subscribe(psts => {
@@ -162,3 +185,9 @@ export class ProfileComponent {
     this.router.navigate(["/UserAddPost"])
   }
 }
+
+
+
+
+
+
