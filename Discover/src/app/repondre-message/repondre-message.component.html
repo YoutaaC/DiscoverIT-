@@ -1,6 +1,6 @@
 <body>
     <br><br>
-    <h2 class="big_title">Modifier une Actualité</h2>
+    <h2 class="big_title">Repondre sur le Message</h2>
       <div class="form-box">
             <!-- saisir le titre -->
             <div class="formu">
@@ -10,19 +10,19 @@
   <!-- saisir le body -->
   
                 <label for="to">to</label>
-                <input type="text" id="to" name="body" [(ngModel)]="contact.emailUser" >
+                <input type="text" id="to" name="to" [(ngModel)]="contact.emailUser" >
+               
   
   <!-- saisir le type -->
          
-                <label for="objet">objet</label>
-                <input type="text" id="objet" placeholder="  Entrer votre objet"  name="type" [(ngModel)]="newcontact.objet" >
+                <label for="objet">Objet</label>
+                <input type="text" id="objet" placeholder="  Entrer votre objet"  name="type" [(ngModel)]="newcontact.subject" >
   
                 <label for="message">Message</label>
-                <input type="text" id="message" placeholder="  Entrer votre message"  name="type" [(ngModel)]="newcontact.message" >
-  
+                <textarea name="message" id="message" cols="40" rows="10"  placeholder="   Entrer votre message" class="form-message"  [(ngModel)]="newcontact.body"></textarea>
 
 
-                <button type="submit" class="sumbmit-btn" (click)="confirmUpdate()">Modifier</button>
+                <button type="submit" class="sumbmit-btn" (click)="sendMail(contact.emailUser,newcontact.subject,newcontact.body)">Envoyer</button>
                 <a href="messageAdmin" class="btn btn-link retour-btn">Retour</a>
               </form>    
           </div>

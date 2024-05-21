@@ -14,22 +14,15 @@ export class MailService {
     private authService: AuthenticationService
   ) { }
 
-  sendMail(file: File[], to: string, cc: string[], subject: string, body: string): Observable<any> {
+  sendMail( to: string, subject: string, body: string): Observable<any> {
     const formData = new FormData();
-    if (file) {
-      for (const f of file) {
-        formData.append('file', f);
-      }
-    }
     formData.append('to', to);
-    formData.append('cc', cc.join(',')); 
     formData.append('subject', subject);
     formData.append('body', body);
 
     const headers = new HttpHeaders({ 'enctype': 'multipart/form-data' });
 
-    // Replace with your actual mail API endpoint URL
-    return this.httpClient.post('/api/mail/send', formData, { headers });
+    return this.httpClient.post('mail/send', formData, { headers });
   }
 
 }

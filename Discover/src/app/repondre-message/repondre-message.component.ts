@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Contact } from '../models/contact.model';
 import { MessageService } from '../message.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { MailService } from '../mail.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-repondre-message',
   templateUrl: './repondre-message.component.html',
@@ -19,21 +20,16 @@ export class RepondreMessageComponent {
     message:"",
     creationDate: new Date() ,
   }
-  newcontact :Contact={
-    id:-1,
-    nomUser:"",
-    prenomUser:"",
-    emailUser:"",
-    objet:"",
-    message:"",
-    creationDate: new Date() ,
+  newcontact :any={
+    to:"",
+    subject:"",
+    body:"",
   }
-
 
 
   userId! :number;
   
-  constructor(private messageService:MessageService, private route:ActivatedRoute){}
+  constructor(private messageService:MessageService, private route:ActivatedRoute,private mailService : MailService){}
   
   ngOnInit(): void {
     this.userId=+this.route.snapshot.paramMap.get('id')!;
@@ -46,7 +42,22 @@ export class RepondreMessageComponent {
         this.contact=contactp
       })
   }
-  confirmUpdate(){
-
+  sendMail( to: string, subject: string, body: string) {
+    this.mailService.sendMail(this.newcontact.to, this.newcontact.subject, this.newcontact.body)
+      .subscribe(response => {
+        console.log('Email sent successfully:', response);
+        Swal.fire({
+          title: "success",
+          text: "Email sent successfully",
+          icon: "success"
+        });
+      }, error => {
+        console.error('Error sending email:', error);
+        Swal.fire({
+          title: "error",
+          text: "Error sending email",
+          icon: "error"
+        });
+      });
   }
 }
