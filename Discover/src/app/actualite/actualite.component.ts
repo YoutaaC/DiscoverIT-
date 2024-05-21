@@ -94,6 +94,9 @@ export class ActualiteComponent {
     }
   }
 
+
+
+
   actuBigdata(){
     this.router.navigate(['actualite/BigData']);
   }
