@@ -62,10 +62,10 @@
           <i class="fa-regular fa-share-from-square btn-share"></i>
           <ul class="dropdown-content">
             <div>
-              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
-                  <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
-                  <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
-                  <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+              <li><a (click)="wannasignup()"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                  <li><a (click)="wannasignup()"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                  <li><a (click)="wannasignup()"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                  <li><a (click)="wannasignup()"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
             </div>
           </ul>
         </div>
@@ -103,10 +103,10 @@
                 <i class="fa-regular fa-share-from-square btn-share"></i>
                 <ul class="dropdown-content">
                   <div>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
-                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
-                        <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                    <li (click)="wannasignup()"><a ><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                        <li (click)="wannasignup()"><a ><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                        <li (click)="wannasignup()"><a ><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                        <li (click)="wannasignup()"><a ><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
                   </div>
                 </ul>
               </div>
@@ -205,7 +205,7 @@
               <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
               <div class="card-body">
                 <div class="d-flex">
-                  <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav"><i class="fa-regular fa-heart icon-fav"></i></button>
+                  <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav" (click)="wannasignup()"><i class="fa-regular fa-heart icon-fav"></i></button>
                 </div>
                 <p>{{event.mini_body}}</p>
                 <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
@@ -213,7 +213,7 @@
                 <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                 <div class="d-flex justify-content-between align-items-center ">
                   <div>
-                    <button class="reserver-btn" (click)="gotoSignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="gotoSignup()">Voir plus</button> 
+                    <button class="reserver-btn" (click)="wannasignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="wannasignup()">Voir plus</button> 
                   </div>   
                 <h5 class="payant-prix">{{event.prix}} DT</h5>
               </div>
@@ -229,7 +229,7 @@
               <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
               <div class="card-body">
                 <div class="d-flex">
-                <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav"><i class="fa-regular fa-heart icon-fav"></i></button>
+                <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav" (click)="wannasignup()"><i class="fa-regular fa-heart icon-fav"></i></button>
               </div>
                 <p>{{event.mini_body}}</p>
                 <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
@@ -237,7 +237,7 @@
                 <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
                 <div class="d-flex justify-content-between align-items-center ">
                   <div>
-                    <button class="reserver-btn" (click)="gotoSignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="gotoSignup()">Voir plus</button> 
+                    <button class="reserver-btn" (click)="wannasignup()">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event" (click)="wannasignup()">Voir plus</button> 
                   </div>   
                 <h5 class="payant-prix">{{event.prix}}</h5>
               </div>
