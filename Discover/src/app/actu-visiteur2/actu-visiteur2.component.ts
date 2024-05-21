@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from '../models/user.model';
-import { Post } from '../models/post.model';
 import { PostService } from '../post.service';
+import { Router } from '@angular/router';
+import { Post } from '../models/post.model';
+import { User } from '../models/user.model';
 
 @Component({
-  selector: 'app-actu-techweb-visit',
-  templateUrl: './actu-techweb-visit.component.html',
-  styleUrls: ['./actu-techweb-visit.component.css']
+  selector: 'app-actu-visiteur2',
+  templateUrl: './actu-visiteur2.component.html',
+  styleUrls: ['./actu-visiteur2.component.css']
 })
-export class ActuTechwebVisitComponent {
+export class ActuVisiteur2Component {
   users: User[] = [];
   posts: Post[] = [];
   currentUser!: User;

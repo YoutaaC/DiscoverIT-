@@ -51,6 +51,8 @@ import { GalerieComponent } from './galerie/galerie.component';
 import { UserAddPostComponent } from './user-add-post/user-add-post.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { RepondreMessageComponent } from './repondre-message/repondre-message.component';
+import { Actualite2Component } from './actualite2/actualite2.component';
+import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -103,7 +105,9 @@ const routes: Routes = [
   {path:'galerie',component:GalerieComponent},
   {path:'UserAddPost',component:UserAddPostComponent},
   {path:'addUser',component:AddUserComponent},
-  {path:'Repondre/:id',component:RepondreMessageComponent}
+  {path:'Repondre/:id',component:RepondreMessageComponent},
+  {path:'actualite2', component:Actualite2Component},
+  {path:'V_actu2',component:ActuVisiteur2Component}
  
 ];
 

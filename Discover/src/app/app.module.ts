@@ -62,6 +62,8 @@ import { GalerieComponent } from './galerie/galerie.component';
 import { UserAddPostComponent } from './user-add-post/user-add-post.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { RepondreMessageComponent } from './repondre-message/repondre-message.component';
+import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.component';
+import { Actualite2Component } from './actualite2/actualite2.component';
 
 
 @NgModule({
@@ -122,7 +124,9 @@ import { RepondreMessageComponent } from './repondre-message/repondre-message.co
     GalerieComponent,
     UserAddPostComponent,
     AddUserComponent,
-    RepondreMessageComponent
+    RepondreMessageComponent,
+    ActuVisiteur2Component,
+    Actualite2Component
     ],
   imports: [
     BrowserModule,

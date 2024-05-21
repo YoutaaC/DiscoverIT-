@@ -16,7 +16,10 @@ export class FavorisProfileComponent {
   currentUser!: User;
   accessToken!: any;
 
- 
+  isFavori1 = false;
+  
+  isFavori2 = false;
+  
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -61,4 +64,17 @@ export class FavorisProfileComponent {
     this.router.navigate(["/detailsEvent",id])
   }
 
+  get FavIconClass1() {
+    return this.isFavori1 ? 'fa-regular fa-heart icon-fav' : 'fa-solid fa-heart icon-favoris';
+  }
+  toggleFav1() {
+    this.isFavori1 = !this.isFavori1; 
+  }
+
+  get FavIconClass2() {
+    return this.isFavori2 ? 'fa-regular fa-heart icon-fav' : 'fa-solid fa-heart icon-favoris';
+  }
+  toggleFav2() {
+    this.isFavori2 = !this.isFavori2; 
+  }
 }

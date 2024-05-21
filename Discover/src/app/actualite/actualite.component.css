@@ -209,3 +209,32 @@ color: #B4B4B4;
     display: flex;
     justify-content: space-between;
   }
+  .pagination {
+    display: flex; /* Arrange page items horizontally */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-top: 10px; 
+    margin-left: 650px;
+  }
+  
+  .page-item {
+    margin: 5px; /* Add spacing between page items */
+  }
+  
+  .page-link {
+    padding: 5px 10px; /* Adjust padding for links */
+    border: 1px solid #AC8DF7; /* Add a border */
+    border-radius: 4px; /* Add rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set text color */
+    background-color: transparent;
+  }
+  .page-item.active .page-link {
+    background-color: #AC8DF7;
+    color: #fff;
+  }
+
+  .page-item:hover .page-link {
+    background-color: #AC8DF7;
+    color: #fff;
+  }

@@ -59,34 +59,59 @@
         <main id="main" class="main">
           <div class="pagetitle">
             
-            <h1 style="font-size: 25px;">Historique des j’aimes</h1> 
+            <h1 style="font-size: 30px;">Favoris</h1> 
                 
           </div>
        
           <section class="section-profile">
             <hr> 
          
-        
-                <div class="col-md-5" *ngFor="let event of events">
-                  <div class="card " *ngIf="event.id === 4 || event.id === 5">
-                    <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
-                    <div class="card-body">
-                      <div class="d-flex">
-                      <h1 class="titre-event">{{event.title}}</h1> <button class="btn-fav" ><i class="fa-regular fa-heart icon-fav"></i></button>
+            <div class="d-flex">
+              <div class="col-0" *ngFor="let event of events">
+                <div class="card "  *ngIf="event.id === 1">
+                  <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <h1 class="titre-event">{{event.title}}</h1>
+                       <button class="btn-fav" (click)="toggleFav1()"><i [class]="FavIconClass1"></i></button>
                     </div>
-                      <p>{{event.mini_body}}</p>
-                      <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
-                      <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
-                      <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
-                      <div class="d-flex justify-content-between align-items-center ">
-                        <div>
-                          <button class="reserver-btn" >Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event">Voir plus</button> 
-                        </div>   
-                      <h5 class="payant-prix">{{event.prix}}</h5>
-                    </div>
-                    </div>
+                    <p>{{event.mini_body}}</p>
+                    <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                    <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                    <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <div>
+                        <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event"  (click)="gotoDetailsEvent(event.id)">Voir plus</button> 
+                      </div>   
+                    <h5 class="payant-prix">{{event.prix}} DT</h5>
+                  </div>
                   </div>
                 </div>
+         
+              </div>
+              <div class="col-1" *ngFor="let event of events">
+                <div class="card "  *ngIf="event.id === 2">
+                  <img src="../../assets/images/event1.jpg" class="card-img-top-event" >
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <h1 class="titre-event">{{event.title}}</h1> 
+                      <button class="btn-fav" (click)="toggleFav2()"><i [class]="FavIconClass2"></i></button>
+                    </div>
+                    <p>{{event.mini_body}}</p>
+                    <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}}&nbsp;{{event.mois_debut}}&nbsp;{{event.annee_debut}}</p>
+                    <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
+                    <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <div>
+                        <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button>&nbsp;&nbsp;<button class="voirplus-btn-event"  (click)="gotoDetailsEvent(event.id)">Voir plus</button> 
+                      </div>   
+                    <h5 class="payant-prix">{{event.prix}} DT</h5>
+                  </div>
+                  </div>
+                </div>
+         
+              </div>
+            </div>
      
         
 

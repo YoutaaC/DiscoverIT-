@@ -2,20 +2,22 @@ import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
-import { Post } from '../models/post.model';
 import { User } from '../models/user.model';
+import { Post } from '../models/post.model';
 
 @Component({
-  selector: 'app-actu-securite',
-  templateUrl: './actu-securite.component.html',
-  styleUrls: ['./actu-securite.component.css']
+  selector: 'app-actualite2',
+  templateUrl: './actualite2.component.html',
+  styleUrls: ['./actualite2.component.css']
 })
-export class ActuSecuriteComponent {
+export class Actualite2Component {
   users: User[] = [];
   posts: Post[] = [];
   currentUser!: User;
   accessToken!: any;
 
+
+ 
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 

@@ -86,4 +86,7 @@ export class ActuAiVisitComponent {
   actutechweb(){
     this.router.navigate(['V_actu/Technologie Web']);
   }
+  actuecommerce(){
+    this.router.navigate(['V_actu/E-commerce']);
+  }
 }
