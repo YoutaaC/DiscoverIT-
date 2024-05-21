@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from '../models/user.model';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../user.service';
 import Swal from 'sweetalert2'
-declare var $:any;
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
 })
-export class SignupComponent {
+export class AddUserComponent {
   user :User={
     id:-1,
     firstName:"",
@@ -49,9 +48,9 @@ export class SignupComponent {
 
 
   register() {
-    if (!this.user || !this.user.username || !this.user.email) { // Replace with appropriate user validation
+    if (!this.user || !this.user.username || !this.user.email) { 
       console.error('No user data to register!');
-      Swal.fire('Error!', 'No user data to register.', 'error');
+      Swal.fire('Error!', 'Remplir le formulaire', 'error');
       return;
     }
 
@@ -69,11 +68,11 @@ export class SignupComponent {
             next: (newUser) => {
               console.log('User registered successfully:', newUser);
               Swal.fire('Registered!', 'User registered successfully.', 'success');
-              this.router.navigate(['home']);
+              this.router.navigate(['adminUser']);
             },
             error: (error) => {
               console.error('Error registering user:', error);
-              Swal.fire('Error!', 'Remplir le formulaire', 'error');
+              Swal.fire('Error!', 'An error occurred during registration.', 'error');
             }
           });
       }
@@ -145,7 +144,3 @@ export class SignupComponent {
   }
 }
 
-
-
-
-//test

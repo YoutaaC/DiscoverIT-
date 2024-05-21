@@ -68,7 +68,7 @@ getPostById(id: number): Observable<Post> {
       "Authorization": "Bearer " + accessToken
     });
 
-    return this.httpClient.post<Post>(this.apiUrl + 'getPostById/'+id, { headers })
+    return this.httpClient.get<Post>(this.apiUrl + 'getPostById/'+id, { headers })
       .pipe(
         catchError(error => {
           console.error('Error fetching posts:', error);

@@ -1,9 +1,6 @@
 <body>
+    <br><br>
     <div class="form-box">
-        <div class="button-box">
-            <button type="button" class="toggle-btn1" (click)="gotoSignup()">S'inscrire</button>
-            <button type="button" class="toggle-btn2" (click)="gotoSignin()">Se connecter</button>
-          </div>
           <!-- saisir le nom -->
           <div class="formu">
         <form  [formGroup]="forminput">
@@ -77,7 +74,8 @@
               <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp;Confirmer votre Pseudo !!
               </div>
 
-              <button type="submit" class="sumbmit-btn" (click)="register()">S'inscrire</button>
+              <button type="submit" class="sumbmit-btn" (click)="register()" >S'inscrire</button>
+              <a href="adminUser" class="btn btn-link retour-btn">Retour</a>
             </form>   
         </div>
       </div>

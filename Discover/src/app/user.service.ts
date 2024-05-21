@@ -56,7 +56,7 @@ export class UserService {
 
     //delete User with username function
 
-    deleteUser(username:String): Observable<any> {
+    deleteUserByUsername(username:String): Observable<any> {
       const accessToken = this.authService.getAccessToken();
   
       if (!accessToken) {
@@ -80,7 +80,7 @@ export class UserService {
 // update user
 
   
-  updateUser(id:number,user:User): Observable<User> {
+updateUser(id:number,user:User): Observable<User> {
     const accessToken = this.authService.getAccessToken();
 
     if (!accessToken) {
@@ -91,7 +91,7 @@ export class UserService {
       "Authorization": "Bearer " + accessToken
     });
 
-    return this.httpClient.put<User>(this.apiUrl + "updateUserP/"+id,user, { headers })
+    return this.httpClient.put<User>(this.apiUrl + "updateUser/"+id,user, { headers })
       .pipe(
         catchError(error => {
           console.error('Error fetching users:', error);
@@ -123,62 +123,25 @@ getUserById(id:number): Observable<User> {
 }
 
 
-// getAllPosts(): Observable<Post[]> {
-//   const accessToken = this.authService.getAccessToken();
-
-//   if (!accessToken) {
-//     throw new Error('Access token not found.'); 
-//   }
-//   console.log(accessToken);
-//   const headers = new HttpHeaders({
-//     "Authorization": "Bearer " + accessToken
-//   });
-
-//   return this.httpClient.get<Post[]>(this.apiUrl + "getAllPosts", { headers })
-//     .pipe(
-//       catchError(error => {
-//         console.error('Error fetching users:', error);
-//         return throwError(error); 
-//       })
-//     );
-// }
-
-// getAllEvents(): Observable<Event[]> {
-//   const accessToken = this.authService.getAccessToken();
-
-//   if (!accessToken) {
-//     throw new Error('Access token not found.'); 
-//   }
-//   console.log(accessToken);
-//   const headers = new HttpHeaders({
-//     "Authorization": "Bearer " + accessToken
-//   });
-
-//   return this.httpClient.get<Event[]>(this.apiUrl + "getAllEvents", { headers })
-//     .pipe(
-//       catchError(error => {
-//         console.error('Error fetching users:', error);
-//         return throwError(error); 
-//       })
-//     );
-// }
 
 
+deleteUserById(id:number): Observable<User> {
+  const accessToken = this.authService.getAccessToken();
 
-//recherche par username , id ou email
+  if (!accessToken) {
+    throw new Error('Access token not found.'); 
+  }
+  console.log(accessToken);
+  const headers = new HttpHeaders({
+    "Authorization": "Bearer " + accessToken
+  });
 
-// searchUsers(username?: string, id?: number, email?: string): Observable<User[]> {
-//   let params = new HttpParams();
-//   if (username) {
-//     params = params.set('username', username);
-//   }
-//   if (id) {
-//     params = params.set('id', id.toString());
-//   }
-//   if (email) {
-//     params = params.set('email', email);
-//   }
-
-//   return this.httpClient.get<User[]>(`${this.apiUrl}/search`, { params });
-// }
+  return this.httpClient.delete<User>(this.apiUrl + "deleteById/"+id, { headers })
+    .pipe(
+      catchError(error => {
+        console.error('Error fetching users:', error);
+        return throwError(error); 
+      })
+    );
+}
 }

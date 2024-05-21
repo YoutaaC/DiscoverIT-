@@ -60,6 +60,8 @@ import { ActuEcommerceComponent } from './actu-ecommerce/actu-ecommerce.componen
 import { ActuTechwebComponent } from './actu-techweb/actu-techweb.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { UserAddPostComponent } from './user-add-post/user-add-post.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { RepondreMessageComponent } from './repondre-message/repondre-message.component';
 
 
 @NgModule({
@@ -118,7 +120,9 @@ import { UserAddPostComponent } from './user-add-post/user-add-post.component';
     ActuEcommerceComponent,
     ActuTechwebComponent,
     GalerieComponent,
-    UserAddPostComponent
+    UserAddPostComponent,
+    AddUserComponent,
+    RepondreMessageComponent
     ],
   imports: [
     BrowserModule,

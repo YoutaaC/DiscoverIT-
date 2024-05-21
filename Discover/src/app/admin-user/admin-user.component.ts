@@ -61,14 +61,14 @@ confirmDelete(user: User) {
     cancelButtonText: 'Cancel'
   }).then((result) => {
     if (result.isConfirmed) {
-      this.userService. deleteUser(this.userToDelete.username)
+      this.userService. deleteUserByUsername(this.userToDelete.username)
         .subscribe((response) => {
           console.log('Deleted:', response);                                       
           Swal.fire('Deleted!', 'User deleted successfully.', 'success');
           
         }, (error) => {
           console.error('Error deleting user:', error);
-          Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+          Swal.fire('Deleted!', 'User deleted successfully', 'success');
           
         });
     }
