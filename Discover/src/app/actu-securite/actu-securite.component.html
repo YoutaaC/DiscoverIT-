@@ -27,143 +27,14 @@
     </div>
     <br>
 <!-- ligne 1 -->
-    <div class="card-grp" >
-      <div *ngFor="let post of posts">
-            <!-- card1 -->
-     <div class="card "   *ngIf="post.id==1">
-         <div class="part1-card">
-             <div class="profile-part">
-                 <div class="profile">
-                 <img src="./../../../assets/images/icon-profile.png" class="pdp">
-             </div>
-             <div class="name-pseudo">
-                 <h5 class="card-title">Pseudo</h5>
-             </div>
-             </div>
-             <div class="suivre">
-              <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
-             </div>
-         </div>
-         <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
-         <div class="card-body" >   
-         <div class="part2-card" >
-           <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
-         </div>
-           <h5 class="title-desc">{{post.title}}</h5>
-           <p class="card-text">{{post.mini_body}}</p>
-           <div class="btns">
-           <button class="btn voirplus-btn">Voir Plus</button>
-           <div class="react d-flex">
-            <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
-           <div class="dropdown">
-            <i class="fa-regular fa-share-from-square btn-share"></i>
-            <ul class="dropdown-content">
-              <div>
-                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
-                    <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
-              </div>
-            </ul>
-          </div>
-         </div>
-         </div>
-         </div>
-     </div>
-            <!-- card2 -->
-            <div class="card"   *ngIf="post.id==11">
-              <div class="part1-card">
-                  <div class="profile-part">
-                      <div class="profile">
-                      <img src="./../../../assets/images/icon-profile.png" class="pdp">
-                  </div>
-                  <div class="name-pseudo">
-                      <h5 class="card-title">Pseudo</h5>
-                  </div>
-                  </div>
-                  <div class="suivre">
-                    <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
-                  </div>
-              </div>
-              <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
-              <div class="card-body" >   
-              <div class="part2-card" >
-                <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
-              </div>
-                <h5 class="title-desc">{{post.title}}</h5>
-                <p class="card-text">{{post.mini_body}}</p>
-                <div class="btns">
-                <button class="btn voirplus-btn" >Voir Plus</button>
-                <div class="react d-flex">
-                  <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                 <div class="dropdown">
-                  <i class="fa-regular fa-share-from-square btn-share"></i>
-                  <ul class="dropdown-content">
-                    <div>
-                      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
-                          <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
-                          <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
-                          <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
-                    </div>
-                  </ul>
-                </div>
-               </div>
-              </div>
-              </div>
-          </div>
-           <!-- card3 -->
-           <div class="card"   *ngIf="post.id==21">
-            <div class="part1-card">
-                <div class="profile-part">
-                    <div class="profile">
-                    <img src="./../../../assets/images/icon-profile.png" class="pdp">
-                </div>
-                <div class="name-pseudo">
-                    <h5 class="card-title">Pseudo</h5>
-                </div>
-                </div>
-                <div class="suivre">
-                  <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
-                </div>
-            </div>
-            <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
-            <div class="card-body" >   
-            <div class="part2-card" >
-              <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
-            </div>
-              <h5 class="title-desc">{{post.title}}</h5>
-              <p class="card-text">{{post.mini_body}}</p>
-              <div class="btns">
-              <button class="btn voirplus-btn" >Voir Plus</button>
-              <div class="react d-flex">
-                <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
-
-               <div class="dropdown">
-                <i class="fa-regular fa-share-from-square btn-share"></i>
-                <ul class="dropdown-content">
-                  <div>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
-                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
-                        <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
-                  </div>
-                </ul>
-              </div>
-             </div>
-            </div>
-            </div>
-        </div>
-      </div>
-  </div>
-  <!-- ligne 2 -->
-  <div class="card-grp" >
+<div class="card-grp" >
     <div *ngFor="let post of posts">
           <!-- card1 -->
-   <div class="card "   *ngIf="post.id==31">
+   <div class="card "   *ngIf="post.id==1">
        <div class="part1-card">
            <div class="profile-part">
                <div class="profile">
-               <img src="./../../../assets/images/icon-profile.png" class="pdp">
+               <img src="./../../../assets/images/Ellipse 38.png" class="pdp">
            </div>
            <div class="name-pseudo">
                <h5 class="card-title">Pseudo</h5>
@@ -200,11 +71,11 @@
        </div>
    </div>
           <!-- card2 -->
-          <div class="card"   *ngIf="post.id==37">
+          <div class="card"   *ngIf="post.id==11">
             <div class="part1-card">
                 <div class="profile-part">
                     <div class="profile">
-                    <img src="./../../../assets/images/icon-profile.png" class="pdp">
+                    <img src="./../../../assets/images/Ellipse 45.png" class="pdp">
                 </div>
                 <div class="name-pseudo">
                     <h5 class="card-title">Pseudo</h5>
@@ -241,11 +112,11 @@
             </div>
         </div>
          <!-- card3 -->
-         <div class="card"   *ngIf="post.id==41">
+         <div class="card"   *ngIf="post.id==21">
           <div class="part1-card">
               <div class="profile-part">
                   <div class="profile">
-                  <img src="./../../../assets/images/icon-profile.png" class="pdp">
+                  <img src="./../../../assets/images/Ellipse 41.png" class="pdp">
               </div>
               <div class="name-pseudo">
                   <h5 class="card-title">Pseudo</h5>
@@ -266,6 +137,7 @@
             <button class="btn voirplus-btn" >Voir Plus</button>
             <div class="react d-flex">
               <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+
              <div class="dropdown">
               <i class="fa-regular fa-share-from-square btn-share"></i>
               <ul class="dropdown-content">
@@ -282,6 +154,134 @@
           </div>
       </div>
     </div>
+</div>
+<!-- ligne 2 -->
+<div class="card-grp" >
+  <div *ngFor="let post of posts">
+        <!-- card1 -->
+ <div class="card "   *ngIf="post.id==31">
+     <div class="part1-card">
+         <div class="profile-part">
+             <div class="profile">
+             <img src="./../../../assets/images/Ellipse 45.png" class="pdp">
+         </div>
+         <div class="name-pseudo">
+             <h5 class="card-title">Pseudo</h5>
+         </div>
+         </div>
+         <div class="suivre">
+          <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+         </div>
+     </div>
+     <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+     <div class="card-body" >   
+     <div class="part2-card" >
+       <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+     </div>
+       <h5 class="title-desc">{{post.title}}</h5>
+       <p class="card-text">{{post.mini_body}}</p>
+       <div class="btns">
+       <button class="btn voirplus-btn">Voir Plus</button>
+       <div class="react d-flex">
+        <span class="btn-like" (click)="toggleLike1()"><i [class]="likeIconClass1"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+       <div class="dropdown">
+        <i class="fa-regular fa-share-from-square btn-share"></i>
+        <ul class="dropdown-content">
+          <div>
+            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+          </div>
+        </ul>
+      </div>
+     </div>
+     </div>
+     </div>
+ </div>
+        <!-- card2 -->
+        <div class="card"   *ngIf="post.id==37">
+          <div class="part1-card">
+              <div class="profile-part">
+                  <div class="profile">
+                  <img src="./../../../assets/images/Ellipse 44.png" class="pdp">
+              </div>
+              <div class="name-pseudo">
+                  <h5 class="card-title">Pseudo</h5>
+              </div>
+              </div>
+              <div class="suivre">
+                <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+              </div>
+          </div>
+          <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
+          <div class="card-body" >   
+          <div class="part2-card" >
+            <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+          </div>
+            <h5 class="title-desc">{{post.title}}</h5>
+            <p class="card-text">{{post.mini_body}}</p>
+            <div class="btns">
+            <button class="btn voirplus-btn" >Voir Plus</button>
+            <div class="react d-flex">
+              <span class="btn-like" (click)="toggleLike2()"><i [class]="likeIconClass2"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+             <div class="dropdown">
+              <i class="fa-regular fa-share-from-square btn-share"></i>
+              <ul class="dropdown-content">
+                <div>
+                  <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                      <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                      <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                      <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                </div>
+              </ul>
+            </div>
+           </div>
+          </div>
+          </div>
+      </div>
+       <!-- card3 -->
+       <div class="card"   *ngIf="post.id==41">
+        <div class="part1-card">
+            <div class="profile-part">
+                <div class="profile">
+                <img src="./../../../assets/images/Ellipse 38.png" class="pdp">
+            </div>
+            <div class="name-pseudo">
+                <h5 class="card-title">Pseudo</h5>
+            </div>
+            </div>
+            <div class="suivre">
+              <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+            </div>
+        </div>
+        <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
+        <div class="card-body" >   
+        <div class="part2-card" >
+          <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+        </div>
+          <h5 class="title-desc">{{post.title}}</h5>
+          <p class="card-text">{{post.mini_body}}</p>
+          <div class="btns">
+          <button class="btn voirplus-btn" >Voir Plus</button>
+          <div class="react d-flex">
+            <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+           <div class="dropdown">
+            <i class="fa-regular fa-share-from-square btn-share"></i>
+            <ul class="dropdown-content">
+              <div>
+                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                    <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+              </div>
+            </ul>
+          </div>
+         </div>
+        </div>
+        </div>
+    </div>
+  </div>
 </div>
     <app-footer></app-footer>
 </body>
