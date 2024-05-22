@@ -231,6 +231,7 @@ body {
     padding: 10px 16px;
     color: white;
     border: none;
+    margin-top: 25px;
   }
 
   .btn-like, .btn-share{
