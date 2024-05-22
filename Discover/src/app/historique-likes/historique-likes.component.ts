@@ -149,5 +149,10 @@ export class HistoriqueLikesComponent {
     }
   }
 
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
+  }
+
+
 
 }

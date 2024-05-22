@@ -230,6 +230,8 @@ export class ProfileComponent {
   gotoadd() {
     this.router.navigate(["/UserAddPost"])
   }
+
+  
 }
 
 

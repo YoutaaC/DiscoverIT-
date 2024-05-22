@@ -52,7 +52,7 @@
          <h5 class="title-desc">{{post.title}}</h5>
          <p class="card-text">{{post.mini_body}}</p>
          <div class="btns">
-         <button class="btn voirplus-btn">Voir Plus</button>
+         <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
          <div class="react d-flex">
           <div>
             <span class="btn-like mb-4" (click)="toggleLike1()">
@@ -98,7 +98,7 @@
               <h5 class="title-desc">{{post.title}}</h5>
               <p class="card-text">{{post.mini_body}}</p>
               <div class="btns">
-              <button class="btn voirplus-btn" >Voir Plus</button>
+              <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
               <div class="react d-flex">
                 <div>
                   <span class="btn-like mb-4" (click)="toggleLike2()">
@@ -144,7 +144,7 @@
             <h5 class="title-desc">{{post.title}}</h5>
             <p class="card-text">{{post.mini_body}}</p>
             <div class="btns">
-            <button class="btn voirplus-btn" >Voir Plus</button>
+            <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
             <div class="react d-flex">
               <div>
                 <span class="btn-like mb-4" (click)="toggleLike3()">
@@ -196,7 +196,7 @@
        <h5 class="title-desc">{{post.title}}</h5>
        <p class="card-text">{{post.mini_body}}</p>
        <div class="btns">
-       <button class="btn voirplus-btn">Voir Plus</button>
+       <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
        <div class="react d-flex">
         <div>
           <span class="btn-like mb-4" (click)="toggleLike4()">
@@ -242,7 +242,7 @@
             <h5 class="title-desc">{{post.title}}</h5>
             <p class="card-text">{{post.mini_body}}</p>
             <div class="btns">
-            <button class="btn voirplus-btn" >Voir Plus</button>
+            <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
             <div class="react d-flex">
               <div>
                 <span class="btn-like mb-4" (click)="toggleLike5()">
@@ -288,7 +288,7 @@
           <h5 class="title-desc">{{post.title}}</h5>
           <p class="card-text">{{post.mini_body}}</p>
           <div class="btns">
-          <button class="btn voirplus-btn" >Voir Plus</button>
+          <button class="btn voirplus-btn" (click)="gotoDetailsPost(post.id)">Voir Plus</button>
           <div class="react d-flex">
             <div>
               <span class="btn-like mb-4" (click)="toggleLike6()">

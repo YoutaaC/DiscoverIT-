@@ -209,4 +209,9 @@ export class ActuEcommerceComponent {
   actuEcomm(){
     this.router.navigate(['actualite/E-commerce']);
   }
+
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
+  }
+
 }

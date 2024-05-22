@@ -188,6 +188,11 @@ export class ActuDevComponent {
     }
   }
 
+
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
+  }
+
   actuBigdata(){
     this.router.navigate(['actualite/BigData']);
   }

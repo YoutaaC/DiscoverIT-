@@ -218,4 +218,9 @@ export class ActualiteComponent {
   gotoProfil(){
     this.router.navigate(['profilUser']);
   }
+
+  gotoDetailsPost(id :number) {
+    this.router.navigate(["/detailsPost",id])
+  }
+
 }
