@@ -61,3 +61,14 @@ body {
     width: 120px;
     height: auto;
   }
+  .box{
+    margin-top: 85px;
+    margin-left: 200px;
+  }
+  .img-g{
+    margin: 7px;
+  }
+  .ligne{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
