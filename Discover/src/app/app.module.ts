@@ -66,6 +66,7 @@ import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.componen
 import { Actualite2Component } from './actualite2/actualite2.component';
 import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
 import { OtherUserComponent } from './other-user/other-user.component';
+import { NotifComponent } from './notif/notif.component';
 
 
 @NgModule({
@@ -130,7 +131,8 @@ import { OtherUserComponent } from './other-user/other-user.component';
     ActuVisiteur2Component,
     Actualite2Component,
     ForgotPassword2Component,
-    OtherUserComponent
+    OtherUserComponent,
+    NotifComponent
     ],
   imports: [
     BrowserModule,
