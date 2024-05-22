@@ -3,7 +3,7 @@
     <aside id="sidebar" class="sidebar">
           <div class="text-center ">
           <img src="./../../assets/images/Ellipse 43.png" class="pdp">
-          <p style="font-size: 18px; font-weight: bold;">Pseudo</p>
+          <p style="font-size: 18px; font-weight: 650;">eya</p>
       </div>
       <hr>
           <ul class="sidebar-nav" id="sidebar-nav">
@@ -59,15 +59,227 @@
         <main id="main" class="main">
           <div class="pagetitle">
             
-            <h1 style="font-size: 25px;">Historique des j’aimes</h1> 
+            <h1 style="font-size: 25px;">&nbsp;&nbsp; Historique des j’aimes</h1> 
                 
           </div>
           <hr> 
           <section class="section-profile">
-  
+            <div class="card-grp d-flex " >
+              <div *ngFor="let post of posts">
+                    <!-- card1 -->
+             <div class="card "   *ngIf="post.id==1">
+           
+                 <img class="card-img-top" src="./../../../assets/images/Rectangle 230.png" alt="Card image cap img-card">
+                 <div class="card-body" >   
+                 <div class="part2-card" >
+                   <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+                 </div>
+                   <h5 class="title-desc">{{post.title}}</h5>
+                   <p class="card-text">{{post.mini_body}}</p>
+                   <div class="btns">
+                   <button class="btn voirplus-btn">Voir Plus</button>
+                   <div class="react d-flex">
+                    <div>
+                      <span class="btn-like mb-4" (click)="toggleLike1()">
+                        <i [class]="likeIconClass1"></i>
+                      </span><br>
+                      <span class="nbr-react2">{{ likeCount1 }}</span>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <div class="dropdown">
+                    <i class="fa-regular fa-share-from-square btn-share"></i>
+                    <ul class="dropdown-content">
+                      <div>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                            <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                 </div>
+                 </div>
+                 </div>
+             </div>
+                    <!-- card2 -->
+                    <div class="card"   *ngIf="post.id==13">
+                   
+                      <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
+                      <div class="card-body" >   
+                      <div class="part2-card" >
+                        <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+                      </div>
+                        <h5 class="title-desc">{{post.title}}</h5>
+                        <p class="card-text">{{post.mini_body}}</p>
+                        <div class="btns">
+                        <button class="btn voirplus-btn" >Voir Plus</button>
+                        <div class="react d-flex">
+                          <div>
+                            <span class="btn-like mb-4" (click)="toggleLike2()">
+                              <i [class]="likeIconClass2"></i>
+                            </span><br>
+                            <span class="nbr-react2">{{ likeCount2 }}</span>
+                          </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                         <div class="dropdown">
+                          <i class="fa-regular fa-share-from-square btn-share"></i>
+                          <ul class="dropdown-content">
+                            <div>
+                              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                                  <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                                  <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                                  <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                            </div>
+                          </ul>
+                        </div>
+                       </div>
+                      </div>
+                      </div>
+                  </div>
+                   <!-- card3 -->
+                   <div class="card"   *ngIf="post.id==15">
+                  
+                    <img class="card-img-top" src="./../../../assets/images/Rectangle 232.png" alt="Card image cap img-card">
+                    <div class="card-body" >   
+                    <div class="part2-card" >
+                      <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+                    </div>
+                      <h5 class="title-desc">{{post.title}}</h5>
+                      <p class="card-text">{{post.mini_body}}</p>
+                      <div class="btns">
+                      <button class="btn voirplus-btn" >Voir Plus</button>
+                      <div class="react d-flex">
+                        <div>
+                          <span class="btn-like mb-4" (click)="toggleLike3()">
+                            <i [class]="likeIconClass3"></i>
+                          </span><br>
+                          <span class="nbr-react2">{{ likeCount3 }}</span>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                       <div class="dropdown">
+                        <i class="fa-regular fa-share-from-square btn-share"></i>
+                        <ul class="dropdown-content">
+                          <div>
+                            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                                <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                          </div>
+                        </ul>
+                      </div>
+                     </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- ligne 2 -->
+            <div class="card-grp d-flex " >
+            <div *ngFor="let post of posts">
+                  <!-- card1 -->
+            <div class="card "   *ngIf="post.id==27">
+              
+               <img class="card-img-top" src="./../../../assets/images/Rectangle 231.png" alt="Card image cap img-card">
+               <div class="card-body" >   
+               <div class="part2-card" >
+                 <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+               </div>
+                 <h5 class="title-desc">{{post.title}}</h5>
+                 <p class="card-text">{{post.mini_body}}</p>
+                 <div class="btns">
+                 <button class="btn voirplus-btn">Voir Plus</button>
+                 <div class="react d-flex">
+                  <div>
+                    <span class="btn-like mb-4" (click)="toggleLike4()">
+                      <i [class]="likeIconClass4"></i>
+                    </span><br>
+                    <span class="nbr-react2">{{ likeCount4 }}</span>
+                  </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <div class="dropdown">
+                  <i class="fa-regular fa-share-from-square btn-share"></i>
+                  <ul class="dropdown-content">
+                    <div>
+                      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                          <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                          <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                          <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                    </div>
+                  </ul>
+                </div>
+               </div>
+               </div>
+               </div>
+            </div>
+                  <!-- card2 -->
+                  <div class="card"   *ngIf="post.id==32">
+                  
+                    <img class="card-img-top" src="./../../../assets/images/Rectangle 227.png" alt="Card image cap img-card">
+                    <div class="card-body" >   
+                    <div class="part2-card" >
+                      <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+                    </div>
+                      <h5 class="title-desc">{{post.title}}</h5>
+                      <p class="card-text">{{post.mini_body}}</p>
+                      <div class="btns">
+                      <button class="btn voirplus-btn" >Voir Plus</button>
+                      <div class="react d-flex">
+                        <div>
+                          <span class="btn-like mb-4" (click)="toggleLike5()">
+                            <i [class]="likeIconClass5"></i>
+                          </span><br>
+                          <span class="nbr-react2">{{ likeCount5 }}</span>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                       <div class="dropdown">
+                        <i class="fa-regular fa-share-from-square btn-share"></i>
+                        <ul class="dropdown-content">
+                          <div>
+                            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                                <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                          </div>
+                        </ul>
+                      </div>
+                     </div>
+                    </div>
+                    </div>
+                </div>
+                 <!-- card3 -->
+                 <div class="card"   *ngIf="post.id==40">
+                 
+                  <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
+                  <div class="card-body" >   
+                  <div class="part2-card" >
+                    <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
+                  </div>
+                    <h5 class="title-desc">{{post.title}}</h5>
+                    <p class="card-text">{{post.mini_body}}</p>
+                    <div class="btns">
+                    <button class="btn voirplus-btn" >Voir Plus</button>
+                    <div class="react d-flex">
+                      <div>
+                        <span class="btn-like mb-4" (click)="toggleLike6()">
+                          <i [class]="likeIconClass6"></i>
+                        </span><br>
+                        <span class="nbr-react2">{{ likeCount6 }}</span>
+                      </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                     <div class="dropdown">
+                      <i class="fa-regular fa-share-from-square btn-share"></i>
+                      <ul class="dropdown-content">
+                        <div>
+                          <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Facebook</a></li>
+                              <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
+                              <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</a></li>
+                              <li><a href="https://discord.gg/gK7neb7Y"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
+                        </div>
+                      </ul>
+                    </div>
+                   </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            </div>
   <br><br><br>
     </section>
         </main> 
-      <!-- <app-footer></app-footer>  -->
   </body>
   

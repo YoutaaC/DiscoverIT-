@@ -57,7 +57,7 @@ export class HistoriqueLikesComponent {
   likeCount1 = 21; 
 
   get likeIconClass1() {
-    return this.isLiked1 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked1 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike1() {
@@ -73,7 +73,7 @@ export class HistoriqueLikesComponent {
   likeCount2 = 10; // Initial count of likes
 
   get likeIconClass2() {
-    return this.isLiked2 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked2 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike2() {
@@ -89,7 +89,7 @@ export class HistoriqueLikesComponent {
   likeCount3 = 41; // Initial count of likes
 
   get likeIconClass3() {
-    return this.isLiked3 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked3 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike3() {
@@ -102,10 +102,9 @@ export class HistoriqueLikesComponent {
   }
 
   isLiked4 = false;
-  likeCount4 = 12; // Initial count of likes
-
+  likeCount4 = 15; 
   get likeIconClass4() {
-    return this.isLiked4 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked4 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike4() {
@@ -118,10 +117,10 @@ export class HistoriqueLikesComponent {
   }
 
   isLiked5 = false;
-  likeCount5 = 11; // Initial count of likes
+  likeCount5 = 11; 
 
   get likeIconClass5() {
-    return this.isLiked5 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked5 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike5() {
@@ -137,7 +136,7 @@ export class HistoriqueLikesComponent {
   likeCount6 = 22; // Initial count of likes
 
   get likeIconClass6() {
-    return this.isLiked6 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+    return this.isLiked6 ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up';
   }
 
   toggleLike6() {
