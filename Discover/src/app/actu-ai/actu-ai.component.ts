@@ -115,4 +115,8 @@ export class ActuAiComponent {
     this.router.navigate(['actualite/E-commerce']);
   }
 
+
+  gotoProfil(){
+    this.router.navigate(['profilUser']);
+  }
 }

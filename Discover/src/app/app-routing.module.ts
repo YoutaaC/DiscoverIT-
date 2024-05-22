@@ -54,6 +54,7 @@ import { RepondreMessageComponent } from './repondre-message/repondre-message.co
 import { Actualite2Component } from './actualite2/actualite2.component';
 import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.component';
 import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
+import { OtherUserComponent } from './other-user/other-user.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -109,7 +110,8 @@ const routes: Routes = [
   {path:'Repondre/:id',component:RepondreMessageComponent},
   {path:'actualite2', component:Actualite2Component},
   {path:'V_actu2',component:ActuVisiteur2Component},
-  {path:'newPassword',component:ForgotPassword2Component}
+  {path:'newPassword',component:ForgotPassword2Component},
+  {path:'profilUser',component:OtherUserComponent}
  
 ];
 

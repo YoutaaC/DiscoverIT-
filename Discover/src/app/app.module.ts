@@ -65,6 +65,7 @@ import { RepondreMessageComponent } from './repondre-message/repondre-message.co
 import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.component';
 import { Actualite2Component } from './actualite2/actualite2.component';
 import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
+import { OtherUserComponent } from './other-user/other-user.component';
 
 
 @NgModule({
@@ -128,7 +129,8 @@ import { ForgotPassword2Component } from './forgot-password2/forgot-password2.co
     RepondreMessageComponent,
     ActuVisiteur2Component,
     Actualite2Component,
-    ForgotPassword2Component
+    ForgotPassword2Component,
+    OtherUserComponent
     ],
   imports: [
     BrowserModule,

@@ -1,50 +1,37 @@
 <body>
-    <app-navbar></app-navbar>
-    <header>
-        <div class="row align-items-center">
-            <div class="col-6 first-part" >
-            <h1 class="title">Ne Ratez aucune information! <br>Restez à jour avec les<br>dernières <span class="marque">actualités.</span></h1>
-
-            </div>
-            <div class="col-4 ">
-                <img src="./../../assets/images/Group 151.png" class="img-top">
-                <img src="./../../assets/images/pos5.png" class="img-anim1">
-                <img src="./../../assets/images/pos2.png" class="img-anim2">
-                <img src="./../../assets/images/pos4.png" class="img-anim3">
-            </div>
-            <img src="./../../assets/images/arrow-event.png" class="arrow-event"/>  
-          </div>
-    </header>
-    <br><br>
-    <div class="categ-btn">
-        <button class="btn btn-options bbtn" (click)="actutous()">Tout</button>&nbsp;
-        <button class="btn btn-clicked bbtn" (click)="actuBigdata()">Big Data </button>&nbsp;
-        <button class="btn btn-options bbtn" (click)="actusecurite()">Sécurité</button>&nbsp;
-        <button class="btn btn-options bbtn" (click)="actudev()">Developement</button>&nbsp;
-        <button class="btn btn-options bbtn" (click)="actuai()">AI</button>&nbsp;
-        <button class="btn btn-options bbtn" (click)="actutechweb()">Technologie Web</button>&nbsp;
-        <button class="btn btn-options bbtn" (click)="actuEcomm()">E-commerce</button>&nbsp;
-    </div>
-    <br>
-<!-- ligne 1 -->
+   <app-navbar></app-navbar>
+   <div class="pagetitle d-flex justify-content-between  ">
+         
+    <div class="d-flex ">
+  <img src="./../../assets/images/Ellipse 39.png" class="pdp2">
+  <div class="div-P1">
+  <h1 style="font-size: 20px;">Aminos</h1> 
+  <span>6 publications</span>&nbsp;&nbsp; <span>67 abonnés</span>&nbsp;&nbsp; <span>106 suivi(e)s</span>
+</div>
+</div>
+<div>
+<button class="btn-add" [(ngModel)]="buttonText1" (click)="onClick1()">{{ buttonText1 }}</button>
+</div>
+</div>
+<!-- <hr> -->
 <div class="card-grp" >
     <div *ngFor="let post of posts">
           <!-- card1 -->
-   <div class="card "   *ngIf="post.id==12">
+   <div class="card "   *ngIf="post.id==1">
        <div class="part1-card">
            <div class="profile-part">
                <div class="profile">
-               <img src="./../../../assets/images/Ellipse 44.png" class="pdp">
+               <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
            </div>
            <div class="name-pseudo">
-               <h5 class="card-title">Pseudo</h5>
+               <h5 class="card-title">Aminos</h5>
            </div>
            </div>
            <div class="suivre">
-            <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+           
            </div>
        </div>
-       <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+       <img class="card-img-top" src="./../../../assets/images/Rectangle 230.png" alt="Card image cap img-card">
        <div class="card-body" >   
        <div class="part2-card" >
          <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
@@ -71,21 +58,21 @@
        </div>
    </div>
           <!-- card2 -->
-          <div class="card"   *ngIf="post.id==17">
+          <div class="card"   *ngIf="post.id==13">
             <div class="part1-card">
                 <div class="profile-part">
                     <div class="profile">
-                    <img src="./../../../assets/images/Ellipse 39.png" class="pdp" (click)="gotoProfil()">
+                    <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
                 </div>
                 <div class="name-pseudo">
                     <h5 class="card-title">Aminos</h5>
                 </div>
                 </div>
                 <div class="suivre">
-                  <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+                  
                 </div>
             </div>
-            <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
+            <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
             <div class="card-body" >   
             <div class="part2-card" >
               <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
@@ -112,21 +99,21 @@
             </div>
         </div>
          <!-- card3 -->
-         <div class="card"   *ngIf="post.id==25">
+         <div class="card"   *ngIf="post.id==15">
           <div class="part1-card">
               <div class="profile-part">
                   <div class="profile">
-                  <img src="./../../../assets/images/Ellipse 45.png" class="pdp">
+                  <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
               </div>
               <div class="name-pseudo">
-                  <h5 class="card-title">Pseudo</h5>
+                  <h5 class="card-title">Aminos</h5>
               </div>
               </div>
               <div class="suivre">
-                <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+                
               </div>
           </div>
-          <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
+          <img class="card-img-top" src="./../../../assets/images/Rectangle 232.png" alt="Card image cap img-card">
           <div class="card-body" >   
           <div class="part2-card" >
             <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
@@ -137,7 +124,7 @@
             <button class="btn voirplus-btn" >Voir Plus</button>
             <div class="react d-flex">
               <span class="btn-like" (click)="toggleLike3()"><i [class]="likeIconClass3"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
-
+  
              <div class="dropdown">
               <i class="fa-regular fa-share-from-square btn-share"></i>
               <ul class="dropdown-content">
@@ -154,26 +141,26 @@
           </div>
       </div>
     </div>
-</div>
-<!-- ligne 2 -->
-<div class="card-grp" >
+  </div>
+  <!-- ligne 2 -->
+  <div class="card-grp" >
   <div *ngFor="let post of posts">
         <!-- card1 -->
- <div class="card "   *ngIf="post.id==26">
+  <div class="card "   *ngIf="post.id==27">
      <div class="part1-card">
          <div class="profile-part">
              <div class="profile">
-             <img src="./../../../assets/images/Ellipse 41.png" class="pdp">
+             <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
          </div>
          <div class="name-pseudo">
-             <h5 class="card-title">Pseudo</h5>
+             <h5 class="card-title">Aminos</h5>
          </div>
          </div>
          <div class="suivre">
-          <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+         
          </div>
      </div>
-     <img class="card-img-top" src="./../../../assets/images/Rectangle 13.png" alt="Card image cap img-card">
+     <img class="card-img-top" src="./../../../assets/images/Rectangle 231.png" alt="Card image cap img-card">
      <div class="card-body" >   
      <div class="part2-card" >
        <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
@@ -198,23 +185,23 @@
      </div>
      </div>
      </div>
- </div>
+  </div>
         <!-- card2 -->
         <div class="card"   *ngIf="post.id==32">
           <div class="part1-card">
               <div class="profile-part">
                   <div class="profile">
-                  <img src="./../../../assets/images/Ellipse 45.png" class="pdp">
+                  <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
               </div>
               <div class="name-pseudo">
-                  <h5 class="card-title">Pseudo</h5>
+                  <h5 class="card-title">Aminos</h5>
               </div>
               </div>
               <div class="suivre">
-                <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+               
               </div>
           </div>
-          <img class="card-img-top" src="./../../../assets/images/Rectangle 23.png" alt="Card image cap img-card">
+          <img class="card-img-top" src="./../../../assets/images/Rectangle 227.png" alt="Card image cap img-card">
           <div class="card-body" >   
           <div class="part2-card" >
             <pre>{{post.creationDate | date: 'dd/MM/yyyy' }}24/03/2024 | <span class="text-info type">{{post.type}}</span></pre>   
@@ -241,18 +228,18 @@
           </div>
       </div>
        <!-- card3 -->
-       <div class="card"   *ngIf="post.id==39">
+       <div class="card"   *ngIf="post.id==40">
         <div class="part1-card">
             <div class="profile-part">
                 <div class="profile">
-                <img src="./../../../assets/images/Ellipse 41.png" class="pdp">
+                <img src="./../../../assets/images/Ellipse 39.png" class="pdp">
             </div>
             <div class="name-pseudo">
-                <h5 class="card-title">Pseudo</h5>
+                <h5 class="card-title">Aminos</h5>
             </div>
             </div>
             <div class="suivre">
-              <button type="button" class="btn btn-link btn-suivre" >Suivre</button>
+              
             </div>
         </div>
         <img class="card-img-top" src="./../../../assets/images/Rectangle 25.png" alt="Card image cap img-card">
@@ -282,6 +269,6 @@
         </div>
     </div>
   </div>
-</div>
-    <app-footer></app-footer>
+  </div>
+   <app-footer></app-footer> 
 </body>

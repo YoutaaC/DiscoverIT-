@@ -105,4 +105,8 @@ export class ActuBigdataVistComponent {
       }
     });
   }
+
+  gotoProfil(){
+    this.router.navigate(['profilUser']);
+  }
 }

@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
+import { User } from '../models/user.model';
+import { Post } from '../models/post.model';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
-import { User } from '../models/user.model';
-import { Post } from '../models/post.model';
 
 @Component({
-  selector: 'app-actu-dev',
-  templateUrl: './actu-dev.component.html',
-  styleUrls: ['./actu-dev.component.css']
+  selector: 'app-other-user',
+  templateUrl: './other-user.component.html',
+  styleUrls: ['./other-user.component.css']
 })
-export class ActuDevComponent {
+export class OtherUserComponent {
   users: User[] = [];
   posts: Post[] = [];
   currentUser!: User;
   accessToken!: any;
 
+
+ 
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -91,6 +93,12 @@ export class ActuDevComponent {
     }
   }
 
+  buttonText1 = 'Suivi(e)';
+
+  onClick1() {
+    this.buttonText1 = 'Suivre';
+  }
+
   actuBigdata(){
     this.router.navigate(['actualite/BigData']);
   }
@@ -111,9 +119,5 @@ export class ActuDevComponent {
   }
   actuEcomm(){
     this.router.navigate(['actualite/E-commerce']);
-  }
-
-  gotoProfil(){
-    this.router.navigate(['profilUser']);
   }
 }

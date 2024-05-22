@@ -83,4 +83,8 @@ export class ActuVisiteurComponent {
       }
     });
   }
+
+  gotoProfil(){
+    this.router.navigate(['profilUser']);
+  }
 }

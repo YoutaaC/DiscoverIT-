@@ -118,4 +118,8 @@ export class ActualiteComponent {
   actuEcomm(){
     this.router.navigate(['actualite/E-commerce']);
   }
+
+  gotoProfil(){
+    this.router.navigate(['profilUser']);
+  }
 }

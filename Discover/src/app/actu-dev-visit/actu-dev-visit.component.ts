@@ -105,4 +105,8 @@ export class ActuDevVisitComponent {
       }
     });
   }
+
+  gotoProfil(){
+    this.router.navigate(['profilUser']);
+  }
 }
