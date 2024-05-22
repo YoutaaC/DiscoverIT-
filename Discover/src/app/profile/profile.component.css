@@ -182,7 +182,7 @@ body {
     padding: 20px;
     margin: 9px;
     width: 350px;
-    height: 470px;
+    height: 485px;
   }
   .img-card{
     border-radius: 30px;
@@ -292,3 +292,8 @@ body {
       display: flex;
       justify-content: space-between;
     } 
+    .nbr-react2{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: -23px;
+    }
