@@ -15,14 +15,14 @@ export class ForgotPasswordComponent {
     if (this.email === 'benothmaneyaa@gmail.com') {
       this.router.navigate(["/newPassword"]);
       Swal.fire({
-        title: "success",
-        text: "Invalid email address.",
+        title: "Succès",
+        text: "Votre adresse email est correcte. Veuillez définir un nouveau mot de passe.",
         icon: "success"
       });
     } else {
       Swal.fire({
         title: "Error",
-        text: "Invalid email address.",
+        text: "Adress mail incorrect",
         icon: "error"
       });
     }
