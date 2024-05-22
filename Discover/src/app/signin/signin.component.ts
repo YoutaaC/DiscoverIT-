@@ -58,7 +58,7 @@ login(): void {
   };
 this.userService.login(loginData)
   .subscribe(user => {
-    if (user) {
+    if (user) { 
       console.log('Login successful');
 
       if (this.username == 'admin' && this.password == 'admin') {  

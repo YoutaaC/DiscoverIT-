@@ -53,6 +53,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { RepondreMessageComponent } from './repondre-message/repondre-message.component';
 import { Actualite2Component } from './actualite2/actualite2.component';
 import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.component';
+import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -107,7 +108,8 @@ const routes: Routes = [
   {path:'addUser',component:AddUserComponent},
   {path:'Repondre/:id',component:RepondreMessageComponent},
   {path:'actualite2', component:Actualite2Component},
-  {path:'V_actu2',component:ActuVisiteur2Component}
+  {path:'V_actu2',component:ActuVisiteur2Component},
+  {path:'newPassword',component:ForgotPassword2Component}
  
 ];
 
