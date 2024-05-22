@@ -61,14 +61,14 @@ export class SignupComponent {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, register it!', 
+      confirmButtonText: 'SignUp!', 
     }).then((result) => {
       if (result.isConfirmed) {
         this.userService.register(this.user)
           .subscribe({
             next: (newUser) => {
               console.log('User registered successfully:', newUser);
-              Swal.fire('Registered!', 'User registered successfully.', 'success');
+              Swal.fire('success!', 'Bienvenu Dans DiscoverIT.', 'success');
               this.router.navigate(['home']);
             },
             error: (error) => {
