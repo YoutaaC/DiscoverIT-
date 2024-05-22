@@ -78,8 +78,9 @@ export class ProfileComponent {
   }
 
 
+    
   isLiked1 = false;
-  likeCount1 = 21; // Initial count of likes
+  likeCount1 = 21; 
 
   get likeIconClass1() {
     return this.isLiked1 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -95,7 +96,7 @@ export class ProfileComponent {
   }
 
   isLiked2 = false;
-  likeCount2 = 21; // Initial count of likes
+  likeCount2 = 10; // Initial count of likes
 
   get likeIconClass2() {
     return this.isLiked2 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -111,7 +112,7 @@ export class ProfileComponent {
   }
 
   isLiked3 = false;
-  likeCount3 = 21; // Initial count of likes
+  likeCount3 = 41; // Initial count of likes
 
   get likeIconClass3() {
     return this.isLiked3 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -126,11 +127,8 @@ export class ProfileComponent {
     }
   }
 
-
-
-  
   isLiked4 = false;
-  likeCount4 = 21; // Initial count of likes
+  likeCount4 = 12; // Initial count of likes
 
   get likeIconClass4() {
     return this.isLiked4 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -146,7 +144,7 @@ export class ProfileComponent {
   }
 
   isLiked5 = false;
-  likeCount5 = 21; // Initial count of likes
+  likeCount5 = 11; // Initial count of likes
 
   get likeIconClass5() {
     return this.isLiked5 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -162,7 +160,7 @@ export class ProfileComponent {
   }
 
   isLiked6 = false;
-  likeCount6 = 21; // Initial count of likes
+  likeCount6 = 22; // Initial count of likes
 
   get likeIconClass6() {
     return this.isLiked6 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -174,6 +172,54 @@ export class ProfileComponent {
       this.likeCount6++;
     } else {
       this.likeCount6--;
+    }
+  }
+
+  isLiked7 = false;
+  likeCount7 = 53; // Initial count of likes
+
+  get likeIconClass7() {
+    return this.isLiked7 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike7() {
+    this.isLiked7 = !this.isLiked7;
+    if (this.isLiked7) {
+      this.likeCount7++;
+    } else {
+      this.likeCount7--;
+    }
+  }
+
+  isLiked8 = false;
+  likeCount8 = 81; // Initial count of likes
+
+  get likeIconClass8() {
+    return this.isLiked8 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike8() {
+    this.isLiked8 = !this.isLiked8;
+    if (this.isLiked8) {
+      this.likeCount8++;
+    } else {
+      this.likeCount8--;
+    }
+  }
+
+  isLiked9 = false;
+  likeCount9 = 27; // Initial count of likes
+
+  get likeIconClass9() {
+    return this.isLiked9 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike9() {
+    this.isLiked9 = !this.isLiked9;
+    if (this.isLiked9) {
+      this.likeCount9++;
+    } else {
+      this.likeCount9--;
     }
   }
 

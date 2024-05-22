@@ -208,3 +208,8 @@ body {
       display: flex;
       justify-content: space-between;
     }
+    .nbr-react2{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: -23px;
+    }

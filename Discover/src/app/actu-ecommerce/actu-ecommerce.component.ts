@@ -43,6 +43,7 @@ export class ActuEcommerceComponent {
     });
   }
 
+  
   isLiked1 = false;
   likeCount1 = 21; 
 
@@ -88,6 +89,102 @@ export class ActuEcommerceComponent {
       this.likeCount3++;
     } else {
       this.likeCount3--;
+    }
+  }
+
+  isLiked4 = false;
+  likeCount4 = 12; // Initial count of likes
+
+  get likeIconClass4() {
+    return this.isLiked4 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike4() {
+    this.isLiked4 = !this.isLiked4;
+    if (this.isLiked4) {
+      this.likeCount4++;
+    } else {
+      this.likeCount4--;
+    }
+  }
+
+  isLiked5 = false;
+  likeCount5 = 11; // Initial count of likes
+
+  get likeIconClass5() {
+    return this.isLiked5 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike5() {
+    this.isLiked5 = !this.isLiked5;
+    if (this.isLiked5) {
+      this.likeCount5++;
+    } else {
+      this.likeCount5--;
+    }
+  }
+
+  isLiked6 = false;
+  likeCount6 = 22; // Initial count of likes
+
+  get likeIconClass6() {
+    return this.isLiked6 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike6() {
+    this.isLiked6 = !this.isLiked6;
+    if (this.isLiked6) {
+      this.likeCount6++;
+    } else {
+      this.likeCount6--;
+    }
+  }
+
+  isLiked7 = false;
+  likeCount7 = 53; // Initial count of likes
+
+  get likeIconClass7() {
+    return this.isLiked7 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike7() {
+    this.isLiked7 = !this.isLiked7;
+    if (this.isLiked7) {
+      this.likeCount7++;
+    } else {
+      this.likeCount7--;
+    }
+  }
+
+  isLiked8 = false;
+  likeCount8 = 81; // Initial count of likes
+
+  get likeIconClass8() {
+    return this.isLiked8 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike8() {
+    this.isLiked8 = !this.isLiked8;
+    if (this.isLiked8) {
+      this.likeCount8++;
+    } else {
+      this.likeCount8--;
+    }
+  }
+
+  isLiked9 = false;
+  likeCount9 = 27; // Initial count of likes
+
+  get likeIconClass9() {
+    return this.isLiked9 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
+  }
+
+  toggleLike9() {
+    this.isLiked9 = !this.isLiked9;
+    if (this.isLiked9) {
+      this.likeCount9++;
+    } else {
+      this.likeCount9--;
     }
   }
 
