@@ -250,3 +250,14 @@ body {
     font-size: 30px;
     margin: 6px 10px 6px 0px;
   }
+.qr{
+  background-color: #02C1BA;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  padding: 3px 7px;
+  position: absolute;
+  margin-top: -320px;
+  margin-left: -15px;
+}

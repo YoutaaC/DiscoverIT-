@@ -67,6 +67,7 @@ import { Actualite2Component } from './actualite2/actualite2.component';
 import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
 import { OtherUserComponent } from './other-user/other-user.component';
 import { NotifComponent } from './notif/notif.component';
+import { CalenderComponent } from './calender/calender.component';
 
 
 @NgModule({
@@ -132,7 +133,8 @@ import { NotifComponent } from './notif/notif.component';
     Actualite2Component,
     ForgotPassword2Component,
     OtherUserComponent,
-    NotifComponent
+    NotifComponent,
+    CalenderComponent
     ],
   imports: [
     BrowserModule,

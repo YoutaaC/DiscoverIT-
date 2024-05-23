@@ -1,9 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Post } from '../models/post.model';
-// import { PostService } from '../post.service';
+
 import { User } from '../models/user.model';
-// import { EventService } from '../event.service';
-// import { VisiteurService } from '../visiteur.service';
+
 import { Event } from '../models/event.model';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -129,7 +128,7 @@ export class HomeComponent {
   }
 
   isLiked2 = false;
-  likeCount2 = 39; // Initial count of likes
+  likeCount2 = 39; 
 
   get likeIconClass2() {
     return this.isLiked2 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
@@ -145,7 +144,7 @@ export class HomeComponent {
   }
   
   isLiked3 = false;
-  likeCount3 = 32; // Initial count of likes
+  likeCount3 = 32; 
 
   get likeIconClass3() {
     return this.isLiked3 ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';

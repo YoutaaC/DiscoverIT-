@@ -3,7 +3,7 @@ import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { Event } from '../models/event.model';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-historique-reservation',
@@ -21,7 +21,6 @@ export class HistoriqueReservationComponent {
     const userData = localStorage.getItem("accessToken");
        if (userData) {
       this.currentUser = JSON.parse(userData);
-
       this.accessToken = userAccessToken;
     } else {
       console.error('User data not found in local storage');
@@ -54,4 +53,15 @@ export class HistoriqueReservationComponent {
     this.router.navigate(["/"])
   }
 
+
+  affiche(){
+    Swal.fire({
+          title: "Votre QR Code ",
+          text: "Votre qr code de cette evenement",
+          imageUrl: "./../../assets/images/Reservation.png",
+          imageWidth: 200,
+          imageHeight: 200,
+          imageAlt: "QR Code"
+        });
+  }
 }

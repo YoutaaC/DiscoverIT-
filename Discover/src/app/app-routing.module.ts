@@ -56,6 +56,7 @@ import { ActuVisiteur2Component } from './actu-visiteur2/actu-visiteur2.componen
 import { ForgotPassword2Component } from './forgot-password2/forgot-password2.component';
 import { OtherUserComponent } from './other-user/other-user.component';
 import { NotifComponent } from './notif/notif.component';
+import { CalenderComponent } from './calender/calender.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -113,7 +114,8 @@ const routes: Routes = [
   {path:'V_actu2',component:ActuVisiteur2Component},
   {path:'newPassword',component:ForgotPassword2Component},
   {path:'profilUser',component:OtherUserComponent},
-  {path:'notification',component:NotifComponent}
+  {path:'notification',component:NotifComponent},
+  {path:'calender',component:CalenderComponent}
  
 ];
 

@@ -50,7 +50,7 @@
                 <span >Historique des j’aimes</span>
               </a>
             </li>
-            <br><br>  <br>
+            <br>
         <br>
         <hr>
         <li class="nav-item">
@@ -70,12 +70,14 @@
           </div>
  
           <section class="section-profile">
-            <div *ngFor="let event of events">
+            <div *ngFor="let event of events" >
+              <div *ngIf="event.id==5">
                 <span class="type-hr" ><hr></span>
                 <br>
-                <div class="row event-card">
+                <div class="row event-card"  >
                     <div class="col-5 img-event">
                     <img src="./../../assets/images/eventexmp.png" class="img-event">
+                    <button class="qr" (click)="affiche()"><i class="fa-solid fa-qrcode"></i></button>
                     </div>
                     <div class="col-4 disc-event">
                       <div class="title-part justify-content-between d-flex ">
@@ -90,7 +92,8 @@
                     </div>
                   </div>
                 </div>
-  <br><br><br>
+                </div>
+  <br><br><br>  <br><br><br>  <br><br><br>
     </section>
         </main>  
   </body>

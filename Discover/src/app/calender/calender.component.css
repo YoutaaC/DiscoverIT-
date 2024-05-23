@@ -1,0 +1,49 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url(./../../assets/images/Desktop-12.jpeg);
+    background-size: cover;
+    color: #444444;
+  }
+
+.formu input[type="text"],
+.formu input[type="email"] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 15px 15px 12px;
+  width: 370px;
+  height: auto;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+}
+
+.sumbmit-btn {
+  border: 0;
+  background: #AC8DF7;
+  color: white;
+  display: block;
+  padding: 15px 40px;
+  border-radius: 10px;
+  width: 100%; 
+  align-items: center; 
+  border: 2px solid #AC8DF7;
+  margin-top: 30px;
+  box-shadow: 2px 2px 2px rgba(70, 69, 69, 0.2);
+
+}
+.form-box {
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54));
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(30px);
+    width: 560px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-left: 500px; 
+    margin-top: 200px;
+    position: absolute;
+  }

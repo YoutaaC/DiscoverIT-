@@ -1,0 +1,16 @@
+<body>
+ 
+<div class="form-box ">
+    <p id="titre"></p>
+    <form [formGroup]="appointmentForm" (ngSubmit)="schedueleMeeting(appointmentForm.value)" >
+        <div class="form-group ">
+                <label for="appointmentTime">MeetingTime</label><br>
+                <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"><br>
+                <label for="email">email</label>
+                <input type="email" id="email" class="form-control" formControlName="email">
+                <button type="submit" id="scheduele-button" class="sumbmit-btn">scheduele</button>
+        </div>
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
