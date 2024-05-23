@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var createGoogleEvent: any;
 
 
+
+
 @Component({
   selector: 'app-calender',
   templateUrl: './calender.component.html',
@@ -19,8 +21,25 @@ appointmentForm!:FormGroup;
  }
 
  schedueleMeeting( formData: any){
-  const eventDetails=this.appointmentForm.value
-  console.log(eventDetails);
-  createGoogleEvent(formData);
+  // const eventDetails=this.appointmentForm.value
+  // console.log(eventDetails);
+  // createGoogleEvent(formData);
+  let appointmentTime = new Date(this.appointmentForm.value.appointmentTime)
+
+const startTime = appointmentTime. toISOString().slice(0, 18) + '-01:00';
+const endTime = this. getEndTime(appointmentTime) ;
+const
+eventDetails = {
+email: this.appointmentForm.value.email,
+startTime: startTime,
+endTime:endTime,
+ };
+ console.info(eventDetails);
+}
+
+ getEndTime(appointmentTime: Date){
+  appointmentTime.setHours(appointmentTime.getHours() + 1);
+  const endTime =appointmentTime.toISOString().slice(0,18)+'-01:00';
  }
+ 
 }
