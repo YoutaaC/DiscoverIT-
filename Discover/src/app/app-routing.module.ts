@@ -115,7 +115,7 @@ const routes: Routes = [
   {path:'newPassword',component:ForgotPassword2Component},
   {path:'profilUser',component:OtherUserComponent},
   {path:'notification',component:NotifComponent},
-  {path:'calender',component:CalenderComponent}
+  {path:'calender/:id',component:CalenderComponent}
  
 ];
 

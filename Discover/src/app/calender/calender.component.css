@@ -45,12 +45,9 @@ label{
     box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(30px);
     width: 450px;
-    padding: 10px 5px;
+    padding: 30px 60px;
     display: flex;
     flex-direction: column; 
-    align-items: center; 
-
-    /* position: absolute; */
   }
   .titre{
     color: white;
@@ -59,15 +56,19 @@ label{
   }
   .info-event{
     border-radius: 40px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54));
+    background-color: #00264D;
+    border-radius: 30px;
+    color: white;
     box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(30px);
     width: 450px;
-    padding: 10px 5px;
+    padding: 20px 50px;
     display: flex;
     flex-direction: column; 
-    align-items: center; 
     position: absolute;
     margin-left: 600px;
     margin-top: -100px;
+  }
+  .event-d{
+    font-size: 25px;
   }

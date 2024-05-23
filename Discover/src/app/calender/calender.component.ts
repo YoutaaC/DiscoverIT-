@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from '../models/user.model';
+import { EventService } from '../event.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { Event } from '../models/event.model';
 declare var createGoogleEvent: any;
 declare const gapi: any; 
 declare var google: any;
@@ -11,6 +16,12 @@ declare var google: any;
   styleUrls: ['./calender.component.css']
 })
 export class CalenderComponent implements OnInit{
+  event!:Event;
+  eventId! :number;
+  accessToken!: any;
+  currentUser!: User;
+  currentId! :number;
+
   appointmentForm!: FormGroup;
 
   CLIENT_ID = "1091432199733-svgrbjbecdgj2k86rhoas9s5mpjoio4d.apps.googleusercontent.com";
@@ -21,7 +32,7 @@ export class CalenderComponent implements OnInit{
   gapiInited = false;
   gisInited = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private router : Router) {}
 
   ngOnInit(): void {
     this.appointmentForm = this.fb.group({
@@ -30,6 +41,16 @@ export class CalenderComponent implements OnInit{
     });
     this.loadGapi();
     this.loadGis();
+
+    this.eventId=+this.route.snapshot.paramMap.get('id')!;
+    this.getEventById();
+  }
+
+  getEventById(){
+    this.eventService.getEventById(this.eventId).subscribe(eventt =>
+      {
+        this.event=eventt
+      })
   }
 
   loadGapi() {

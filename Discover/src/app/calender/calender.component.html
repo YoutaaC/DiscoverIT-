@@ -16,8 +16,14 @@
         </form>
       </div>
       <div class="info-event col-5">
+        <h2 class="event-d">Categorie: {{event.type}} </h2>
+         <h2 class="event-d">Nom De l'evenement: {{event.title}}</h2>
+            <span class="itemms-event"><i class="fa-regular fa-calendar icon-event"></i> de {{event.jour_debut}} {{event.mois_debut}} {{event.annee_debut}} à {{event.date_fin}}</span><br>
+         <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</span><br>
+         <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</span><br>
+       <span class="itemms-event"><i class="fa-solid fa-sack-dollar icon-event"></i>{{event.prix}}</span><br>
 
       </div>
     </div>
 
-</body>
+ </body> 
