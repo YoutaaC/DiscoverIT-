@@ -1,13 +1,14 @@
 <body>
+    <div></div>
     <div class="form-box">
-        <p id="titre"></p>
+        <h3 id="titre">Confirmer </h3>
         <form [formGroup]="appointmentForm" (ngSubmit)="scheduleMeeting(appointmentForm.value)">
           <div class="form-group">
-            <label for="appointmentTime">Meeting Time</label><br>
-            <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"><br>
             <label for="email">Email</label>
             <input type="email" id="email" class="form-control" formControlName="email"><br>
-            <button type="submit" id="schedule-button" class="submit-btn">Schedule</button>
+            <label for="appointmentTime">Meeting Time</label><br>
+            <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"><br>
+            <button type="submit" id="schedule-button" class="sumbmit-btn">Schedule</button>
           </div>
         </form>
       </div>

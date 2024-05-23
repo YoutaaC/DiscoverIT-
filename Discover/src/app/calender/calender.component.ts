@@ -107,8 +107,8 @@ export class CalenderComponent implements OnInit{
 
   async scheduleEvent(eventDetails: any) {
     const event = {
-      summary: "Scheduled Meeting",
-      location: "Online",
+      summary: "Discover IT",
+      location: "Tunis",
       description: "Scheduled via Google Calendar API",
       start: {
         dateTime: eventDetails.startTime,
