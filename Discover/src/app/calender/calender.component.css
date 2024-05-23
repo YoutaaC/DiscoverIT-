@@ -1,10 +1,16 @@
 body {
-    font-family: "Open Sans", sans-serif;
+ 
     background-image: url(./../../assets/images/Desktop-12.jpeg);
     background-size: cover;
     color: #444444;
+    padding-left: 150px; 
+    padding-top: 200px;
+    padding-bottom: 202px;
   }
-
+label{
+  color: black;
+  margin-bottom: 5px;
+}
 .formu input[type="text"],
 .formu input[type="email"] {
   border: 0;
@@ -20,11 +26,11 @@ body {
 }
 
 .sumbmit-btn {
-  border: 0;
+  
   background: #AC8DF7;
   color: white;
   display: block;
-  padding: 15px 40px;
+  padding: 15px 30px;
   border-radius: 10px;
   width: 100%; 
   align-items: center; 
@@ -38,12 +44,30 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54));
     box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(30px);
-    width: 560px;
-    padding: 15px;
+    width: 450px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    margin-left: 500px; 
-    margin-top: 200px;
+
+    /* position: absolute; */
+  }
+  .titre{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .info-event{
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54));
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(30px);
+    width: 450px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
     position: absolute;
+    margin-left: 600px;
+    margin-top: -100px;
   }

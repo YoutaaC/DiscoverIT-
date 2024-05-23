@@ -1,16 +1,23 @@
 <body>
-    <div></div>
-    <div class="form-box">
-        <h3 id="titre">Confirmer </h3>
+    <div class="container d-flex ">
+    <div class="form-box col-4">
+        <h3 id="titre" class="titre">Calendar Confirmation</h3>
         <form [formGroup]="appointmentForm" (ngSubmit)="scheduleMeeting(appointmentForm.value)">
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" class="form-control" formControlName="email"><br>
+
             <label for="appointmentTime">Meeting Time</label><br>
-            <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"><br>
+            <input type="datetime-local" id="appointmentTime" formControlName="appointmentTime"><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+            
             <button type="submit" id="schedule-button" class="sumbmit-btn">Schedule</button>
           </div>
         </form>
       </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="info-event col-5">
+
+      </div>
+    </div>
+
 </body>
