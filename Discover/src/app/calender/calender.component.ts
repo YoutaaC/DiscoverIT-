@@ -28,8 +28,7 @@ appointmentForm!:FormGroup;
 
 const startTime = appointmentTime. toISOString().slice(0, 18) + '-01:00';
 const endTime = this. getEndTime(appointmentTime) ;
-const
-eventDetails = {
+const eventDetails = {
 email: this.appointmentForm.value.email,
 startTime: startTime,
 endTime:endTime,
