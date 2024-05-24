@@ -54,6 +54,7 @@ export class ReservationComponent implements OnInit{
       icon: "success",
       title: "Réservation confirmée !",
       text: "Votre réservation a été confirmée.",
+      confirmButtonText: "Télécharger QR code",
       imageUrl: "./../../assets/images/Reservation.png",
       imageWidth: 300,
       imageHeight: 300,
