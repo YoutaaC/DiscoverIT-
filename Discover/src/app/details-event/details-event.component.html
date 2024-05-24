@@ -11,7 +11,7 @@
                 <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</span><br>
                 <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</span><br>
               <span class="itemms-event"><i class="fa-solid fa-sack-dollar icon-event"></i>{{event.prix}}</span><br>
-                <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn">Ajouter au calendrier</button>
+                <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn" (click)="calender(event.id)">Ajouter au calendrier</button>
                 <div class="box">
                     <div class="box1">
                         <p>Organisateur:</p> 

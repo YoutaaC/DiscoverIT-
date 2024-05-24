@@ -13,11 +13,19 @@
             
             <button type="submit" id="schedule-button" class="sumbmit-btn">Schedule</button>
           </div>
-        </form>
+        </form> 
+        <a href="home" class="ms-4 mt-2 goback">Retour</a>
       </div>
       <div class="info-event col-5">
-        <h2 class="event-d">Categorie: {{event.type}} </h2>
-         <h2 class="event-d">Nom De l'evenement: {{event.title}}</h2>
+        <div>
+          <img src="./../../assets/images/Group 145.png" class="icon-top">
+          <!-- <img src="./../../assets/images/key (2).png" class="mefteh"> -->
+          <i class="fa-solid fa-info mefteh"></i>
+        </div>
+        <h2 class="event-d">les données de votre Evenement</h2>
+        
+         <br>
+         <span class="event-dd">{{event.type}} : {{event.title}}</span>
             <span class="itemms-event"><i class="fa-regular fa-calendar icon-event"></i> de {{event.jour_debut}} {{event.mois_debut}} {{event.annee_debut}} à {{event.date_fin}}</span><br>
          <span class="itemms-event"><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</span><br>
          <span class="itemms-event"><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</span><br>

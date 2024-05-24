@@ -188,6 +188,8 @@ export class HomeComponent {
     this.router.navigate(["/detailsPost",id])
   }
 
+
+
   gotoProfil(){
     this.router.navigate(['profilUser']);
   }

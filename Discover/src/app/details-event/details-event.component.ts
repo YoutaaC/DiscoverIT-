@@ -52,7 +52,9 @@ export class DetailsEventComponent {
     this.router.navigate(["/reservation",id])
   }
 
-
+  calender(id :number) {
+    this.router.navigate(["/calender",id])
+  }
   // sendMail(file: File[], to: string, cc: string[], subject: string, body: string) {
   //   this.mailService.sendMail(file, to, cc, subject, body)
   //     .subscribe(response => {
