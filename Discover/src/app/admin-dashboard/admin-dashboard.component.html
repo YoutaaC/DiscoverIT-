@@ -265,12 +265,12 @@
   
               <div class="card-body pb-0 ">
                 <h5 class="card-title"> les Categories<span style="color: black;">| disponible </span></h5>
-
-                <div class="card card-side">
-                  <!-- <ul  *ngFor="let contact of contacts">
-                    <li>{{contact.objet}}</li>
-                  </ul> -->
-                </div>
+                  <div class="">
+                    <ul  *ngFor="let categorie of categories">
+                      <li>{{categorie.type}}</li>
+                    </ul>
+                  </div>
+               
               </div>
             </div>
             <div class="card card-side">
@@ -281,7 +281,7 @@
               <div class="card-body pb-0 ">
                 <h5 class="card-title"> les Objets <span style="color: black;">| messages</span></h5>
 
-                <div class="card card-side">
+                <div class="">
                   <ul  *ngFor="let contact of contacts">
                     <li>{{contact.objet}}</li>
                   </ul>

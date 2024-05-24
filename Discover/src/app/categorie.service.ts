@@ -30,14 +30,14 @@ export class CategorieService {
     return this.httpClient.get<Categorie[]>(this.apiUrl + "getAll", { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching events:', error);
+          console.error('Error fetching categories:', error);
           return throwError(error); 
         })
       );
   }
 
 
-  createEvent(categorie: Categorie): Observable<Categorie> {
+  createCategorie(categorie: Categorie): Observable<Categorie> {
     const accessToken = this.authService.getAccessToken();
   
     if (!accessToken) {
@@ -51,7 +51,7 @@ export class CategorieService {
     return this.httpClient.post<any>(this.apiUrl + 'add', categorie, { headers })
       .pipe(
         catchError(error => {
-          console.error('Error fetching events:', error);
+          console.error('Error fetching categories:', error);
           return throwError(error); 
         })
       );
@@ -70,6 +70,47 @@ export class CategorieService {
     });
   
     return this.httpClient.delete<any>(this.apiUrl + 'delete/'+id, { headers })
+      .pipe(
+        catchError(error => {
+          console.error('Error fetching categories:', error);
+          return throwError(error); 
+        })
+      );
+  }
+
+
+  updateCategorie(id:number,categorie:Categorie): Observable<Categorie> {
+    const accessToken = this.authService.getAccessToken();
+
+    if (!accessToken) {
+      throw new Error('Access token not found.'); 
+    }
+    console.log(accessToken);
+    const headers = new HttpHeaders({
+      "Authorization": "Bearer " + accessToken
+    });
+
+    return this.httpClient.put<Categorie>(this.apiUrl + "updateUser/"+id,categorie, { headers })
+      .pipe(
+        catchError(error => {
+          console.error('Error fetching users:', error);
+          return throwError(error); 
+        })
+      );
+  }
+
+  getCategorieById(id: number): Observable<Categorie>{
+    const accessToken = this.authService.getAccessToken();
+  
+    if (!accessToken) {
+      throw new Error('Access token not found.'); 
+    }
+    console.log(accessToken);
+    const headers = new HttpHeaders({
+      "Authorization": "Bearer " + accessToken
+    });
+  
+    return this.httpClient.get<any>(this.apiUrl + 'getCategorieById/'+id, { headers })
       .pipe(
         catchError(error => {
           console.error('Error fetching events:', error);

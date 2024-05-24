@@ -69,6 +69,8 @@ import { OtherUserComponent } from './other-user/other-user.component';
 import { NotifComponent } from './notif/notif.component';
 import { CalenderComponent } from './calender/calender.component';
 import { AdminCategorieComponent } from './admin-categorie/admin-categorie.component';
+import { AddCategorieComponent } from './add-categorie/add-categorie.component';
+import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 
 
 @NgModule({
@@ -136,7 +138,9 @@ import { AdminCategorieComponent } from './admin-categorie/admin-categorie.compo
     OtherUserComponent,
     NotifComponent,
     CalenderComponent,
-    AdminCategorieComponent
+    AdminCategorieComponent,
+    AddCategorieComponent,
+    UpdateCategorieComponent
     ],
   imports: [
     BrowserModule,

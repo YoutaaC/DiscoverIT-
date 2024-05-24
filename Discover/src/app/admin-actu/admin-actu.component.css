@@ -420,23 +420,19 @@ background-color: #32839B;
 }
 .delete-btn{
   background-color: #AC8DF7;
-
 }
 
 .table {
-  background-color: transparent;
+
   margin-top: 5px;
 }
 th, td {
   padding: 10px; 
-  border: 1px solid #ccc; 
   text-align: left;
-  background-color: #eee ;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 th {
-  background-color: #eee; 
   font-weight: bold; 
 }
 .responsive-table {
@@ -448,7 +444,3 @@ th {
       width: 1160px; 
   }
 }
-/* .logo-icone{
-  width: 10px;
-  height: auto;
-} */

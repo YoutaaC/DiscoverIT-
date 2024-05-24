@@ -298,3 +298,54 @@ body {
       margin-top: 10px;
       margin-left: -23px;
     }
+  .notif-box{
+    width: 751px;
+    border-radius: 15px;
+    padding:  20px 20px 10px 20px;
+    margin: 4px;
+  }
+  .cercle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .cercle-rouge{
+    background-color: #DF5551;
+  }
+  .cercle-bleu{
+    background-color: #3AA4E2;
+  }
+  .cercle-vert{
+    background-color: #02C1BA;
+  }
+  .Acceptation{
+    background-color: #0A676F ;
+  }
+  .follow{
+     background-color: #205C8C;
+    }
+.suppression{
+  background-color: #84313A;
+}
+.tn{
+  font-weight: bold;
+}
+p{
+  font-size: 16px;
+}
+.icon-item1{
+  font-size: 22px;
+  margin-top: 11px;
+  margin-left: 8px;
+}
+.icon-item2{
+  font-size: 20px;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.icon-item3{
+  font-size: 20px;
+  margin-top: 12px;
+  margin-left: 11px;
+}

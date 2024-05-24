@@ -427,14 +427,14 @@ background-color: #32839B;
 }
 th, td {
   padding: 10px; 
-  border: 1px solid #ccc; 
+
   text-align: left;
-  background-color: #eee ;
+
   font-size: 14px;
 }
 
 th {
-  background-color: #eee; 
+ 
   font-weight: bold; 
 }
 .responsive-table {

@@ -58,6 +58,8 @@ import { OtherUserComponent } from './other-user/other-user.component';
 import { NotifComponent } from './notif/notif.component';
 import { CalenderComponent } from './calender/calender.component';
 import { AdminCategorieComponent } from './admin-categorie/admin-categorie.component';
+import { AddCategorieComponent } from './add-categorie/add-categorie.component';
+import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -117,7 +119,11 @@ const routes: Routes = [
   {path:'profilUser',component:OtherUserComponent},
   {path:'notification',component:NotifComponent},
   {path:'calender/:id',component:CalenderComponent},
-  {path:'admincatg',component:AdminCategorieComponent}
+  {path:'admincatg',component:AdminCategorieComponent},
+  {path:'addCatg',component:AddCategorieComponent},
+  {path:'updateCateg/:id',component:UpdateCategorieComponent}
+
+
  
 ];
 

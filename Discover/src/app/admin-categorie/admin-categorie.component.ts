@@ -15,6 +15,7 @@ export class AdminCategorieComponent {
   accessToken!: any;
   currentUser!: User;
   categorieToDelete!: Categorie | null;
+
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -38,10 +39,7 @@ export class AdminCategorieComponent {
       console.error('Error fetching Categories:', error);
     });
   }
-  updateEvent(id :number){
-    this.router.navigate(["/updateEvent",id])
-   }
-
+ 
   CategorieToDelete!:Categorie;
   confirmDelete(categorie: Categorie) {
     this.CategorieToDelete = categorie; 
@@ -51,7 +49,7 @@ export class AdminCategorieComponent {
       text: "This action cannot be undone!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#AC8DF',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'Cancel'
@@ -75,9 +73,18 @@ export class AdminCategorieComponent {
     });
   }
   
+  
+  
+    createCategorie() {
+      this.router.navigate(['addCatg']);
+    }
+
+    UpdateCategorie(id :Number) {
+      this.router.navigate(['updateCateg',id]);
+    }
 
 
-
+  
   logout(){
     localStorage.removeItem("user");
     localStorage.removeItem("isLoggedIn");

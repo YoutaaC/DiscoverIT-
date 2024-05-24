@@ -420,22 +420,19 @@ background-color: #32839B;
   background-color: #AC8DF7;
 }
 
-
 table {
   border-collapse: collapse; 
 }
 th, td {
   padding: 10px; 
-  border: 1px solid #ccc; 
   text-align: left;
-  background-color: #eee ;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 th {
-  background-color: #eee; 
   font-weight: bold; 
 }
+
 
 .responsive-table {
   width: 100%; 

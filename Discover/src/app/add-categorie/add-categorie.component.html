@@ -1,0 +1,23 @@
+<body>
+<br><br><br><br><br><br><br><br>
+
+    <div class="form-box">
+
+          <div class="formu  ">
+            <form  [formGroup]="forminput">
+                <label for="type">Categorie<b style="color: #660909;">*</b></label>
+                <input type="text" id="type" placeholder="  Entrer votre Categorie" formControlName="type" name="type" [(ngModel)]="newCatg.type" >
+  
+                <div class="warning-div"
+                *ngIf="!forminput.pristine && forminput.controls['type'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Categorie !!
+               </div>
+
+              <button type="submit" class="sumbmit-btn" (click)="createCategorie()">Ajouter</button>
+              <a href="admincatg" class="btn btn-link retour-btn">Retour</a>
+          </form>  
+        </div>
+      </div>
+ <br><br><br><br><br><br><br><br><br><br><br>
+
+      </body>

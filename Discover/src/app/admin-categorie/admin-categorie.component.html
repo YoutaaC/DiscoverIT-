@@ -53,13 +53,13 @@
           </li>
   
           <li class="nav-item">
-            <a class="nav-link" href="adminActu">
+            <a class="nav-link collapsed" href="adminActu">
               <i class="fa-solid fa-file-lines"></i>
               <span>Actualité</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link collapsed" href="admincatg">
+            <a class="nav-link " href="admincatg">
               <i class="fa-solid fa-layer-group"></i>
               <span>Catégories</span>
             </a>
@@ -93,44 +93,44 @@
     <main id="main" class="main">
       <div class="pagetitle justify-content-between d-flex ">
         <h1>Catégories</h1>
-        <a href="createPost"><button class="btn text-light text-center  conf-btn" >Ajouter</button> </a>
+      <button class="btn text-light text-center  conf-btn" (click)="createCategorie()">Ajouter</button>
       </div>
-      <section class="section profile">
-  <table class="table table-striped responsive-table">
+      <section class="section">
+  <table class="table table-dark table-striped-columns responsive-table">
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Body</th>
-        <th scope="col">Desc</th>
         <th scope="col">Type</th>
-        <th scope="col">Confirmation</th>
-      
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <!-- <tr *ngFor="let post of posts">
-        <td>{{post.id}}</td>
-        <td>{{post.title}}</td>
-        <td>{{post.body}}</td>
-        <td>{{post.mini_body}}</td>
-        <td>{{post.type}}</td>  
-        <td style="color: #32839B;">{{post.isConfirmed}}</td>
-       
+      <tr *ngFor="let categorie of categories">
+        <td>{{categorie.id}}</td>
+        <td>{{categorie.type}}</td>  
         <td>
-      <button mat-button *ngIf="!post.isConfirmed" class="btn text-light conf-btn ">Confirmer</button>
-          <br><br>
-          <button class="btn text-light modif-btn" >Modifier</button>
-          <br><br>
-          <button class="btn text-light delete-btn" >Supprimer</button>
+          <button class="btn text-light delete-btn" (click)="confirmDelete(categorie)">Supprimer</button>&nbsp; &nbsp;&nbsp; &nbsp;
+          <button class="btn text-light conf-btn" (click)=" UpdateCategorie(categorie.id)">Modifier</button>
         </td>
-      </tr> -->
+      </tr>
     </tbody>    
   </table>
+
+  <!-- <div class="d-flex" *ngFor="let categorie of categories" >
+  <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Categorie Id : {{categorie.id}}</h5>
+      <p class="card-text">Nom de Categorie : {{categorie.type}}</p>
+      <div class="d-flex">
+      <button class="btn text-light delete-btn" (click)="confirmDelete(categorie)">Supprimer</button> &nbsp; &nbsp;
+      <button class="btn text-light conf-btn" (click)=" UpdateCategorie(categorie.id)">Modifier</button>
+    </div>
+    </div>
+  </div>
+</div> -->
   
       </section> 
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </body>
 
