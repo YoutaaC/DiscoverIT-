@@ -57,6 +57,7 @@ import { ForgotPassword2Component } from './forgot-password2/forgot-password2.co
 import { OtherUserComponent } from './other-user/other-user.component';
 import { NotifComponent } from './notif/notif.component';
 import { CalenderComponent } from './calender/calender.component';
+import { AdminCategorieComponent } from './admin-categorie/admin-categorie.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -115,7 +116,8 @@ const routes: Routes = [
   {path:'newPassword',component:ForgotPassword2Component},
   {path:'profilUser',component:OtherUserComponent},
   {path:'notification',component:NotifComponent},
-  {path:'calender/:id',component:CalenderComponent}
+  {path:'calender/:id',component:CalenderComponent},
+  {path:'admincatg',component:AdminCategorieComponent}
  
 ];
 

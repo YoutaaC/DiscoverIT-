@@ -1,29 +1,30 @@
 <body>
     <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- Logo -->
       <div class="d-flex align-items-center justify-content-between">
         <a href="accueil" class="logo d-flex align-items-center">
           <img src="./../../assets/img/aaaa.png" class="logo-icone">
           <span class="d-none d-lg-block">Discover <span style="color: #02C1BA;">IT</span> </span>
         </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
       </div>
+  <!-- Search Bar -->
       <div class="search-bar">
         <form class="search-form d-flex align-items-center">
-          <form class="search-form d-flex align-items-center">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword" >
-            <button type="submit" title="Search" ><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword" >
+          <button type="submit" title="Search" ><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
+  
       <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center" style="text-decoration: none; ">
-
+        <ul class="d-flex align-items-center">
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="adminProfile" >
               <img src="./../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
               <span class="d-none d-md-block ps-2">admin</span>
-            </a>
+            </a> 
         </ul>
-      </nav>
-    </header>
+      </nav> 
+    </header> 
     <aside id="sidebar" class="sidebar">
   
       <ul class="sidebar-nav" id="sidebar-nav">
@@ -38,11 +39,10 @@
         <li class="nav-heading">Fonctionnalitées</li>
 
         <li class="nav-item">
-          
-            <a class="nav-link " href="adminUser">
-              <i class="fa-solid fa-users"></i>
-              <span>User</span>
-            </a>
+          <a class="nav-link collapsed" href="adminUser">
+            <i class="fa-solid fa-users"></i>
+            <span>User</span>
+          </a>
           </li>
   
           <li class="nav-item">
@@ -53,7 +53,7 @@
           </li>
   
           <li class="nav-item">
-            <a class="nav-link collapsed" href="adminActu">
+            <a class="nav-link" href="adminActu">
               <i class="fa-solid fa-file-lines"></i>
               <span>Actualité</span>
             </a>
@@ -64,70 +64,73 @@
               <span>Catégories</span>
             </a>
           </li>
+  
         <li class="nav-heading">Profile</li>
+  
         <li class="nav-item">
           <a class="nav-link collapsed" href="adminProfile">
             <i class="fa-solid fa-user"></i>
             <span>Profile</span>
           </a>
         </li>
+
         <li class="nav-item">
             <a class="nav-link collapsed" href="messageAdmin">
               <i class="fa-solid fa-envelope"></i>
               <span>Messages</span>
             </a>
           </li>
+  
         <li class="nav-item">
-          <a class="nav-link collapsed" href="signin">
+          <a class="nav-link collapsed" href="Signin">
             <i class="fa-solid fa-right-to-bracket"></i>
             <span (click)="logout()">Logout</span>
           </a>
         </li>
       </ul>
+  
     </aside>
     <main id="main" class="main">
-      <div class="pagetitle d-flex  justify-content-between">
-        
-        <h1>Users</h1> 
-        <a href="addUser"><button class="btn conf-btn text-light text-center ">Ajouter</button> </a>  
+      <div class="pagetitle justify-content-between d-flex ">
+        <h1>Actualité</h1>
+        <a href="createPost"><button class="btn text-light text-center  conf-btn" >Ajouter</button> </a>
       </div>
-      <section class="section profile"> 
-  <!-- Table -->
-  <table class="table table-striped responsive-table">
+      <section class="section profile">
+  <!-- <table class="table table-striped responsive-table">
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Prenom</th>
-        <th scope="col">Pseudo</th>
-        <th scope="col">Email</th>
-        <th scope="col">Tel</th>
-        <th scope="col">Mot De Passe</th>
-        <th scope="col">Date</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Desc</th>
+        <th scope="col">Type</th>
+        <th scope="col">Confirmation</th>
+      
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{user.id}}</td>
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.tel}}</td>
-        <td >{{user.password}}</td>
-        <td>{{user.creationDate | date: 'dd/MM/yyyy' }}</td>
-        <td><button class="btn  modif-btn text-light" (click)="updateUser(user.id)">Modifier</button>&nbsp; &nbsp;
-          <button class="btn delete-btn text-light" (click)="confirmDelete(user)">Supprimer</button>
-        </td> 
+      <tr *ngFor="let post of posts">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+        <td>{{post.mini_body}}</td>
+        <td>{{post.type}}</td>  
+        <td style="color: #32839B;">{{post.isConfirmed}}</td>
+       
+        <td>
+      <button mat-button *ngIf="!post.isConfirmed" class="btn text-light conf-btn ">Confirmer</button>
+          <br><br>
+          <button class="btn text-light modif-btn" >Modifier</button>
+          <br><br>
+          <button class="btn text-light delete-btn" >Supprimer</button>
+        </td>
       </tr>
-    </tbody>
-  </table>
- 
-      
-</section>
-    </main> 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </tbody>    
+  </table> -->
+  
+      </section> 
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </body>
 
- 
