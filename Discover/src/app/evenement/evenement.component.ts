@@ -54,7 +54,9 @@ export class EvenementComponent {
     this.router.navigate(["/detailsEvent",id])
   }
 
-
+  calender(id :number) {
+    this.router.navigate(["/calender",id])
+  }
 
   
 }

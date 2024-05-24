@@ -237,3 +237,8 @@ body {
       display: flex;
       justify-content: space-between;
     }
+    .nbr-react1, .nbr-react2, .nbr-react3{
+      position: absolute;
+      margin-top: 10px;
+      margin-left: -23px;
+    }

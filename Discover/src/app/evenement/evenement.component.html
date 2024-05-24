@@ -68,7 +68,7 @@
             <p><i class="fa-regular fa-calendar icon-event"></i>{{event.jour_debut}} &nbsp;{{event.mois_debut}} &nbsp;{{event.annee_debut}}</p>
               <p><i class="fa-regular fa-clock icon-event" ></i>{{event.time}}</p>
               <p><i class="fa-solid fa-location-dot icon-event"></i>{{event.lieu}}</p>
-            <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn">Ajouter au calendrier</button>
+            <button class="reserver-btn" (click)="gotoReservation(event.id)">Réserver</button> &nbsp; <button class="calendrier-mail-btn" (click)="calender(event.id)">Ajouter au calendrier</button>
         </div>
       </div>
     </div>
