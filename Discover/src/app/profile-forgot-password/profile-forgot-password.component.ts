@@ -3,6 +3,7 @@ import { User } from '../models/user.model';
 import { UserService } from '../user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var $:any;
 @Component({
   selector: 'app-profile-forgot-password',
@@ -14,13 +15,53 @@ export class ProfileForgotPasswordComponent {
   currentUser!: User;
   currentuserId! :number;
   users: User[] = [];
+
+
+  forminput2!:FormGroup;
+  forminput3!:FormGroup;
+  forminput4!:FormGroup;
+
+
+
   ngOnInit(): void {
+    this.forminput2=this.formBuilder.group(
+      {
+        'oldP':['',[Validators.required]]
+      }
+    );
+
+    this.forminput3=this.formBuilder.group(
+      {
+        'newPassword':['',[Validators.required]]
+      }
+    );
+
+    this.forminput4=this.formBuilder.group(
+      {
+        'confPass':['',[Validators.required]]
+      }
+    );
+    this.forminput4 = this.formBuilder.group({
+      newPassword: ['', Validators.required], 
+      confPass: ['', Validators.required]
+    });
+
     this.currentuserId=+this.route.snapshot.paramMap.get('id')!;
     this.getUser();
+
+ 
+
   }
 
   
-  constructor(private userService: UserService, private route: ActivatedRoute ,private router:Router) {}
+
+
+
+
+  
+
+
+  constructor(private userService: UserService, private route: ActivatedRoute ,private router:Router,private formBuilder:FormBuilder) {}
 
   getAllUsers(): void {
     this.userService.getAllUsers().subscribe(users => {

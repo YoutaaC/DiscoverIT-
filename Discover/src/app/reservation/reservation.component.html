@@ -4,7 +4,7 @@
       <div class="form-box">
           
             <div class="formu">
-          <form >
+  
             <h2 class="title-salon text-capitalize">{{event.type}}:&nbsp;&nbsp;<span class="title-NameEvent">{{event.title}}</span> </h2>
             <br>
             <div class="d-flex " style="color: white;">
@@ -22,21 +22,58 @@
           <br>
             <h4 class="title">-Informations personnelles</h4>
 <!-- saisir le nom -->
+<form  [formGroup]="forminput">
                 <label for="nom">Nom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="name"  [(ngModel)]="currentUser.firstName">
- <!-- saisir le prenom -->
+                <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" formControlName="nom"  [(ngModel)]="currentUser.firstName">
+                
+                <div class="warning-div"
+                *ngIf="!forminput.pristine && forminput.controls['nom'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Nom !
+               </div>
+</form>
+<!-- saisir le prenom -->
+ <form  [formGroup]="forminput1">
                 <label for="prenom">Prenom<b style="color: #A60707;">*</b></label>
-                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName">
+                <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" formControlName="prenom"  [(ngModel)]="currentUser.lastName">
+
+                <div class="warning-div"
+                *ngIf="!forminput1.pristine && forminput1.controls['prenom'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Prenomom !
+               </div>
+</form>
 <!-- saisir l'email -->
+<form  [formGroup]="forminput2">
                 <label for="email">Email<b style="color: #A60707;">*</b></label>
-                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email"  [(ngModel)]="currentUser.email">
+                <input type="text" id="email" placeholder="  Entrer votre email"  name="email" formControlName="email" formControlName="email"  [(ngModel)]="currentUser.email">
+
+                <div class="warning-div"
+                *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Email !!
+               </div>
+               <div class="warning-div"
+                *ngIf="!forminput2.pristine && forminput2.controls['email'].errors?.['email']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Email incorrect !!
+               </div>
+</form>
 <!-- saisir le telephone -->
+<form  [formGroup]="forminput3">
                 <label for="tel">Num de téléphone<b style="color: #A60707;">*</b></label>
                 <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="test" 
-                maxlength="8" [(ngModel)]="currentUser.tel">
-
+                maxlength="8" [(ngModel)]="currentUser.tel" formControlName="tel" [(ngModel)]="currentUser.tel">
+                <div class="warning-div"
+                *ngIf="!forminput3.pristine && forminput3.controls['tel'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Numero !
+               </div>
+</form>
+ <!-- nbr de place -->
+<form  [formGroup]="forminput4">
                 <h4 class="title">-Informations de réservation</h4>
-                <label for="nbr-pkace">Nombre  de places:</label><input type="number" min="0" class="nbrPlace " placeholder=""><br>
+                <label for="nbr-pkace">Nombre  de places:<b style="color: #A60707;">*</b></label><input type="number" min="0" class="nbrPlace " placeholder="" formControlName="nbr" ><br>
+                <div class="warning-div"
+                *ngIf="!forminput4.pristine && forminput4.controls['nbr'].errors?.['required']">
+                <img src="./../../assets/images/iconmonstr-error-lined-240.png" class="warning-icon">&nbsp; Saisir votre Numero !
+               </div>
+</form>
                 <br>
                 <h4 class="title">-Informations supplémentaires</h4>
                 <label for="nbr-pkace">Commentaires supplémentaires</label><br>
@@ -45,7 +82,7 @@
                 <br><br>
                 <button type="submit" class="sumbmit-btn" (click)="afficheQR()" >Réserver</button>
               
-              </form>    
+             
           </div>
         </div>
      

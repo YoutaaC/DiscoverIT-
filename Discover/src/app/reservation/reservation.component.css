@@ -196,3 +196,12 @@ label{
   font-size: 25px;
   margin-right: 10px;
 }
+.warning-icon{
+  width: 25px;
+  height: auto;
+}
+
+.warning-div{
+  margin: 5px 0 5px 0;
+  color: #660909;
+}
