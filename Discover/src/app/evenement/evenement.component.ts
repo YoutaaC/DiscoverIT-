@@ -31,6 +31,7 @@ export class EvenementComponent {
       console.error('User data not found in local storage');
     }
     this.getAllEvents();
+    this.getAllCategories();
 
   }
   constructor(private eventService: EventService, private router: Router,private mailService: MailService,private categorieService:CategorieService) {}
@@ -45,8 +46,11 @@ export class EvenementComponent {
 
 
   getAllCategories(): void {
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
     this.categorieService.getAllCategories().subscribe(evtns => {
       this.catgs = evtns;
+      
     }, error => {
       console.error('Error fetching events:', error);
     });
