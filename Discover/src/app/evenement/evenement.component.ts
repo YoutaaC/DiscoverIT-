@@ -19,6 +19,8 @@ export class EvenementComponent {
   accessToken!: any;
   currentUser!: User;
 
+  typeFilter:string[] = [];
+
   ngOnInit(): void {
     const userAccessToken = localStorage.getItem("accessToken"); 
 
@@ -39,6 +41,7 @@ export class EvenementComponent {
   getAllEvents(): void {
     this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
+      console.log(evtns);
     }, error => {
       console.error('Error fetching events:', error);
     });
@@ -74,5 +77,19 @@ export class EvenementComponent {
     this.router.navigate(["/calender",id])
   }
 
+
+    filter(events: Event[]): Event[] {
+      let result: Event[] = [];
+    
+      return result;
+    }
+
+    tt(){
+      // console.log("kharejj hajaa yehdikk ")
+      // tt(chkbox:string){ 
+
+      // }
+    }
+  }
+
   
-}

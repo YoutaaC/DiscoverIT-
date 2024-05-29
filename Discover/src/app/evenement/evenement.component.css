@@ -162,6 +162,12 @@ hr{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.title-filtre{
+  color: black;
+  padding: 4px;
+}
+
 .btn-filtre{
   color: black;
   border: black solid 1px;
@@ -170,18 +176,15 @@ hr{
   margin: 5px;
 
 }
-.title-filtre{
-  color: black;
-  padding: 4px;
-}
 .btn-filtre:hover{
   color: #02C1BA;
   border: #02C1BA solid 1px;
 }
 
-.btn-filtre input:checked{
-  color: #02C1BA;
+.btn-filtre:has( input:checked ){
+  color: white;
  background: #02C1BA;
+ border: none;
 }
 .check-items{
   color: black;
