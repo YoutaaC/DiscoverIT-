@@ -178,6 +178,11 @@ hr{
   color: #02C1BA;
   border: #02C1BA solid 1px;
 }
+
+.btn-filtre input:checked{
+  color: #02C1BA;
+ background: #02C1BA;
+}
 .check-items{
   color: black;
 }
