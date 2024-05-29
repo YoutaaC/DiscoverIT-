@@ -78,17 +78,21 @@ export class EvenementComponent {
   }
 
 
-    filter(events: Event[]): Event[] {
-      let result: Event[] = [];
-    
-      return result;
+  filter(events: Event[]): Event[] {
+    if(this.typeFilter.length===0){
+      return events;
     }
+    let result: Event[] = events.filter((e)=> this.typeFilter.includes(e.type) )      
+    console.log(result);
+    return result;
+    
+  }
 
-    tt(chkbox:string){
-      console.log(this.typeFilter);
+   getCheck(chkbox:string){
+      
       if(this.typeFilter.includes(chkbox)){
         this.typeFilter.splice(this.typeFilter.indexOf(chkbox),1);
-        console.log(this.typeFilter);
+        
       }else{
         this.typeFilter.push(chkbox);
       }

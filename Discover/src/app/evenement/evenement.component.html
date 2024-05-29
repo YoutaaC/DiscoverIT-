@@ -27,9 +27,8 @@
                  <br>
                   <h5 class="title-filtre"> Par Type:</h5>
                   <div  *ngFor="let typee of catgs" class="d-inline-flex">
-                  <!-- <button class="btn-filtre"  [(ngModel)]="typee.type">{{typee.type}}</button> -->
                   <label class="btn-filtre" for="{{typee.type}}" >{{typee.type}} 
-                  <input type="checkbox" class="btn-check " id="{{typee.type}}" autocomplete="off" (click)="tt(typee.type)">
+                  <input type="checkbox" class="btn-check " id="{{typee.type}}" autocomplete="off" (click)="getCheck(typee.type)">
               </label><br>
                 </div>
              
@@ -37,14 +36,14 @@
                 <button class="btn-filtre">Formation</button> <button class="btn-filtre">Salon</button> <button class="btn-filtre">Conférences</button> <button class="btn-filtre">En ligne</button>  <button class="btn-filtre">Hackathon</button>
                
                 <h5 class="title-filtre">Par Accès: </h5>
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Payant</span> <br>
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Non Payant</span>
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Payant</span> <br>
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Non Payant</span>
                 
                 <h5 class="title-filtre">Par Jour: </h5>
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Lundi </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox"><span class="check-items">Vendredi</span><br> 
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Mardi </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox"><span class="check-items">Samedi</span><br> 
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Mercredi</span>  &nbsp;  <input type="checkbox"><span class="check-items">Dimanche</span><br> 
-                <input type="checkbox" (click)="tt('')"><span class="check-items">Jeudi</span>
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Lundi </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox"><span class="check-items">Vendredi</span><br> 
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Mardi </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="checkbox"><span class="check-items">Samedi</span><br> 
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Mercredi</span>  &nbsp;  <input type="checkbox"><span class="check-items">Dimanche</span><br> 
+                <input type="checkbox" (click)="getCheck('')"><span class="check-items">Jeudi</span>
               </div>
               </div>
           <br>
@@ -56,7 +55,7 @@
     </div>
   
 <br>
-<div *ngFor="let event of events">
+<div *ngFor="let event of filter(events)">
     <span class="type-hr" ><span>{{event.mois_debut}} {{event.annee_debut}}</span> &nbsp;&nbsp;&nbsp;<hr></span>
     <br>
     <div class="row event-card">
