@@ -6,6 +6,7 @@ import { EventService } from '../event.service';
 import { UserService } from '../user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
 declare var $:any;
 @Component({
   selector: 'app-reservation',
@@ -31,7 +32,7 @@ export class ReservationComponent implements OnInit{
 
   // qrCode: string;
   
-  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private formBuilder: FormBuilder ){}
+  constructor(private eventService:EventService, private route:ActivatedRoute,private userService : UserService,private formBuilder: FormBuilder,private httpClient: HttpClient ){}
   
   ngOnInit(): void {
     this.forminput=this.formBuilder.group(
@@ -63,6 +64,11 @@ export class ReservationComponent implements OnInit{
         'nbr':['',[Validators.required]]
       }
     );
+    this.forminput4 = this.formBuilder.group({
+      password: ['', Validators.required], 
+      confPass: ['', Validators.required]
+    });
+    
  
 
     this.eventId=+this.route.snapshot.paramMap.get('id')!;
@@ -88,48 +94,88 @@ export class ReservationComponent implements OnInit{
   }
 
 
-  // afficheQR(){
-  //   Swal.fire({
-  //     icon: "success",
-  //     title: "Réservation confirmée !",
-  //     text: "Votre réservation a été confirmée.",
-  //     confirmButtonText: "Télécharger QR code",
-  //     imageUrl: "./../../assets/images/Reservation.png",
-  //     imageWidth: 300,
-  //     imageHeight: 300,
-  //     imageAlt: "QR Code"
-  //   });
-  // }
 
 
 
-  afficheQR() {
-    if (!this.currentUser.firstName || !this.currentUser.lastName || !this.currentUser.email) { 
-      console.error('No user data to register!');
-      Swal.fire('Error!', 'Remplir les champs nécessaires.', 'error');
-      return;
-    }
-
+  
+  afficheQR(){
     Swal.fire({
-      title: 'Are you sure you want to Réservation?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Réserver', 
+      icon: "success",
+      title: "Réservation confirmée !",
+      text: "Votre réservation a été confirmée.",
+      confirmButtonText: "Télécharger QR code",
+      imageUrl: "./../../assets/images/Reservation.png",
+      imageWidth: 300,
+      imageHeight: 300,
+      imageAlt: "QR Code"
     }).then((result) => {
-      Swal.fire({
-        icon: "success",
-        title: "Réservation confirmée !",
-        text: "Votre réservation a été confirmée.",
-        confirmButtonText: "Télécharger QR code",
-        imageUrl: "./../../assets/images/Reservation.png",
-        imageWidth: 300,
-        imageHeight: 300,
-        imageAlt: "QR Code"
-      });
+      if (result.isConfirmed) {
+        this.downloadImage("./../../assets/images/Reservation.png");
+      }
     });
   }
+
+
+  downloadImage(url: string) {
+    this.httpClient.get(url, { responseType: 'blob' }).subscribe(blob => {
+        // Create a link element
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Reservation.jpg'; // Set the download filename
+  
+        // Append link to the body, click it, and then remove it
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, error => {
+        console.error('Error downloading the image: ', error);
+    });
+  }
+
+
+// afficheQR() {
+//   if (!this.currentUser.firstName || !this.currentUser.lastName || !this.currentUser.email || !this.currentUser.tel) {
+//     console.error('Aucune donnée d\'utilisateur à enregistrer !');
+//     Swal.fire('Erreur !', 'Veuillez remplir tous les champs obligatoires.', 'error');
+//     return;
+//   }
+
+//   Swal.fire({
+//     title: 'Êtes-vous sûr de vouloir réserver ?',
+//     icon: 'warning',
+//     showCancelButton: true,
+//     confirmButtonColor: '#3085d6',
+//     cancelButtonColor: '#d33',
+//     confirmButtonText: 'Réserver',
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire({
+//         icon: "success",
+//         title: "Réservation confirmée !",
+//         text: "Votre réservation a été confirmée. Consultez l'image ci-dessous pour voir votre QR code.",
+//         confirmButtonColor: '#3085d6',
+//         confirmButtontext: "Télécharger le QR code",
+//         imageUrl: "./../../assets/images/Reservation.png",
+//         imageWidth: 300,
+//         imageHeight: 300,
+//         imageAlt: "QR Code de réservation"
+//       });
+//     }
+//   });
+// }
+
+
+
+// downloadImage(imageUrl: string) {
+//   this.httpClient.get(imageUrl, { responseType: 'blob' })
+//     .subscribe(blob => {
+//       const url = URL.createObjectURL(blob);
+//       const anchor = document.createElement('a');
+//       anchor.href = url;
+//       anchor.download = 'image.png'; 
+//       anchor.click();
+//       URL.revokeObjectURL(url);
+//     });
 
 
   // onSubmit() {

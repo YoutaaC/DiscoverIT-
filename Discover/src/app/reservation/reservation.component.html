@@ -58,7 +58,7 @@
 <!-- saisir le telephone -->
 <form  [formGroup]="forminput3">
                 <label for="tel">Num de téléphone<b style="color: #A60707;">*</b></label>
-                <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="test" 
+                <input type="text" id="tel" placeholder="  Entrer votre numero de telephone"  name="tel" 
                 maxlength="8" [(ngModel)]="currentUser.tel" formControlName="tel" [(ngModel)]="currentUser.tel">
                 <div class="warning-div"
                 *ngIf="!forminput3.pristine && forminput3.controls['tel'].errors?.['required']">
