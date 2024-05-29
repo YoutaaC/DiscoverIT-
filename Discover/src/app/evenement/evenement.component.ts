@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 import { MailService } from '../mail.service';
+import { CategorieService } from '../categorie.service';
+import { Categorie } from '../models/categorie.model';
 
 @Component({
   selector: 'app-evenement',
@@ -13,6 +15,7 @@ import { MailService } from '../mail.service';
 export class EvenementComponent {
 
   events: Event[] = [];
+  catgs:Categorie[] =[];
   accessToken!: any;
   currentUser!: User;
 
@@ -30,11 +33,20 @@ export class EvenementComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router,private mailService: MailService) {}
+  constructor(private eventService: EventService, private router: Router,private mailService: MailService,private categorieService:CategorieService) {}
 
   getAllEvents(): void {
     this.eventService.getAllEvents().subscribe(evtns => {
       this.events = evtns;
+    }, error => {
+      console.error('Error fetching events:', error);
+    });
+  }
+
+
+  getAllCategories(): void {
+    this.categorieService.getAllCategories().subscribe(evtns => {
+      this.catgs = evtns;
     }, error => {
       console.error('Error fetching events:', error);
     });

@@ -25,9 +25,12 @@
               <div>
                 <div>
                  <br>
+                 <div  *ngFor="let catg of catgs">
                   <h5 class="title-filtre"> Par Type:</h5>
-                <button class="btn-filtre">Sécurité</button> <button class="btn-filtre">Développement</button>  <button class="btn-filtre">IoT</button> <button class="btn-filtre">Robotique</button> <button class="btn-filtre">AR/VR</button>
-                <button class="btn-filtre">Intelligence Artificielle</button>  <button class="btn-filtre">Blockchain</button>
+                  <button class="btn-filtre">{{catg.type}}</button>
+                </div>
+                <!-- <button class="btn-filtre">Sécurité</button> <button class="btn-filtre">Développement</button>  <button class="btn-filtre">IoT</button> <button class="btn-filtre">Robotique</button> <button class="btn-filtre">AR/VR</button> -->
+                <!-- <button class="btn-filtre">Intelligence Artificielle</button>  <button class="btn-filtre">Blockchain</button> -->
                 
                 <h5 class="title-filtre"> Par Catégories:</h5>
                 <button class="btn-filtre">Formation</button> <button class="btn-filtre">Salon</button> <button class="btn-filtre">Conférences</button> <button class="btn-filtre">En ligne</button>  <button class="btn-filtre">Hackathon</button>
