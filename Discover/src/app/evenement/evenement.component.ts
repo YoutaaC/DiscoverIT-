@@ -87,7 +87,7 @@ export class EvenementComponent {
   }
  
   filter(events: Event[]): Event[] {
-    const FilterByType= this.typeFilter.length > 0;
+    const FilterByType= this.typeFilter.length === 0;
     const FilterByPrice= this.pricesChecked.length > 0 ? this.pricesChecked.reduce((a, b) => Math.min(a, b), 2) : 0;
     console.log('pricesChecked', this.pricesChecked);
     events.forEach((e) => {
