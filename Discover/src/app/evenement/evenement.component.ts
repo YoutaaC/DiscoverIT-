@@ -87,8 +87,8 @@ export class EvenementComponent {
   }
  
   filter(events: Event[]): Event[] {
-    const FilterByType= this.typeFilter.length === 0;
-    const FilterByPrice= this.pricesChecked.length > 0 ? this.pricesChecked.reduce((a, b) => Math.min(a, b), 2) : 0;
+    const FilterByType= this.typeFilter.length > 0;
+    const FilterByPrice= this.pricesChecked.length > 0 ? this.pricesChecked.reduce((a, b) => Math.min(a, b), 2) : -1;
     console.log('pricesChecked', this.pricesChecked);
     events.forEach((e) => {
       console.log(e.prix,(FilterByPrice <= e.prix ),FilterByType);
@@ -96,7 +96,7 @@ export class EvenementComponent {
  
     let result: Event[] = events.filter((e) =>
       (this.typeFilter.includes(e.type) || FilterByType) &&
-      (FilterByPrice <= e.prix )
+      (FilterByPrice=== 0?e.prix=== 0 : FilterByPrice <= e.prix  )
     );
     console.log(result);
     return result;
