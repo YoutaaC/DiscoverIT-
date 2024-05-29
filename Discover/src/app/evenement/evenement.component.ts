@@ -84,11 +84,15 @@ export class EvenementComponent {
       return result;
     }
 
-    tt(){
-      // console.log("kharejj hajaa yehdikk ")
-      // tt(chkbox:string){ 
-
-      // }
+    tt(chkbox:string){
+      console.log(this.typeFilter);
+      if(this.typeFilter.includes(chkbox)){
+        this.typeFilter.splice(this.typeFilter.indexOf(chkbox),1);
+        console.log(this.typeFilter);
+      }else{
+        this.typeFilter.push(chkbox);
+      }
+     
     }
   }
 
