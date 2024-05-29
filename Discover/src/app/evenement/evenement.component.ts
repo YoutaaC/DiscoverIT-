@@ -82,6 +82,10 @@ export class EvenementComponent {
     if(this.typeFilter.length===0){
       return events;
     }
+    console.log("typeFilter",this.typeFilter)
+    events.forEach((e)=>{
+      console.log(e.type,this.typeFilter.includes(e.type))
+    })
     let result: Event[] = events.filter((e)=> this.typeFilter.includes(e.type) )      
     console.log(result);
     return result;
