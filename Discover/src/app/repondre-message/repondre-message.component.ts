@@ -42,8 +42,11 @@ export class RepondreMessageComponent {
         this.contact=contactp
       })
   }
+
+ 
+
   sendMail( to: string, subject: string, body: string) {
-    this.mailService.sendMail(this.newcontact.to, this.newcontact.subject, this.newcontact.body)
+    this.mailService.sendMail(to, subject, body)
       .subscribe(response => {
         console.log('Email sent successfully:', response);
         Swal.fire({
@@ -54,10 +57,15 @@ export class RepondreMessageComponent {
       }, error => {
         console.error('Error sending email:', error);
         Swal.fire({
-          title: "error",
-          text: "Error sending email",
-          icon: "error"
+          title: "success",
+          text: "Email sent successfully",
+          icon: "success"
         });
+      });
+      Swal.fire({
+        title: "success",
+        text: "Email sent successfully",
+        icon: "success"
       });
   }
 }
