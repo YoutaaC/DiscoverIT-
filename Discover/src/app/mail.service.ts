@@ -22,7 +22,7 @@ export class MailService {
 
     const headers = new HttpHeaders({ 'enctype': 'multipart/form-data' });
 
-    return this.httpClient.post('mail/send', formData, { headers });
+    return this.httpClient.post(this.apiUrl +'send', formData, { headers });
   }
 
 }
