@@ -3,7 +3,7 @@
   <aside id="sidebar" class="sidebar">
         <div class="text-center ">
             <img src="./../../assets/images/Ellipse 43.png" class="pdp">
-            <p style="font-size: 18px; font-weight: 650px;">eya</p>
+            <p style="font-size: 18px; font-weight: 650px;" [(ngModel)]="user.username">eya</p>
     </div>
     <hr>
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -72,7 +72,7 @@
     <img src="./../../assets/images/Ellipse 43.png" class="pdp2">
     <div class="upload-img-icon"><i class="fa-solid fa-pen icon-update"></i></div>
     <div class="div-P1">
-    <h1 style="font-size: 20px;">eya</h1> 
+    <h1 style="font-size: 20px;" [(ngModel)]="user.username">eya</h1> 
     <span>modifier votre profile <br>
       Cette modification sera affichée sur votre profil</span>
   </div>    
@@ -84,38 +84,38 @@
             <div class="d-flex ">
                 <div>
               <label for="nom"> votre Nom</label>
-              <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" [(ngModel)]="currentUser.firstName" >
+              <input type="text" id="nom" placeholder="  Entrer votre nom"  name="nom" [(ngModel)]="user.firstName" >
             </div>
 <!-- saisir le prenom -->
             <div>
               <label for="prenom">votre Prenom</label>
-              <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="currentUser.lastName" >
+              <input type="text" id="prenom" placeholder="  Entrer votre prenom" name="prenom" [(ngModel)]="user.lastName" >
             </div>
             </div>
 <!-- saisir l'email -->
             <div class="d-flex ">
                 <div>
               <label for="email">votre Email</label>
-              <input type="text" id="email" placeholder="  Entrer votre email"  name="email" [(ngModel)]="currentUser.email" >
+              <input type="text" id="email" placeholder="  Entrer votre email"  name="email" [(ngModel)]="user.email" >
             </div>
          <!-- saisir le num de tel -->
          <div>
          <label for="tel">Num Tel</label>
-         <input type="text" id="tel" placeholder="   Entrer votre Num de telephone" name="tel"  [(ngModel)]="currentUser.tel">
+         <input type="text" id="tel" placeholder="   Entrer votre Num de telephone" name="tel"  [(ngModel)]="user.tel">
         </div>
         </div>
          <!-- saisir le mot de passe -->
              <div class="d-flex ">
                 <div>
               <label for="motDePasse">votre adresse</label>
-              <input type="text" id="motDePasse" placeholder="  Entrer votre adresse" name="password" [(ngModel)]="currentUser.password">
+              <input type="text" id="motDePasse" placeholder="  Entrer votre adresse" name="password" >
             </div>
  
          
     <!-- choisir le pseudo -->
                 <div >
               <label for="pseudo">votre pseudo</label>
-              <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"[(ngModel)]="currentUser.username">
+              <input type="text" id="pseudo" placeholder="   Entrer votre pseudo" name="pseudo"[(ngModel)]="user.username">
             </div>
             </div>  
             <hr> 

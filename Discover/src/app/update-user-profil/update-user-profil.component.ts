@@ -10,20 +10,33 @@ declare var $:any;
   styleUrls: ['./update-user-profil.component.css']
 })
 export class UpdateUserProfilComponent {
-  currentUser!:User;
-  currentUserId! :number;
-  
+  // currentUser!:User;
+  // currentUserId! :number;
+  userId! :number;
+  user : User={
+    id:-1,
+    firstName:"",
+    lastName:"",
+    username:"",
+    email:"", 
+    tel:"",
+    password:"",  
+    creationDate: new Date() ,
+    accessToken:"",
+  }
+
+
   constructor(private userService:UserService, private route:ActivatedRoute, private router:Router){}
   
   ngOnInit(): void {
-    this.currentUserId=+this.route.snapshot.paramMap.get('id')!;
+    this.userId=+this.route.snapshot.paramMap.get('id')!;
     this.getUser();
   }
   
   getUser(){
-    this.userService.getUserById(this.currentUserId).subscribe(userp =>
+    this.userService.getUserById(this.userId).subscribe(userp =>
       {
-        this.currentUser=userp
+        this.user=userp
       })
   }
   
@@ -40,8 +53,8 @@ export class UpdateUserProfilComponent {
       cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
-        if (this.currentUser) {
-          this.userService.updateUser(this.currentUserId, this.currentUser)
+        if (this.user) {
+          this.userService.updateUser(this.userId, this.user)
             .subscribe(updateUser => {
               console.log('Updated:', updateUser); 
               Swal.fire('Mise à jour !', 'Utilisateur mis à jour avec succès.', 'success');
