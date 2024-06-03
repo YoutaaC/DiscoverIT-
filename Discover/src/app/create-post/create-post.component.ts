@@ -41,20 +41,20 @@ PostToAdd!:Post;
         .subscribe(createdPost => {
           console.log('Post added successfully:', createdPost);
           Swal.fire({
-            title: "success",
-            text: "Post added successfully",
+            title: "Succès",
+            text: "Publication ajoutée avec succès",
             icon: "success"
           });
         }, error => {
           console.error('Error adding post:', error);
           Swal.fire({
             title: "Error !",
-            text: "Error adding Event",
+            text: "Erreur lors de l'ajout de la publication",
             icon: "error"
           });
         });
     } else {
-      console.error('Title and body are required.');
+      console.error('Les données sont requis.');
      
     }
   }

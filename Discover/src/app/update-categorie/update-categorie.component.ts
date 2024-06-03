@@ -40,13 +40,13 @@ export class UpdateCategorieComponent {
 
   confirmUpdate(): void {
     Swal.fire({
-      title: 'Are you sure you want to update this category?',
+      title: 'Êtes-vous sûr de vouloir mettre à jour cette catégorie ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Update',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Mettre à jour',
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.categorie) {
@@ -54,15 +54,15 @@ export class UpdateCategorieComponent {
             .subscribe(
               updatedCategorie => {
                 console.log('Updated category:', updatedCategorie);
-                Swal.fire('Updated!', 'Category updated successfully.', 'success');
+                Swal.fire('Mise à jour !', 'Catégorie mise à jour avec succès.', 'success');
               },
               error => {
                 console.error('Error updating category:', error);
-                Swal.fire('Error!', 'An error occurred during the update.', 'error');
+                Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la mise à jour.', 'error');
               }
             );
         } else {
-          console.error('No category data to update!');
+          console.error('Aucune donnée de catégorie à mettre à jour !');
         }
       }
     });

@@ -63,20 +63,20 @@ EventToAdd!:Event;
         .subscribe(createdEvent => {
           console.log('Event added successfully:', createdEvent);
           Swal.fire({
-            title: "success",
-            text: "Event added successfully",
+            title: "Succès",
+            text: "Événement ajouté avec succès",
             icon: "success"
           });
         }, error => {
           console.error('Error adding Event:', error);
           Swal.fire({
             title: "Error !",
-            text: "Error adding Event",
+            text: "Erreur lors de l'ajout de l'événement",
             icon: "error"
           });
         });
     } else {
-      console.error('Title and body are required.');
+      console.error('Title and body sont requis.');
       
     }
   }

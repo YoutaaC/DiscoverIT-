@@ -31,28 +31,27 @@ export class UpdatePostComponent {
   
   confirmUpdate() { 
     Swal.fire({
-      title: 'Are you sure you want to update this post?', 
-  
+      title: 'Êtes-vous sûr de vouloir mettre à jour cette publication ?', 
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, update it!', 
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Mettre à jour', 
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.post) { 
           this.postService.updatePostPut(this.postId, this.post)
             .subscribe(updatedPost => {
               console.log('Updated Post:', updatedPost); 
-              Swal.fire('Updated!', 'Post updated successfully.', 'success');
+              Swal.fire('Mise à jour !', 'Publication mise à jour avec succès.', 'success');
              
             }, (error) => {
               console.error('Error updating post:', error);
-              Swal.fire('Error!', 'An error occurred during update.', 'error');
+              Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la mise à jour.', 'error');
             });
         } else {
-          console.error('No post data to update!'); 
+          console.error('Aucune donnée de publication à mettre à jour !'); 
         }
       }
     });

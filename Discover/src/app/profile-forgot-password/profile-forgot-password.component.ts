@@ -82,27 +82,27 @@ export class ProfileForgotPasswordComponent {
   
   confirmUpdate() {
     Swal.fire({
-      title: 'Êtes-vous sure de vouloir changer le mot de passe ?',
+      title: 'Êtes-vous sûr(e) de vouloir changer le mot de passe ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'oui, changer!', 
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Changer', 
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.currentUser) { 
           this.userService.updateUser(this.currentUser.id, this.currentUser)
             .subscribe(updatedUser => {
               console.log('Updated User:', updatedUser); 
-              Swal.fire('Updated!', 'User updated successfully.', 'success');
+              Swal.fire('Mis à jour !', 'Utilisateur mis à jour avec succès.', 'success');
              
             }, (error) => {
               console.error('Error updating user:', error);
-              Swal.fire('Error!', 'An error occurred during update.', 'error');
+              Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la mise à jour.', 'error');
             });
         } else {
-          console.error('No user data to update!'); 
+          console.error('Aucune donnée utilisateur à mettre à jour !'); 
         }
       }
     });

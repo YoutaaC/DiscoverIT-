@@ -93,12 +93,12 @@ export class ContactVisiteurComponent {
         .subscribe(createdContact => {
           console.log('Message added successfully:', createdContact);
           Swal.fire({
-            title: "Message envoyer avec succée !",
+            title: "Message envoyé avec succès !",
             icon: "success"
           });
         }, error => {
           console.error('Error adding Event:', error);
-          Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+          Swal.fire('Erreur !', 'Une erreur s\'est produite lors de l\'envoi du message.', 'error');
         });
     } else {
       console.error('Title and body are required.');

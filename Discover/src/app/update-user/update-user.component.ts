@@ -32,28 +32,27 @@ export class UpdateUserComponent {
   
   confirmUpdate() {
     Swal.fire({
-      title: 'Are you sure you want to update?',
-      text: "This action cannot be undone!",
+      title: 'Êtes-vous sûr de vouloir mettre à jour ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, update it!', 
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Mettre à jour', 
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.user) { 
           this.userService.updateUser(this.userId, this.user)
             .subscribe(updateUser => {
               console.log('Updated:', updateUser); 
-              Swal.fire('Updated!', 'User updated successfully.', 'success');
+              Swal.fire('Mise à jour !', 'Utilisateur mis à jour avec succès.', 'success');
              
             }, (error) => {
               console.error('Error updating user:', error);
-              Swal.fire('Error!', 'An error occurred during update.', 'error');
+              Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la mise à jour.', 'error');
             });
         } else {
-          console.error('No user data to update!'); 
+          console.error('Aucune donnée utilisateur à mettre à jour !'); 
         }
       }
     });

@@ -33,27 +33,27 @@ export class UpdateEventComponent {
   
   confirmUpdate() {
     Swal.fire({
-      title: 'Are you sure you want to update this event?',
+      title: 'Êtes-vous sûr de vouloir mettre à jour cet événement ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, update it!', 
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Mettre à jour', 
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.event) { 
           this.eventService.updateEventPut(this.eventId, this.event)
             .subscribe(updatedEvent => {
               console.log('Updated Event:', updatedEvent); 
-              Swal.fire('Updated!', 'Event updated successfully.', 'success');
+              Swal.fire('Mise à jour !', 'Événement mis à jour avec succès.', 'success');
               
             }, (error) => {
               console.error('Error updating event:', error);
-              Swal.fire('Error!', 'An error occurred during update.', 'error');
+              Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la mise à jour.', 'error');
             });
         } else {
-          console.error('No event data to update!'); 
+          console.error('Aucune donnée d\'événement à mettre à jour !'); 
         }
       }
     });

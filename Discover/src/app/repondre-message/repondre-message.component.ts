@@ -51,20 +51,20 @@ export class RepondreMessageComponent {
         console.log('Email sent successfully:', response);
         Swal.fire({
           title: "success",
-          text: "Email sent successfully",
+          text: "Email envoyé avec succès",
           icon: "success"
         });
       }, error => {
         console.error('Error sending email:', error);
         Swal.fire({
           title: "success",
-          text: "Email sent successfully",
+          text: "Email envoyé avec succès",
           icon: "success"
         });
       });
       Swal.fire({
         title: "success",
-        text: "Email sent successfully",
+        text: "Email envoyé avec succès",
         icon: "success"
       });
   }

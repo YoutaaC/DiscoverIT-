@@ -43,28 +43,28 @@ export class MessagesComponent implements OnInit {
     this.contactToDelete = contact; 
 
     Swal.fire({
-      title: 'Are you sure you want to delete this contact?',
-      text: "This action cannot be undone!",
+      title: 'Êtes-vous sûr de vouloir supprimer ce contact ?',
+      text: "Cette action est irréversible !",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'supprimer',
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (this.contactToDelete) { 
           this.messageService.deleteContact(this.contactToDelete.id)
             .subscribe(() => {
               console.log('Contact deleted!');
-              Swal.fire('Deleted!', 'Contact deleted successfully.', 'success');
+              Swal.fire('Supprimé !', 'Contact supprimé avec succès.', 'success');
             
             }, (error) => {
               console.error('Error deleting contact:', error);
-              Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+              Swal.fire('Erreur !', 'Une erreur s\'est produite lors de la suppression.', 'error');
             });
         } else {
-          console.error('No contact selected for deletion!');
+          console.error('Aucun contact sélectionné pour la suppression !');
         }
       }
     });

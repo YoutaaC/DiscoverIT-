@@ -56,24 +56,24 @@ export class SignupComponent {
     }
 
     Swal.fire({
-      title: 'Are you sure you want to register?',
+      title: 'Êtes-vous sûr de vouloir vous inscrire ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'SignUp!', 
+      confirmButtonText: 'S\'inscrire !', 
     }).then((result) => {
       if (result.isConfirmed) {
         this.userService.register(this.user)
           .subscribe({
             next: (newUser) => {
               console.log('User registered successfully:', newUser);
-              Swal.fire('success!', 'Bienvenu Dans DiscoverIT.', 'success');
+              Swal.fire('Succès !', 'Bienvenue dans DiscoverIT.', 'success');
               this.router.navigate(['home']);
             },
             error: (error) => {
               console.error('Error registering user:', error);
-              Swal.fire('Error!', 'Remplir le formulaire', 'error');
+              Swal.fire('Erreur !', 'Veuillez remplir le formulaire pour compléter l\'inscription.', 'error');
             }
           });
       }
@@ -145,7 +145,3 @@ export class SignupComponent {
   }
 }
 
-
-
-
-//test

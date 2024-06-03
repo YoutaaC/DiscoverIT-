@@ -77,7 +77,7 @@ this.userService.login(loginData)
     console.error('Error occurred during login:', error);
     Swal.fire({
       title: "Problème  de Connection !",
-      text: "Invalid username or password",
+      text: "Nom d'utilisateur ou mot de passe invalide",
       icon: "info"
     });
   });
