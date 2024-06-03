@@ -6,6 +6,8 @@ import { Post } from '../models/post.model';
 import { PostService } from '../post.service';
 import { AuthenticationService } from '../authentication.service';
 import Swal from 'sweetalert2'
+import { CategorieService } from '../categorie.service';
+import { Categorie } from '../models/categorie.model';
 @Component({
   selector: 'app-user-add-post',
   templateUrl: './user-add-post.component.html',
@@ -15,6 +17,7 @@ export class UserAddPostComponent {
   currentUserId! :number;
   currentUser: User | null = null;
   posts: Post[] = [];
+  catgs: Categorie[] = [];
   accessToken!:any;
   newPost: any = {
     title: '',
@@ -33,8 +36,9 @@ export class UserAddPostComponent {
       console.error('User data not found in local storage');
     }
     this.createPost();
+    this.getAllCategories();
   }
-  constructor(private userService:UserService, private route:ActivatedRoute, private router:Router,private postService:PostService,private autService:AuthenticationService){}
+  constructor(private userService:UserService, private route:ActivatedRoute, private router:Router,private postService:PostService,private autService:AuthenticationService,private categorieService: CategorieService){}
 
   PostToAdd!:Post;
     createPost() {
@@ -60,6 +64,21 @@ export class UserAddPostComponent {
        
       }
     }
+
+
+    getAllCategories(): void {
+   
+      this.categorieService.getAllCategories().subscribe(
+        (evtns) => {
+          this.catgs = evtns;
+        },
+        (error) => {
+          console.error('Error fetching events:', error);
+        }
+      );
+    }
+
+
   logout(){
     localStorage.removeItem("user");
     localStorage.removeItem("isLoggedIn");
