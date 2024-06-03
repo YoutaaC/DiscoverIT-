@@ -99,7 +99,7 @@ export class CategorieService {
       );
   }
 
-  getCategorieById(id: number): Observable<Categorie>{
+  getCatgById(id: number): Observable<Categorie>{
     const accessToken = this.authService.getAccessToken();
   
     if (!accessToken) {
