@@ -5,6 +5,7 @@ import { EventService } from '../event.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { Event } from '../models/event.model';
+import Swal from 'sweetalert2';
 declare var createGoogleEvent: any;
 declare const gapi: any; 
 declare var google: any;
@@ -156,6 +157,12 @@ export class CalenderComponent implements OnInit{
 
     request.execute(function (event: any) {
       console.info("Event created: " + event.htmlLink);
+      Swal.fire({
+        title: "Alarme créée avec succès",
+        text:"Vérifiez votre agenda",
+        icon: "success"
+      });
+      
     });
   }
 }

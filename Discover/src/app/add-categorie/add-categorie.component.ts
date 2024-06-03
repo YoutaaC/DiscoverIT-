@@ -35,22 +35,22 @@ export class AddCategorieComponent {
       if (this.newCatg.type) {
         this.categorieService.createCategorie(this.newCatg)
           .subscribe(createdCateg => {
-            console.log('Event added successfully:', createdCateg);
+            console.log('Catégorie ajoutée avec succès:', createdCateg);
             Swal.fire({
-              title: "success",
-              text: "Event added successfully",
+              title: "Succès",
+              text: "Catégorie ajoutée avec succès",
               icon: "success"
             });
           }, error => {
             console.error('Error adding Event:', error);
             Swal.fire({
               title: "Error !",
-              text: "Error adding Event",
+              text: "Erreur lors de l'ajout de la catégorie",
               icon: "error"
             });
           });
       } else {
-        console.error('categorie required.');
+        console.error('Catégorie requise.');
         
       }
     }

@@ -52,23 +52,23 @@ confirmDelete(user: User) {
   this.userToDelete = user;
 
   Swal.fire({
-    title: 'Are you sure you want to delete this user?',
+    title: 'Êtes-vous sûr de vouloir supprimer cet utilisateur ?',
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#32839B',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'Cancel'
+    confirmButtonText: ' supprimer',
+    cancelButtonText: 'Annuler'
   }).then((result) => {
     if (result.isConfirmed) {
       this.userService. deleteUserByUsername(this.userToDelete.username)
         .subscribe((response) => {
           console.log('Deleted:', response);                                       
-          Swal.fire('Deleted!', 'User deleted successfully.', 'success');
+          Swal.fire('Supprimé!', 'Utilisateur supprimé avec succès.', 'success');
           
         }, (error) => {
           console.error('Error deleting user:', error);
-          Swal.fire('Deleted!', 'User deleted successfully', 'success');
+          Swal.fire('Erreur!', 'Une erreur s\'est produite lors de la suppression.', 'error');
           
         });
     }

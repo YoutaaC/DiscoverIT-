@@ -45,14 +45,14 @@ export class AdminCategorieComponent {
     this.CategorieToDelete = categorie; 
 
     Swal.fire({
-      title: 'Are you sure you want to delete this event?',
-      text: "This action cannot be undone!",
+      title: 'Êtes-vous sûr de vouloir supprimer cette catégorie?',
+      text: "Cette action est irréversible!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#AC8DF',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'supprimer',
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (!this. CategorieToDelete) {
@@ -63,11 +63,11 @@ export class AdminCategorieComponent {
         this.categorieService.deleteCategorie(this. CategorieToDelete.id)
           .subscribe((response) => {
             console.log('Deleted:', response); 
-            Swal.fire('Deleted!', 'categorie deleted successfully.', 'success');
+            Swal.fire('Supprimé!', 'Catégorie supprimée avec succès.', 'success');
             
           }, (error) => {
             console.error('Error deleting categorie:', error);
-            Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+            Swal.fire('Erreur!', 'Une erreur s\'est produite lors de la suppression.', 'error');
           });
       }
     });

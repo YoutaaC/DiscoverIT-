@@ -55,23 +55,23 @@ export class AdminActuComponent implements OnInit {
     this.postToDelete = post;
     Swal.fire({
       title: 'Êtes-vous sûr de vouloir supprimer cette publication?',
- 
+      text: "Cette action est irréversible !",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#32839B',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonText: 'supprimer',
       cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         this.postService.deletePost(this.postToDelete.id)
           .subscribe((response) => {
             console.log('Deleted:', response); 
-            Swal.fire('Deleted!', 'Post deleted successfully.', 'success');
+            Swal.fire('Supprimé!', 'Publication supprimée avec succès.', 'success');
            
           }, (error) => {
             console.error('Error deleting post:', error);
-            Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+            Swal.fire('Erreur!', 'Une erreur s\'est produite lors de la suppression.', 'error');
           });
       }
     });

@@ -49,30 +49,30 @@ export class AddUserComponent {
 
   register() {
     if (!this.user || !this.user.username || !this.user.email) { 
-      console.error('No user data to register!');
-      Swal.fire('Error!', 'Remplir le formulaire', 'error');
+      console.error('Aucune donnée utilisateur à enregistrer!');
+      Swal.fire('Erreur!', 'Remplir le formulaire', 'error');
       return;
     }
 
     Swal.fire({
-      title: 'Are you sure you want to register?',
+      title: 'Êtes-vous sûr de vouloir vous inscrire?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, register it!', 
+      confirmButtonText: 'inscrivez-vous', 
     }).then((result) => {
       if (result.isConfirmed) {
         this.userService.register(this.user)
           .subscribe({
             next: (newUser) => {
-              console.log('User registered successfully:', newUser);
-              Swal.fire('Registered!', 'User registered successfully.', 'success');
+              console.log('Utilisateur enregistré avec succès:', newUser);
+              Swal.fire('Enregistré!', 'Utilisateur enregistré avec succès.', 'success');
               this.router.navigate(['adminUser']);
             },
             error: (error) => {
               console.error('Error registering user:', error);
-              Swal.fire('Error!', 'An error occurred during registration.', 'error');
+              Swal.fire('Erreur!', 'Une erreur s\'est produite lors de l\'enregistrement.', 'error');
             }
           });
       }

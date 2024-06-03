@@ -49,14 +49,14 @@ export class AdminEventComponent {
     this.eventToDelete = event; 
 
     Swal.fire({
-      title: 'Are you sure you want to delete this event?',
-      text: "This action cannot be undone!",
+      title: 'Êtes-vous sûr de vouloir supprimer cet événement ?',
+      text: "Cette action est irréversible !",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'supprimer',
+      cancelButtonText: 'Annuler'
     }).then((result) => {
       if (result.isConfirmed) {
         if (!this.eventToDelete) {
@@ -67,11 +67,11 @@ export class AdminEventComponent {
         this.eventService.deleteEvent(this.eventToDelete.id)
           .subscribe((response) => {
             console.log('Deleted:', response); 
-            Swal.fire('Deleted!', 'Event deleted successfully.', 'success');
+            Swal.fire('Supprimé!', 'Événement supprimé avec succès.', 'success');
             
           }, (error) => {
             console.error('Error deleting event:', error);
-            Swal.fire('Error!', 'An error occurred during deletion.', 'error');
+            Swal.fire('Erreur!', 'Une erreur s\'est produite lors de la suppression.', 'error');
           });
       }
     });
