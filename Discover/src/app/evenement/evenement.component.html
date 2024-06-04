@@ -31,9 +31,22 @@
                   <input type="checkbox" class="btn-check " id="{{typee.type}}" autocomplete="off" (click)="getCheck(typee.type)">
               </label><br>
                 </div>
-             
                 <h5 class="title-filtre"> Par Catégories:</h5>
-                <button class="btn-filtre">Formation</button> <button class="btn-filtre">Salon</button> <button class="btn-filtre">Conférences</button> <button class="btn-filtre">En ligne</button>  <button class="btn-filtre">Hackathon</button>
+                <label class="btn-filtre" for="Formation" >Formation 
+                <input type="checkbox" class="btn-check " id="Formation"  (click)="getCheck('Formation')"></label>
+
+                <label class="btn-filtre" for="Salon" >Salon 
+                  <input type="checkbox" class="btn-check " id="Salon"  (click)="getCheck('Salon')"></label>
+
+                  <label class="btn-filtre" for="Conférences" >Conférences 
+                    <input type="checkbox" class="btn-check " id="Conférences"  (click)="getCheck('Conférences')"></label>
+
+                    <label class="btn-filtre" for="En ligne " >En ligne 
+                      <input type="checkbox" class="btn-check " id="En ligne "  (click)="getCheck('En ligne')"></label>
+
+                 <label class="btn-filtre" for="Hackathon" >Hackathon
+                      <input type="checkbox" class="btn-check " id="Hackathon"  (click)="getCheck('Hackathon')"></label>
+                
                
                 <h5 class="title-filtre">Par Accès: </h5>
                 <input type="checkbox" (click)="handlePriceChecked(1)"><span class="check-items">Payant</span> <br>
