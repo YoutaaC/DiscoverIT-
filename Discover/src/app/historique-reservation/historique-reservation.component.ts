@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { Event } from '../models/event.model';
 import Swal from 'sweetalert2'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-historique-reservation',
@@ -28,7 +29,7 @@ export class HistoriqueReservationComponent {
     this.getAllEvents();
 
   }
-  constructor(private eventService: EventService, private router: Router) {}
+  constructor(private eventService: EventService, private router: Router, private httpClient : HttpClient) {}
 
   getAllEvents(): void {
     this.eventService.getAllEvents().subscribe(evnt => {
@@ -58,10 +59,34 @@ export class HistoriqueReservationComponent {
     Swal.fire({
           title: "Votre QR Code ",
           text: "Votre qr code de cette evenement",
+          confirmButtonText: "Télécharger QR code",
           imageUrl: "./../../assets/images/Reservation.png",
           imageWidth: 200,
           imageHeight: 200,
           imageAlt: "QR Code"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.downloadImage("./../../assets/images/Reservation.png");
+          }
         });
   }
+
+
+  
+  downloadImage(url: string) {
+    this.httpClient.get(url, { responseType: 'blob' }).subscribe(blob => {
+        // Create a link element
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Reservation.jpg'; // Set the download filename
+  
+        // Append link to the body, click it, and then remove it
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, error => {
+        console.error('Error downloading the image: ', error);
+    });
+  }
+
 }
