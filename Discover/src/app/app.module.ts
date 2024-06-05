@@ -72,6 +72,7 @@ import { AdminCategorieComponent } from './admin-categorie/admin-categorie.compo
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 import { GalerieVComponent } from './galerie-v/galerie-v.component';
+import { HomeTestComponent } from './home-test/home-test.component';
 
 
 @NgModule({
@@ -142,7 +143,8 @@ import { GalerieVComponent } from './galerie-v/galerie-v.component';
     AdminCategorieComponent,
     AddCategorieComponent,
     UpdateCategorieComponent,
-    GalerieVComponent
+    GalerieVComponent,
+    HomeTestComponent
     ],
   imports: [
     BrowserModule,

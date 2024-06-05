@@ -61,6 +61,7 @@ import { AdminCategorieComponent } from './admin-categorie/admin-categorie.compo
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 import { GalerieVComponent } from './galerie-v/galerie-v.component';
+import { HomeTestComponent } from './home-test/home-test.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -123,7 +124,8 @@ const routes: Routes = [
   {path:'admincatg',component:AdminCategorieComponent},
   {path:'addCatg',component:AddCategorieComponent},
   {path:'updateCateg/:id',component:UpdateCategorieComponent},
-  {path:'V_galerie',component:GalerieVComponent}
+  {path:'V_galerie',component:GalerieVComponent},
+  {path:'Homee',component:HomeTestComponent}
 
 
  

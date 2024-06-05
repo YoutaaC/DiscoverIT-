@@ -69,7 +69,7 @@ export class SignupComponent {
             next: (newUser) => {
               console.log('User registered successfully:', newUser);
               Swal.fire('Succès !', 'Bienvenue dans DiscoverIT.', 'success');
-              this.router.navigate(['home']);
+              this.router.navigate(['Homee']);
             },
             error: (error) => {
               console.error('Error registering user:', error);
