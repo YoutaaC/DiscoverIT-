@@ -1,0 +1,74 @@
+body {
+    width: 100%;
+    height: auto;
+    background-image: url(./../../assets/images/eventFond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+    color: white;
+  }
+  .img-top{
+    position: relative;
+    margin-left: 150px;
+    margin-top: 90px;
+    width: 343px;
+    height: auto;
+  }
+  .title{
+    font-size: 40px;
+    position: relative;
+    margin-left: 149px; 
+    margin-top: 50px;
+  }
+  .marque{
+    background-image: url(./../../assets/images/Asset.png);
+    background-repeat: no-repeat;
+  
+  }
+  .img-anim1 {
+    position: absolute;
+    margin-top: -370px;
+    margin-left: 70px;
+    animation: rotate2 2s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); } 
+  }
+  
+  @keyframes rotate2 {
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(-360deg); } 
+  }
+  .img-anim2{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 500px;
+    animation: rotate 6s linear infinite;
+  }
+  .img-anim3{
+    position: absolute;
+    margin-top: -370px;
+    margin-left: 450px;
+    animation: rotate 8s linear infinite; 
+  } 
+  
+  .arrow-event{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 370px;
+    width: 120px;
+    height: auto;
+  }
+  .box{
+    margin-top: 85px;
+    margin-left: 200px;
+  }
+  .img-g{
+    margin: 7px;
+  }
+  .ligne{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }

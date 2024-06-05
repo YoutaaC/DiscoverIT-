@@ -162,6 +162,12 @@ display: block;
 .dropdown:hover .dropdown-content {
 display: block;
 }
+
+.title-filtre{
+color: black;
+padding: 4px;
+}
+
 .btn-filtre{
 color: black;
 border: black solid 1px;
@@ -170,14 +176,18 @@ border-radius: 30px;
 margin: 5px;
 
 }
-.title-filtre{
-color: black;
-padding: 4px;
-}
 .btn-filtre:hover{
 color: #02C1BA;
 border: #02C1BA solid 1px;
 }
+
+.btn-filtre:has( input:checked ){
+color: white;
+background: #02C1BA;
+border: none;
+}
+
+
 .check-items{
 color: black;
 }
@@ -229,12 +239,12 @@ margin-left: 450px;
 animation: rotate 8s linear infinite; 
 } 
 .cmpl{
-  color: white;
-  background-color: #00264D;
-  border: none;
-  border-radius: 32px;
-  padding: 13px 16px;
-  position: absolute;
-  margin-top: -330px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+color: white;
+background-color: #00264D;
+border: none;
+border-radius: 32px;
+padding: 13px 16px;
+position: absolute;
+margin-top: -330px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }

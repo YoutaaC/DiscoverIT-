@@ -71,6 +71,7 @@ import { CalenderComponent } from './calender/calender.component';
 import { AdminCategorieComponent } from './admin-categorie/admin-categorie.component';
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
+import { GalerieVComponent } from './galerie-v/galerie-v.component';
 
 
 @NgModule({
@@ -140,7 +141,8 @@ import { UpdateCategorieComponent } from './update-categorie/update-categorie.co
     CalenderComponent,
     AdminCategorieComponent,
     AddCategorieComponent,
-    UpdateCategorieComponent
+    UpdateCategorieComponent,
+    GalerieVComponent
     ],
   imports: [
     BrowserModule,

@@ -60,6 +60,7 @@ import { CalenderComponent } from './calender/calender.component';
 import { AdminCategorieComponent } from './admin-categorie/admin-categorie.component';
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
+import { GalerieVComponent } from './galerie-v/galerie-v.component';
 
 const routes: Routes = [
   {path:'signup', component:SignupComponent},
@@ -121,7 +122,8 @@ const routes: Routes = [
   {path:'calender/:id',component:CalenderComponent},
   {path:'admincatg',component:AdminCategorieComponent},
   {path:'addCatg',component:AddCategorieComponent},
-  {path:'updateCateg/:id',component:UpdateCategorieComponent}
+  {path:'updateCateg/:id',component:UpdateCategorieComponent},
+  {path:'V_galerie',component:GalerieVComponent}
 
 
  
